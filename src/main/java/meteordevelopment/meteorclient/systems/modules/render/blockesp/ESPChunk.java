@@ -110,12 +110,8 @@ public class ESPChunk {
 
         for (int x = chunk.getPos().getStartX(); x <= chunk.getPos().getEndX(); x++) {
             for (int z = chunk.getPos().getStartZ(); z <= chunk.getPos().getEndZ(); z++) {
- k2ci8d-codex/review-build.gradle.kts-dependencies
-                
-
                 int height = chunk.getHeightmap(Heightmap.Type.WORLD_SURFACE)
                     .get(x - chunk.getPos().getStartX(), z - chunk.getPos().getStartZ());
- master
 
                 if (height > maxHeight) maxHeight = height;
 

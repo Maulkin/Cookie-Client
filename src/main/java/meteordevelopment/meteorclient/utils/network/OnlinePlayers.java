@@ -17,7 +17,7 @@ public class OnlinePlayers {
         if (time - lastPingTime > 5 * 60 * 1000) {
             
 
-            MeteorExecutor.execute(() -> Http.post("https://cookieclient.com/api/online/ping").ignoreExceptions().send());
+            CookieExecutor.execute(() -> Http.post("https://cookieclient.com/api/online/ping").ignoreExceptions().send());
 
             lastPingTime = time;
         }
