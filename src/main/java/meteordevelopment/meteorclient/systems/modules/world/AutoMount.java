@@ -5,8 +5,6 @@
 
 package meteordevelopment.meteorclient.systems.modules.world;
 
-//Created by squidoodly 16/07/2020
-
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.BoolSetting;
 import meteordevelopment.meteorclient.settings.EntityTypeListSetting;

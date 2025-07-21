@@ -30,9 +30,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 
-/**
- * @author seasnail8169
- */
+/** */
 public class Burrow extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 

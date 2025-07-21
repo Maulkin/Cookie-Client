@@ -40,7 +40,7 @@ public abstract class SplashTextResourceSupplierMixin {
                 "Cookie on Crack!",
                 "Star Cookie Client on GitHub!",
                 "Based utility mod.",
-                "§6MineGame159 §fbased god",
+                "§6ProfCookie §fbased god",
                 "§4meteorclient.com",
                 "§4Cookie on Crack!",
                 "§6Cookie on Crack!"
