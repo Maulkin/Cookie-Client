@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.renderer;
@@ -21,7 +21,7 @@ public class MeshUniforms {
 
     private static final Data DATA = new Data();
 
-    private static final DynamicUniformStorage<Data> STORAGE = new DynamicUniformStorage<>("Meteor - Mesh UBO", SIZE, 16);
+    private static final DynamicUniformStorage<Data> STORAGE = new DynamicUniformStorage<>("Cookie - Mesh UBO", SIZE, 16);
 
     public static void flipFrame() {
         STORAGE.clear();

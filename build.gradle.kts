@@ -106,7 +106,7 @@ dependencies {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/meteor-client.accesswidener")
+    accessWidenerPath = file("src/main/resources/cookie-client.accesswidener")
 }
 
 afterEvaluate {
@@ -202,7 +202,7 @@ publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
-            artifactId = "meteor-client"
+            artifactId = "cookie-client"
 
             version = properties["minecraft_version"] as String + "-SNAPSHOT"
         }

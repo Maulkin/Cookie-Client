@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 import { getMcVersion } from "./mc_version.js"
@@ -40,7 +40,7 @@ function sendDiscordWebhook() {
                 avatar_url: "https://meteorclient.com/icon.png",
                 embeds: [
                     {
-                        title: "Meteor Client " + mcVersion + " build #" + buildNumber,
+                        title: "Cookie Client " + mcVersion + " build #" + buildNumber,
                         description: description,
                         url: "https://meteorclient.com",
                             color: success ? 2672680 : 13117480

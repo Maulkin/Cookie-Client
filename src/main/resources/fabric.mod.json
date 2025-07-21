@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "name": "Meteor Client",
-  "id": "meteor-client",
+  "name": "Cookie Client",
+  "id": "cookie-client",
   "version": "${version}",
   "description": "Based utility mod.",
   "authors": [
@@ -16,7 +16,7 @@
     "discord": "https://meteorclient.com/discord"
   },
   "license": "GPL-3.0",
-  "icon": "assets/meteor-client/icon.png",
+  "icon": "assets/cookie-client/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
@@ -27,18 +27,18 @@
     ]
   },
   "mixins": [
-    "meteor-client.mixins.json",
-    "meteor-client-baritone.mixins.json",
-    "meteor-client-indigo.mixins.json",
-    "meteor-client-sodium.mixins.json",
-    "meteor-client-lithium.mixins.json",
-    "meteor-client-viafabricplus.mixins.json"
+    "cookie-client.mixins.json",
+    "cookie-client-baritone.mixins.json",
+    "cookie-client-indigo.mixins.json",
+    "cookie-client-sodium.mixins.json",
+    "cookie-client-lithium.mixins.json",
+    "cookie-client-viafabricplus.mixins.json"
   ],
-  "accessWidener": "meteor-client.accesswidener",
+  "accessWidener": "cookie-client.accesswidener",
   "custom": {
-    "meteor-client:build_number": "${build_number}",
-    "meteor-client:color": "145,61,226",
-    "meteor-client:commit": "${commit}",
+    "cookie-client:build_number": "${build_number}",
+    "cookie-client:color": "145,61,226",
+    "cookie-client:commit": "${commit}",
     "modmenu": {
       "links": {
         "modmenu.discord": "https://meteorclient.com/discord"

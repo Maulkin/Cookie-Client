@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.systems.accounts.types;
@@ -74,7 +74,7 @@ public class TheAlteningAccount extends Account<TheAlteningAccount> implements T
         WaybackAuthLib auth = new WaybackAuthLib(ENVIRONMENT.servicesHost());
 
         auth.setUsername(name);
-        auth.setPassword("Meteor on Crack!");
+        auth.setPassword("Cookie on Crack!");
 
         return auth;
     }

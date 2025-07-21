@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.utils.render.postprocess;
@@ -20,7 +20,7 @@ public class OutlineUniforms {
         .putFloat()
         .get();
 
-    private static final DynamicUniformStorage<Data> STORAGE = new DynamicUniformStorage<>("Meteor - Outline UBO", UNIFORM_SIZE, 16);
+    private static final DynamicUniformStorage<Data> STORAGE = new DynamicUniformStorage<>("Cookie - Outline UBO", UNIFORM_SIZE, 16);
 
     public static void flipFrame() {
         STORAGE.clear();

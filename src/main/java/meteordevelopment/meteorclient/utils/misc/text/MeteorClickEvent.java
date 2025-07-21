@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.utils.misc.text;
@@ -12,7 +12,7 @@ import net.minecraft.text.ClickEvent;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * This class does nothing except ensure that {@link ClickEvent}'s containing Meteor Client commands can only be executed if they come from the client.
+ * This class does nothing except ensure that {@link ClickEvent}'s containing Cookie Client commands can only be executed if they come from the client.
  * @see ScreenMixin#onHandleBasicClickEvent(ClickEvent, MinecraftClient, Screen, CallbackInfo)
  */
 public class MeteorClickEvent implements ClickEvent {
