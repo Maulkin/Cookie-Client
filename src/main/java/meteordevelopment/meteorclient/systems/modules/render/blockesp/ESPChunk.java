@@ -26,6 +26,9 @@ public class ESPChunk {
     private final int x, z;
     public Long2ObjectMap<ESPBlock> blocks;
 
+    private int bottom = mc.world.getBottomY();
+    private int top = mc.world.getBottomY();
+
     public ESPChunk(int x, int z) {
         this.x = x;
         this.z = z;
@@ -77,7 +80,13 @@ public class ESPChunk {
         int chunkX = ChunkSectionPos.getSectionCoord(mc.player.getBlockPos().getX());
         int chunkZ = ChunkSectionPos.getSectionCoord(mc.player.getBlockPos().getZ());
 
-        return x > chunkX + viewDist || x < chunkX - viewDist || z > chunkZ + viewDist || z < chunkZ - viewDist;
+        boolean horizontal = x > chunkX + viewDist || x < chunkX - viewDist || z > chunkZ + viewDist || z < chunkZ - viewDist;
+
+        int distanceBlocks = blockEsp.distance.get() * 16;
+        int y = mc.player.getBlockPos().getY();
+        boolean vertical = y > top + distanceBlocks || y < bottom - distanceBlocks;
+
+        return horizontal || vertical;
     }
 
     public void render(Render3DEvent event) {
@@ -89,16 +98,26 @@ public class ESPChunk {
 
     public static ESPChunk searchChunk(Chunk chunk, List<Block> blocks) {
         ESPChunk schunk = new ESPChunk(chunk.getPos().x, chunk.getPos().z);
+
+        schunk.bottom = mc.world.getBottomY();
+        schunk.top = mc.world.getHeight();
+
         if (schunk.shouldBeDeleted()) return schunk;
 
         BlockPos.Mutable blockPos = new BlockPos.Mutable();
+        int maxHeight = mc.world.getBottomY();
 
         for (int x = chunk.getPos().getStartX(); x <= chunk.getPos().getEndX(); x++) {
             for (int z = chunk.getPos().getStartZ(); z <= chunk.getPos().getEndZ(); z++) {
                 int minY = mc.world.getBottomY();
                 int maxY = mc.world.getHeight();
 
-                for (int y = minY; y < maxY; y++) {
+d6va1g-codex/add-vertical-check-in-espchunk.shouldbedeleted
+                if (height > maxHeight) maxHeight = height;
+
+                for (int y = mc.world.getBottomY(); y < height; y++) {
+
+master
                     blockPos.set(x, y, z);
                     BlockState bs = chunk.getBlockState(blockPos);
 
@@ -106,6 +125,8 @@ public class ESPChunk {
                 }
             }
         }
+
+        schunk.top = maxHeight;
 
         return schunk;
     }
