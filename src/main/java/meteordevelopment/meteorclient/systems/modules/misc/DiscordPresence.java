@@ -5,8 +5,6 @@
 
 package meteordevelopment.meteorclient.systems.modules.misc;
 
-//Created by squidoodly
-
 import meteordevelopment.discordipc.DiscordIPC;
 import meteordevelopment.discordipc.RichPresence;
 import meteordevelopment.meteorclient.MeteorClient;
@@ -154,7 +152,7 @@ public class DiscordPresence extends Module {
         if (!MeteorClient.BUILD_NUMBER.isEmpty()) largeText += " Build: " + MeteorClient.BUILD_NUMBER;
         rpc.setLargeImage("meteor_client", largeText);
 
-        currentSmallImage = SmallImage.Snail;
+        currentSmallImage = SmallImage.MineGame;
 
         recompileLine1();
         recompileLine2();
@@ -296,8 +294,7 @@ public class DiscordPresence extends Module {
     }
 
     private enum SmallImage {
-        MineGame("minegame", "MineGame159"),
-        Snail("seasnail", "seasnail8169");
+        MineGame("minegame", "ProfCookie");
 
         private final String key, text;
 
@@ -311,8 +308,7 @@ public class DiscordPresence extends Module {
         }
 
         SmallImage next() {
-            if (this == MineGame) return Snail;
-            return MineGame;
+            return this;
         }
     }
 }
