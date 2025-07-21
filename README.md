@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="https://meteorclient.com/icon.png" alt="cookie-client-logo" width="15%"/>
+<img src="https://cookieclient.com/icon.png" alt="cookie-client-logo" width="15%"/>
 </p>
 
 <h1 align="center">Cookie</h1>
@@ -24,7 +24,7 @@
 - Run `./gradlew build`
 
 ### Installation
-Follow the [guide](https://meteorclient.com/faq/installation) on the wiki.
+Follow the [guide](https://cookieclient.com/faq/installation) on the wiki.
 
 ## Contributions
 We will review and help with all reasonable pull requests as long as the guidelines below are met.
@@ -41,7 +41,7 @@ Please provide as much information as you can to best help us understand your is
 
 ## Donations
 All of our work is completely free and non-profit (donations pay only for hosting costs), therefore we are very grateful for all donations made to support us in running our community.  
-Donations can be made via our [website](https://meteorclient.com/donate) and the minimum amount to get donor benefits is €5.  
+Donations can be made via our [website](https://cookieclient.com/donate) and the minimum amount to get donor benefits is €5.  
 You will be rewarded with a role on our Discord server and a customisable in-game cape.  
 ⚠️ _Make sure to create a Cookie account and link your Discord and Minecraft accounts to fully experience your rewards._ ⚠️
 
@@ -57,4 +57,4 @@ If you use **ANY** code from the source:
 - You must state clearly and obviously to all end users that you are using code from this project.
 - Your application must also be licensed under the same license.
 
-*If you have any other questions, check our [FAQ](https://meteorclient.com/faq) or ask in our [Discord](https://meteorclient.com/discord) server.*
+*If you have any other questions, check our [FAQ](https://cookieclient.com/faq) or ask in our [Discord](https://cookieclient.com/discord) server.*
