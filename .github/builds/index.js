@@ -1,5 +1,5 @@
 /*
- * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * This file is part of the Cookie Client distribution (https://github.com/cookie-client/cookie-client).
  * Copyright (c) Cookie Development.
  */
 
@@ -26,7 +26,7 @@ function sendDiscordWebhook() {
             for (let i in res.commits) {
                 let commit = res.commits[i];
 
-                changes += "\n- [`" + commit.sha.substring(0, 7) + "`](https://github.com/MeteorDevelopment/meteor-client/commit/" + commit.sha + ") *" + commit.commit.message + "*";
+                changes += "\n- [`" + commit.sha.substring(0, 7) + "`](https://github.com/cookie-client/cookie-client/commit/" + commit.sha + ") *" + commit.commit.message + "*";
                 hasChanges = true;
             }
             if (hasChanges) description += changes;
