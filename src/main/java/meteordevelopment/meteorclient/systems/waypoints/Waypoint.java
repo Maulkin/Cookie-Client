@@ -5,13 +5,13 @@
 
 package meteordevelopment.meteorclient.systems.waypoints;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.renderer.Renderer2D;
-import meteordevelopment.meteorclient.settings.*;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
-import meteordevelopment.meteorclient.utils.world.Dimension;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.renderer.Renderer2D;
+import meteordevelopment.cookieclient.settings.*;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.utils.world.Dimension;
 import net.minecraft.client.texture.AbstractTexture;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;

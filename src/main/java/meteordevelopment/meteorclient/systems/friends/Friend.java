@@ -6,10 +6,10 @@
 package meteordevelopment.meteorclient.systems.friends;
 
 import com.mojang.util.UndashedUuid;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
-import meteordevelopment.meteorclient.utils.network.Http;
-import meteordevelopment.meteorclient.utils.render.PlayerHeadTexture;
-import meteordevelopment.meteorclient.utils.render.PlayerHeadUtils;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.utils.network.Http;
+import meteordevelopment.cookieclient.utils.render.PlayerHeadTexture;
+import meteordevelopment.cookieclient.utils.render.PlayerHeadUtils;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import org.jetbrains.annotations.NotNull;
@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.UUID;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class Friend implements ISerializable<Friend>, Comparable<Friend> {
     public volatile String name;

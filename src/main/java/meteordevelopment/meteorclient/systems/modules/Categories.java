@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.systems.modules;
 
-import meteordevelopment.meteorclient.addons.AddonManager;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
+import meteordevelopment.cookieclient.addons.AddonManager;
+import meteordevelopment.cookieclient.addons.MeteorAddon;
 import net.minecraft.item.Items;
 
 public class Categories {

@@ -5,14 +5,14 @@
 
 package meteordevelopment.meteorclient.mixin;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.meteor.CharTypedEvent;
-import meteordevelopment.meteorclient.events.meteor.KeyEvent;
-import meteordevelopment.meteorclient.gui.GuiKeyEvents;
-import meteordevelopment.meteorclient.gui.WidgetScreen;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.input.Input;
-import meteordevelopment.meteorclient.utils.misc.input.KeyAction;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.meteor.CharTypedEvent;
+import meteordevelopment.cookieclient.events.meteor.KeyEvent;
+import meteordevelopment.cookieclient.gui.GuiKeyEvents;
+import meteordevelopment.cookieclient.gui.WidgetScreen;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.input.Input;
+import meteordevelopment.cookieclient.utils.misc.input.KeyAction;
 import net.minecraft.client.Keyboard;
 import net.minecraft.client.MinecraftClient;
 import org.lwjgl.glfw.GLFW;

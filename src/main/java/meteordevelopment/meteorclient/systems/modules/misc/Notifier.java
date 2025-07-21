@@ -7,19 +7,19 @@ package meteordevelopment.meteorclient.systems.modules.misc;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-import meteordevelopment.meteorclient.events.entity.EntityAddedEvent;
-import meteordevelopment.meteorclient.events.entity.EntityRemovedEvent;
-import meteordevelopment.meteorclient.events.game.GameJoinedEvent;
-import meteordevelopment.meteorclient.events.game.GameLeftEvent;
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.entity.EntityAddedEvent;
+import meteordevelopment.cookieclient.events.entity.EntityRemovedEvent;
+import meteordevelopment.cookieclient.events.game.GameJoinedEvent;
+import meteordevelopment.cookieclient.events.game.GameLeftEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.friends.Friends;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.entity.fakeplayer.FakePlayerEntity;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.entity.fakeplayer.FakePlayerEntity;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.entity.Entity;
@@ -40,7 +40,7 @@ import net.minecraft.util.math.Vec3d;
 
 import java.util.*;
 
-import static meteordevelopment.meteorclient.utils.player.ChatUtils.formatCoords;
+import static meteordevelopment.cookieclient.utils.player.ChatUtils.formatCoords;
 
 public class Notifier extends Module {
     private final SettingGroup sgTotemPops = settings.createGroup("Totem Pops");

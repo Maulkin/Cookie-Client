@@ -5,13 +5,13 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement.speed.modes;
 
-import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
+import meteordevelopment.cookieclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.movement.Anchor;
 import meteordevelopment.meteorclient.systems.modules.movement.speed.SpeedMode;
 import meteordevelopment.meteorclient.systems.modules.movement.speed.SpeedModes;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
 import org.joml.Vector2d;
 
 public class Strafe extends SpeedMode {

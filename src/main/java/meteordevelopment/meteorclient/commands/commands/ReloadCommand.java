@@ -7,12 +7,12 @@ package meteordevelopment.meteorclient.commands.commands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import meteordevelopment.meteorclient.commands.Command;
-import meteordevelopment.meteorclient.renderer.Fonts;
+import meteordevelopment.cookieclient.renderer.Fonts;
 import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.friends.Friend;
 import meteordevelopment.meteorclient.systems.friends.Friends;
-import meteordevelopment.meteorclient.utils.network.Capes;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.cookieclient.utils.network.Capes;
+import meteordevelopment.cookieclient.utils.network.MeteorExecutor;
 import net.minecraft.command.CommandSource;
 
 public class ReloadCommand extends Command {

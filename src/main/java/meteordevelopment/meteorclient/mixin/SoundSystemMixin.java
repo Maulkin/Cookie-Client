@@ -6,8 +6,8 @@
 package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.world.PlaySoundEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.world.PlaySoundEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.misc.SoundBlocker;
 import net.minecraft.client.sound.SoundInstance;

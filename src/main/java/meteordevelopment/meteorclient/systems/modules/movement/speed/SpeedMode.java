@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement.speed;
 
-import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
+import meteordevelopment.cookieclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.effect.StatusEffectInstance;

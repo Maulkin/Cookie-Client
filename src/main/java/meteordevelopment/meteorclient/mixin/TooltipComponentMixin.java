@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.mixin;
 
-import meteordevelopment.meteorclient.utils.tooltip.MeteorTooltipData;
+import meteordevelopment.cookieclient.utils.tooltip.MeteorTooltipData;
 import net.minecraft.client.gui.tooltip.TooltipComponent;
 import net.minecraft.item.tooltip.TooltipData;
 import org.spongepowered.asm.mixin.Mixin;

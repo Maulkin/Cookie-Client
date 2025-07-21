@@ -5,17 +5,17 @@
 
 package meteordevelopment.meteorclient.systems.hud.screens;
 
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.WidgetScreen;
-import meteordevelopment.meteorclient.gui.tabs.builtin.HudTab;
-import meteordevelopment.meteorclient.renderer.Renderer2D;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.WidgetScreen;
+import meteordevelopment.cookieclient.gui.tabs.builtin.HudTab;
+import meteordevelopment.cookieclient.renderer.Renderer2D;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudElement;
 import meteordevelopment.meteorclient.systems.hud.HudRenderer;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.input.Input;
-import meteordevelopment.meteorclient.utils.other.Snapper;
-import meteordevelopment.meteorclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.input.Input;
+import meteordevelopment.cookieclient.utils.other.Snapper;
+import meteordevelopment.cookieclient.utils.render.color.Color;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.util.math.MathHelper;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class HudEditorScreen extends WidgetScreen implements Snapper.Container {
     private static final Color SPLIT_LINES_COLOR = new Color(255, 255, 255, 75);

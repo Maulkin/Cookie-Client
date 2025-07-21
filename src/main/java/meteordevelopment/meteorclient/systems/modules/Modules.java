@@ -6,17 +6,17 @@
 package meteordevelopment.meteorclient.systems.modules;
 
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceOpenHashMap;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.game.GameJoinedEvent;
-import meteordevelopment.meteorclient.events.game.GameLeftEvent;
-import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
-import meteordevelopment.meteorclient.events.meteor.ActiveModulesChangedEvent;
-import meteordevelopment.meteorclient.events.meteor.KeyEvent;
-import meteordevelopment.meteorclient.events.meteor.ModuleBindChangedEvent;
-import meteordevelopment.meteorclient.events.meteor.MouseButtonEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.game.GameJoinedEvent;
+import meteordevelopment.cookieclient.events.game.GameLeftEvent;
+import meteordevelopment.cookieclient.events.game.OpenScreenEvent;
+import meteordevelopment.cookieclient.events.meteor.ActiveModulesChangedEvent;
+import meteordevelopment.cookieclient.events.meteor.KeyEvent;
+import meteordevelopment.cookieclient.events.meteor.ModuleBindChangedEvent;
+import meteordevelopment.cookieclient.events.meteor.MouseButtonEvent;
 import meteordevelopment.meteorclient.pathing.BaritoneUtils;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.System;
 import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.config.Config;
@@ -32,11 +32,11 @@ import meteordevelopment.meteorclient.systems.modules.render.blockesp.BlockESP;
 import meteordevelopment.meteorclient.systems.modules.render.marker.Marker;
 import meteordevelopment.meteorclient.systems.modules.world.Timer;
 import meteordevelopment.meteorclient.systems.modules.world.*;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.Keybind;
-import meteordevelopment.meteorclient.utils.misc.ValueComparableMap;
-import meteordevelopment.meteorclient.utils.misc.input.Input;
-import meteordevelopment.meteorclient.utils.misc.input.KeyAction;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.Keybind;
+import meteordevelopment.cookieclient.utils.misc.ValueComparableMap;
+import meteordevelopment.cookieclient.utils.misc.input.Input;
+import meteordevelopment.cookieclient.utils.misc.input.KeyAction;
 import meteordevelopment.orbit.EventHandler;
 import meteordevelopment.orbit.EventPriority;
 import net.minecraft.nbt.NbtCompound;
@@ -48,7 +48,7 @@ import java.io.File;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class Modules extends System<Modules> {
     private static final List<Category> CATEGORIES = new ArrayList<>();

@@ -1,0 +1,52 @@
+/*
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
+ */
+
+package meteordevelopment.cookieclient.gui.screens.settings;
+
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.widgets.WWidget;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.utils.misc.Names;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.PotionContentsComponent;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
+
+import java.util.List;
+import java.util.Optional;
+
+public class StatusEffectListSettingScreen extends CollectionListSettingScreen<StatusEffect> {
+    public StatusEffectListSettingScreen(GuiTheme theme, Setting<List<StatusEffect>> setting) {
+        super(theme, "Select Effects", setting, setting.get(), Registries.STATUS_EFFECT);
+    }
+
+    @Override
+    protected WWidget getValueWidget(StatusEffect value) {
+        return theme.itemWithLabel(getPotionStack(value), getValueName(value));
+    }
+
+    @Override
+    protected String getValueName(StatusEffect value) {
+        return Names.get(value);
+    }
+
+    private ItemStack getPotionStack(StatusEffect effect) {
+        ItemStack potion = Items.POTION.getDefaultStack();
+
+        potion.set(
+            DataComponentTypes.POTION_CONTENTS,
+            new PotionContentsComponent(
+                potion.get(DataComponentTypes.POTION_CONTENTS).potion(),
+                Optional.of(effect.getColor()),
+                potion.get(DataComponentTypes.POTION_CONTENTS).customEffects(),
+                Optional.empty()
+            )
+        );
+
+        return potion;
+    }
+}

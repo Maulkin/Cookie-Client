@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.systems.hud;
 
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
 import net.minecraft.nbt.NbtCompound;
 
 public class HudBox implements ISerializable<HudBox> {

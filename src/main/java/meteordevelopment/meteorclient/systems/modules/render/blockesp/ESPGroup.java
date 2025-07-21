@@ -6,10 +6,10 @@
 package meteordevelopment.meteorclient.systems.modules.render.blockesp;
 
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
-import meteordevelopment.meteorclient.events.render.Render3DEvent;
+import meteordevelopment.cookieclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
-import meteordevelopment.meteorclient.utils.misc.UnorderedArrayList;
-import meteordevelopment.meteorclient.utils.render.RenderUtils;
+import meteordevelopment.cookieclient.utils.misc.UnorderedArrayList;
+import meteordevelopment.cookieclient.utils.render.RenderUtils;
 import net.minecraft.block.Block;
 
 import java.util.ArrayDeque;

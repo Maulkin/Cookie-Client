@@ -10,15 +10,15 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.meteor.CustomFontChangedEvent;
-import meteordevelopment.meteorclient.renderer.*;
-import meteordevelopment.meteorclient.renderer.text.CustomTextRenderer;
-import meteordevelopment.meteorclient.renderer.text.Font;
-import meteordevelopment.meteorclient.renderer.text.VanillaTextRenderer;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.render.RenderUtils;
-import meteordevelopment.meteorclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.meteor.CustomFontChangedEvent;
+import meteordevelopment.cookieclient.renderer.*;
+import meteordevelopment.cookieclient.renderer.text.CustomTextRenderer;
+import meteordevelopment.cookieclient.renderer.text.Font;
+import meteordevelopment.cookieclient.renderer.text.VanillaTextRenderer;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.render.RenderUtils;
+import meteordevelopment.cookieclient.utils.render.color.Color;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.entity.state.LivingEntityRenderState;
@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class HudRenderer {
     public static final HudRenderer INSTANCE = new HudRenderer();

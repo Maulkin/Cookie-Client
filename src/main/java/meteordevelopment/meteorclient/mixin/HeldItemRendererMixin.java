@@ -7,9 +7,9 @@ package meteordevelopment.meteorclient.mixin;
 
 import com.google.common.base.MoreObjects;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.render.ArmRenderEvent;
-import meteordevelopment.meteorclient.events.render.HeldItemRendererEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.render.ArmRenderEvent;
+import meteordevelopment.cookieclient.events.render.HeldItemRendererEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.render.HandView;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -28,7 +28,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 @Mixin(HeldItemRenderer.class)
 public abstract class HeldItemRendererMixin {

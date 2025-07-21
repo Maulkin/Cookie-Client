@@ -12,7 +12,7 @@ import meteordevelopment.meteorclient.commands.arguments.FriendArgumentType;
 import meteordevelopment.meteorclient.commands.arguments.PlayerListEntryArgumentType;
 import meteordevelopment.meteorclient.systems.friends.Friend;
 import meteordevelopment.meteorclient.systems.friends.Friends;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
 import net.minecraft.command.CommandSource;
 import net.minecraft.util.Formatting;
 

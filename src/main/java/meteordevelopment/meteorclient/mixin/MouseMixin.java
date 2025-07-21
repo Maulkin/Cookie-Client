@@ -5,11 +5,11 @@
 
 package meteordevelopment.meteorclient.mixin;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.meteor.MouseButtonEvent;
-import meteordevelopment.meteorclient.events.meteor.MouseScrollEvent;
-import meteordevelopment.meteorclient.utils.misc.input.Input;
-import meteordevelopment.meteorclient.utils.misc.input.KeyAction;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.meteor.MouseButtonEvent;
+import meteordevelopment.cookieclient.events.meteor.MouseScrollEvent;
+import meteordevelopment.cookieclient.utils.misc.input.Input;
+import meteordevelopment.cookieclient.utils.misc.input.KeyAction;
 import net.minecraft.client.Mouse;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

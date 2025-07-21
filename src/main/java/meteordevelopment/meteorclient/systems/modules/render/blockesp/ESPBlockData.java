@@ -5,16 +5,16 @@
 
 package meteordevelopment.meteorclient.systems.modules.render.blockesp;
 
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.WidgetScreen;
-import meteordevelopment.meteorclient.gui.utils.IScreenFactory;
-import meteordevelopment.meteorclient.renderer.ShapeMode;
-import meteordevelopment.meteorclient.settings.BlockDataSetting;
-import meteordevelopment.meteorclient.settings.IBlockData;
-import meteordevelopment.meteorclient.utils.misc.IChangeable;
-import meteordevelopment.meteorclient.utils.misc.ICopyable;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.WidgetScreen;
+import meteordevelopment.cookieclient.gui.utils.IScreenFactory;
+import meteordevelopment.cookieclient.renderer.ShapeMode;
+import meteordevelopment.cookieclient.settings.BlockDataSetting;
+import meteordevelopment.cookieclient.settings.IBlockData;
+import meteordevelopment.cookieclient.utils.misc.IChangeable;
+import meteordevelopment.cookieclient.utils.misc.ICopyable;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
 import net.minecraft.block.Block;
 import net.minecraft.nbt.NbtCompound;
 

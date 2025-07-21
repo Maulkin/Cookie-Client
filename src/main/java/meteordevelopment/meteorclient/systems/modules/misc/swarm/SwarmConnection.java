@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.misc.swarm;
 
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
 
 import java.io.DataOutputStream;
 import java.io.IOException;

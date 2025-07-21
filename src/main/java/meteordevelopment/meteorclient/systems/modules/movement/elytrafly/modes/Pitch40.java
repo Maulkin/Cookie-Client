@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement.elytrafly.modes;
 
-import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
+import meteordevelopment.cookieclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.systems.modules.movement.elytrafly.ElytraFlightMode;
 import meteordevelopment.meteorclient.systems.modules.movement.elytrafly.ElytraFlightModes;
 

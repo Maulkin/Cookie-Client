@@ -5,10 +5,10 @@
 
 package meteordevelopment.meteorclient.systems.modules.render;
 
-import meteordevelopment.meteorclient.events.render.RenderBlockEntityEvent;
-import meteordevelopment.meteorclient.events.world.ChunkOcclusionEvent;
-import meteordevelopment.meteorclient.events.world.ParticleEvent;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.render.RenderBlockEntityEvent;
+import meteordevelopment.cookieclient.events.world.ChunkOcclusionEvent;
+import meteordevelopment.cookieclient.events.world.ParticleEvent;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;

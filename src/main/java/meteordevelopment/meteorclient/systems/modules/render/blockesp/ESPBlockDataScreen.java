@@ -5,11 +5,11 @@
 
 package meteordevelopment.meteorclient.systems.modules.render.blockesp;
 
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.WindowScreen;
-import meteordevelopment.meteorclient.renderer.ShapeMode;
-import meteordevelopment.meteorclient.settings.*;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.WindowScreen;
+import meteordevelopment.cookieclient.renderer.ShapeMode;
+import meteordevelopment.cookieclient.settings.*;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
 import net.minecraft.block.Block;
 
 public class ESPBlockDataScreen extends WindowScreen {

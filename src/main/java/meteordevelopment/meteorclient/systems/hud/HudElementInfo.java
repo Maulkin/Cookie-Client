@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.hud;
 
-import meteordevelopment.meteorclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Comparator;

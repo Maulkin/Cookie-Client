@@ -11,8 +11,8 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.utils.notebot.decoder.SongDecoders;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.utils.notebot.decoder.SongDecoders;
 import net.minecraft.command.CommandSource;
 
 import java.io.IOException;

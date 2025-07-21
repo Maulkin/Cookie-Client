@@ -1,0 +1,40 @@
+/*
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
+ */
+
+package meteordevelopment.cookieclient.gui.screens.settings;
+
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.widgets.WWidget;
+import meteordevelopment.cookieclient.settings.ItemListSetting;
+import meteordevelopment.cookieclient.utils.misc.Names;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
+
+import java.util.function.Predicate;
+
+public class ItemListSettingScreen extends CollectionListSettingScreen<Item> {
+    public ItemListSettingScreen(GuiTheme theme, ItemListSetting setting) {
+        super(theme, "Select Items", setting, setting.get(), Registries.ITEM);
+    }
+
+    @Override
+    protected boolean includeValue(Item value) {
+        Predicate<Item> filter = ((ItemListSetting) setting).filter;
+        if (filter != null && !filter.test(value)) return false;
+
+        return value != Items.AIR;
+    }
+
+    @Override
+    protected WWidget getValueWidget(Item value) {
+        return theme.itemWithLabel(value.getDefaultStack());
+    }
+
+    @Override
+    protected String getValueName(Item value) {
+        return Names.get(value);
+    }
+}

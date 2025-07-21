@@ -6,11 +6,11 @@
 package meteordevelopment.meteorclient.mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import meteordevelopment.meteorclient.renderer.MeshUniforms;
+import meteordevelopment.cookieclient.renderer.MeshUniforms;
 import meteordevelopment.meteorclient.systems.modules.render.Blur;
-import meteordevelopment.meteorclient.utils.render.postprocess.ChamsShader;
-import meteordevelopment.meteorclient.utils.render.postprocess.OutlineUniforms;
-import meteordevelopment.meteorclient.utils.render.postprocess.PostProcessShader;
+import meteordevelopment.cookieclient.utils.render.postprocess.ChamsShader;
+import meteordevelopment.cookieclient.utils.render.postprocess.OutlineUniforms;
+import meteordevelopment.cookieclient.utils.render.postprocess.PostProcessShader;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

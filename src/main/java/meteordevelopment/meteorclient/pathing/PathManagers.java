@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.pathing;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.utils.PreInit;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.utils.PreInit;
 
 import java.lang.reflect.InvocationTargetException;
 

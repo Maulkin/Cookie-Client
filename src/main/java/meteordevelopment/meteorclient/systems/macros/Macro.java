@@ -5,12 +5,12 @@
 
 package meteordevelopment.meteorclient.systems.macros;
 
-import meteordevelopment.meteorclient.gui.utils.StarscriptTextBoxRenderer;
-import meteordevelopment.meteorclient.settings.*;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
-import meteordevelopment.meteorclient.utils.misc.Keybind;
-import meteordevelopment.meteorclient.utils.misc.MeteorStarscript;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.gui.utils.StarscriptTextBoxRenderer;
+import meteordevelopment.cookieclient.settings.*;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.utils.misc.Keybind;
+import meteordevelopment.cookieclient.utils.misc.MeteorStarscript;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import org.meteordev.starscript.Script;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class Macro implements ISerializable<Macro> {
     public final Settings settings = new Settings();

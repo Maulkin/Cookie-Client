@@ -10,13 +10,13 @@ import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.commands.arguments.ModuleArgumentType;
 import meteordevelopment.meteorclient.commands.arguments.SettingArgumentType;
 import meteordevelopment.meteorclient.commands.arguments.SettingValueArgumentType;
-import meteordevelopment.meteorclient.gui.GuiThemes;
-import meteordevelopment.meteorclient.gui.WidgetScreen;
-import meteordevelopment.meteorclient.gui.tabs.TabScreen;
-import meteordevelopment.meteorclient.gui.tabs.Tabs;
-import meteordevelopment.meteorclient.settings.Setting;
+import meteordevelopment.cookieclient.gui.GuiThemes;
+import meteordevelopment.cookieclient.gui.WidgetScreen;
+import meteordevelopment.cookieclient.gui.tabs.TabScreen;
+import meteordevelopment.cookieclient.gui.tabs.Tabs;
+import meteordevelopment.cookieclient.settings.Setting;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.Utils;
 import net.minecraft.command.CommandSource;
 
 public class SettingCommand extends Command {

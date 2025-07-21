@@ -5,28 +5,28 @@
 
 package meteordevelopment.meteorclient.systems.modules.render;
 
-import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
-import meteordevelopment.meteorclient.events.render.Render2DEvent;
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.screens.EditSystemScreen;
-import meteordevelopment.meteorclient.gui.widgets.WLabel;
-import meteordevelopment.meteorclient.gui.widgets.WWidget;
-import meteordevelopment.meteorclient.gui.widgets.containers.WTable;
-import meteordevelopment.meteorclient.gui.widgets.pressable.WButton;
-import meteordevelopment.meteorclient.gui.widgets.pressable.WCheckbox;
-import meteordevelopment.meteorclient.gui.widgets.pressable.WMinus;
+import meteordevelopment.cookieclient.events.game.OpenScreenEvent;
+import meteordevelopment.cookieclient.events.render.Render2DEvent;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.renderer.GuiRenderer;
+import meteordevelopment.cookieclient.gui.screens.EditSystemScreen;
+import meteordevelopment.cookieclient.gui.widgets.WLabel;
+import meteordevelopment.cookieclient.gui.widgets.WWidget;
+import meteordevelopment.cookieclient.gui.widgets.containers.WTable;
+import meteordevelopment.cookieclient.gui.widgets.pressable.WButton;
+import meteordevelopment.cookieclient.gui.widgets.pressable.WCheckbox;
+import meteordevelopment.cookieclient.gui.widgets.pressable.WMinus;
 import meteordevelopment.meteorclient.pathing.PathManagers;
-import meteordevelopment.meteorclient.renderer.text.TextRenderer;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.renderer.text.TextRenderer;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.waypoints.Waypoint;
 import meteordevelopment.meteorclient.systems.waypoints.Waypoints;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
-import meteordevelopment.meteorclient.utils.render.NametagUtils;
-import meteordevelopment.meteorclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.render.NametagUtils;
+import meteordevelopment.cookieclient.utils.render.color.Color;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.DeathScreen;
@@ -40,7 +40,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
 
-import static meteordevelopment.meteorclient.utils.player.ChatUtils.formatCoords;
+import static meteordevelopment.cookieclient.utils.player.ChatUtils.formatCoords;
 
 public class WaypointsModule extends Module {
     private static final Color GRAY = new Color(200, 200, 200);

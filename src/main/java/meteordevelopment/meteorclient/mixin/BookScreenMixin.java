@@ -6,9 +6,9 @@
 package meteordevelopment.meteorclient.mixin;
 
 import it.unimi.dsi.fastutil.io.FastByteArrayOutputStream;
-import meteordevelopment.meteorclient.gui.GuiThemes;
-import meteordevelopment.meteorclient.gui.screens.EditBookTitleAndAuthorScreen;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.gui.GuiThemes;
+import meteordevelopment.cookieclient.gui.screens.EditBookTitleAndAuthorScreen;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ingame.BookScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -33,7 +33,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.Base64;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 @Mixin(BookScreen.class)
 public abstract class BookScreenMixin extends Screen {

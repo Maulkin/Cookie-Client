@@ -12,7 +12,7 @@ import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
 import com.mojang.serialization.DataResult;
 import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.commands.arguments.ComponentMapArgumentType;
-import meteordevelopment.meteorclient.utils.misc.text.MeteorClickEvent;
+import meteordevelopment.cookieclient.utils.misc.text.MeteorClickEvent;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.DataCommandObject;
 import net.minecraft.command.EntityDataObject;

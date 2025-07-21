@@ -7,8 +7,8 @@ package meteordevelopment.meteorclient.pathing;
 
 import baritone.api.BaritoneAPI;
 import baritone.api.utils.SettingsUtil;
-import meteordevelopment.meteorclient.settings.*;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.settings.*;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 

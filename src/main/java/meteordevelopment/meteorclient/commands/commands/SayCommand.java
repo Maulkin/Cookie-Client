@@ -9,7 +9,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.mixin.ClientPlayNetworkHandlerAccessor;
-import meteordevelopment.meteorclient.utils.misc.MeteorStarscript;
+import meteordevelopment.cookieclient.utils.misc.MeteorStarscript;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.command.CommandSource;
 import net.minecraft.network.encryption.NetworkEncryptionUtils;
