@@ -2,7 +2,7 @@
   "required": false,
   "package": "meteordevelopment.meteorclient.mixin.sodium",
   "compatibilityLevel": "JAVA_21",
-  "plugin": "meteordevelopment.meteorclient.MixinPlugin",
+  "plugin": "meteordevelopment.cookieclient.MixinPlugin",
   "client": [
     "MeshVertexConsumerMixin",
     "SodiumBlockOcclusionCacheMixin",

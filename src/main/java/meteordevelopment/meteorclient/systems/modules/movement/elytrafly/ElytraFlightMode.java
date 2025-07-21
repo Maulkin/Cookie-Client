@@ -5,12 +5,12 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement.elytrafly;
 
-import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.entity.player.PlayerMoveEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
-import meteordevelopment.meteorclient.utils.player.FindItemResult;
-import meteordevelopment.meteorclient.utils.player.InvUtils;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.player.FindItemResult;
+import meteordevelopment.cookieclient.utils.player.InvUtils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;

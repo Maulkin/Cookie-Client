@@ -5,12 +5,12 @@
 
 package meteordevelopment.meteorclient.systems.modules.render;
 
-import meteordevelopment.meteorclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.mixin.StatusEffectInstanceAccessor;
-import meteordevelopment.meteorclient.settings.EnumSetting;
-import meteordevelopment.meteorclient.settings.IntSetting;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.settings.EnumSetting;
+import meteordevelopment.cookieclient.settings.IntSetting;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;

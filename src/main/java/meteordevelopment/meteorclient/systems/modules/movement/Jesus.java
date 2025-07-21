@@ -6,18 +6,18 @@
 package meteordevelopment.meteorclient.systems.modules.movement;
 
 import com.google.common.collect.Streams;
-import meteordevelopment.meteorclient.events.entity.player.CanWalkOnFluidEvent;
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
-import meteordevelopment.meteorclient.events.world.CollisionShapeEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.events.entity.player.CanWalkOnFluidEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.world.CollisionShapeEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.mixin.LivingEntityAccessor;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
 import meteordevelopment.meteorclient.pathing.PathManagers;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
-import meteordevelopment.meteorclient.utils.entity.EntityUtils;
+import meteordevelopment.cookieclient.utils.entity.EntityUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

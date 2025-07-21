@@ -2,7 +2,7 @@
   "required": false,
   "package": "meteordevelopment.meteorclient.mixin.lithium",
   "compatibilityLevel": "JAVA_21",
-  "plugin": "meteordevelopment.meteorclient.MixinPlugin",
+  "plugin": "meteordevelopment.cookieclient.MixinPlugin",
   "client": [
     "ChunkAwareBlockCollisionSweeperMixin",
     "LithiumEntityCollisionsMixin"

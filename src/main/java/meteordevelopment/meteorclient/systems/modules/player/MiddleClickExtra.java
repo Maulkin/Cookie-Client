@@ -5,23 +5,23 @@
 
 package meteordevelopment.meteorclient.systems.modules.player;
 
-import meteordevelopment.meteorclient.events.entity.player.FinishUsingItemEvent;
-import meteordevelopment.meteorclient.events.entity.player.StoppedUsingItemEvent;
-import meteordevelopment.meteorclient.events.meteor.MouseButtonEvent;
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.settings.BoolSetting;
-import meteordevelopment.meteorclient.settings.EnumSetting;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.events.entity.player.FinishUsingItemEvent;
+import meteordevelopment.cookieclient.events.entity.player.StoppedUsingItemEvent;
+import meteordevelopment.cookieclient.events.meteor.MouseButtonEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.settings.BoolSetting;
+import meteordevelopment.cookieclient.settings.EnumSetting;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.friends.Friend;
 import meteordevelopment.meteorclient.systems.friends.Friends;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.misc.input.KeyAction;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
-import meteordevelopment.meteorclient.utils.player.FindItemResult;
-import meteordevelopment.meteorclient.utils.player.InvUtils;
+import meteordevelopment.cookieclient.utils.misc.input.KeyAction;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.utils.player.FindItemResult;
+import meteordevelopment.cookieclient.utils.player.InvUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BowItem;

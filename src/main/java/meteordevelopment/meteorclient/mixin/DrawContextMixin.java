@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReceiver;
 import com.llamalad7.mixinextras.sugar.Local;
-import meteordevelopment.meteorclient.utils.tooltip.MeteorTooltipData;
+import meteordevelopment.cookieclient.utils.tooltip.MeteorTooltipData;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.tooltip.TooltipComponent;

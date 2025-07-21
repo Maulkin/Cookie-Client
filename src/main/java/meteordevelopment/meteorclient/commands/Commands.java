@@ -9,14 +9,14 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import meteordevelopment.meteorclient.commands.commands.*;
 import meteordevelopment.meteorclient.pathing.PathManagers;
-import meteordevelopment.meteorclient.utils.PostInit;
+import meteordevelopment.cookieclient.utils.PostInit;
 import net.minecraft.command.CommandSource;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class Commands {
     public static final CommandDispatcher<CommandSource> DISPATCHER = new CommandDispatcher<>();

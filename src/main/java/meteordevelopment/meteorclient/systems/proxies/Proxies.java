@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.systems.proxies;
 
 import meteordevelopment.meteorclient.systems.System;
 import meteordevelopment.meteorclient.systems.Systems;
-import meteordevelopment.meteorclient.utils.misc.NbtUtils;
+import meteordevelopment.cookieclient.utils.misc.NbtUtils;
 import net.minecraft.nbt.NbtCompound;
 import org.jetbrains.annotations.NotNull;
 

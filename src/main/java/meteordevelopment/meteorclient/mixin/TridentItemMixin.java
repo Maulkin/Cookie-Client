@@ -8,7 +8,7 @@ package meteordevelopment.meteorclient.mixin;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.movement.TridentBoost;
-import meteordevelopment.meteorclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.Utils;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.TridentItem;
@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 @Mixin(TridentItem.class)
 public abstract class TridentItemMixin {

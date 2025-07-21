@@ -6,7 +6,7 @@
 package meteordevelopment.meteorclient.systems.modules.player;
 
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
-import meteordevelopment.meteorclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;

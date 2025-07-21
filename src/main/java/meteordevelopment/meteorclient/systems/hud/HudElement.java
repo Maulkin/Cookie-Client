@@ -5,13 +5,13 @@
 
 package meteordevelopment.meteorclient.systems.hud;
 
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.widgets.WWidget;
-import meteordevelopment.meteorclient.settings.Settings;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.widgets.WWidget;
+import meteordevelopment.cookieclient.settings.Settings;
 import meteordevelopment.meteorclient.systems.hud.screens.HudEditorScreen;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
-import meteordevelopment.meteorclient.utils.other.Snapper;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.utils.other.Snapper;
 import net.minecraft.nbt.NbtCompound;
 
 public abstract class HudElement implements Snapper.Element, ISerializable<HudElement> {

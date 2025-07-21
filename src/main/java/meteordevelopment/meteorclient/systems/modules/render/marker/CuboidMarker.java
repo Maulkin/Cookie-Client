@@ -5,10 +5,10 @@
 
 package meteordevelopment.meteorclient.systems.modules.render.marker;
 
-import meteordevelopment.meteorclient.events.render.Render3DEvent;
-import meteordevelopment.meteorclient.renderer.ShapeMode;
-import meteordevelopment.meteorclient.settings.*;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.events.render.Render3DEvent;
+import meteordevelopment.cookieclient.renderer.ShapeMode;
+import meteordevelopment.cookieclient.settings.*;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
 import net.minecraft.util.math.BlockPos;
 
 // TODO: Add outline and more modes

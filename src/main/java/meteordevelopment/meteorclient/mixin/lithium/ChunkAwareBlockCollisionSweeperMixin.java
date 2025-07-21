@@ -7,8 +7,8 @@ package meteordevelopment.meteorclient.mixin.lithium;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.world.CollisionShapeEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.world.CollisionShapeEvent;
 import net.caffeinemc.mods.lithium.common.entity.movement.ChunkAwareBlockCollisionSweeper;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;

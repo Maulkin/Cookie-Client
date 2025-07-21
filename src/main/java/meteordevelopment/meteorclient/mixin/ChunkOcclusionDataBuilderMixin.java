@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.mixin;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.world.ChunkOcclusionEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.world.ChunkOcclusionEvent;
 import net.minecraft.client.render.chunk.ChunkOcclusionDataBuilder;
 import net.minecraft.util.math.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;

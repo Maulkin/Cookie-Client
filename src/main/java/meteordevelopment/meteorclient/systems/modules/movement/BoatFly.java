@@ -5,16 +5,16 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement;
 
-import meteordevelopment.meteorclient.events.entity.BoatMoveEvent;
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.entity.BoatMoveEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
-import meteordevelopment.meteorclient.settings.BoolSetting;
-import meteordevelopment.meteorclient.settings.DoubleSetting;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.settings.BoolSetting;
+import meteordevelopment.cookieclient.settings.DoubleSetting;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.network.packet.s2c.play.VehicleMoveS2CPacket;
 import net.minecraft.util.math.Vec3d;

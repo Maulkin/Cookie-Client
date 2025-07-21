@@ -5,23 +5,23 @@
 
 package meteordevelopment.meteorclient.systems.modules.combat;
 
-import meteordevelopment.meteorclient.events.render.Render3DEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.events.render.Render3DEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.mixin.AbstractBlockAccessor;
-import meteordevelopment.meteorclient.renderer.ShapeMode;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.renderer.ShapeMode;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.friends.Friends;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.misc.Keybind;
-import meteordevelopment.meteorclient.utils.player.FindItemResult;
-import meteordevelopment.meteorclient.utils.player.InvUtils;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
-import meteordevelopment.meteorclient.utils.render.color.Color;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
-import meteordevelopment.meteorclient.utils.world.BlockIterator;
-import meteordevelopment.meteorclient.utils.world.BlockUtils;
-import meteordevelopment.meteorclient.utils.world.Dir;
+import meteordevelopment.cookieclient.utils.misc.Keybind;
+import meteordevelopment.cookieclient.utils.player.FindItemResult;
+import meteordevelopment.cookieclient.utils.player.InvUtils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.utils.world.BlockIterator;
+import meteordevelopment.cookieclient.utils.world.BlockUtils;
+import meteordevelopment.cookieclient.utils.world.Dir;
 import meteordevelopment.orbit.EventHandler;
 import meteordevelopment.orbit.EventPriority;
 import net.minecraft.block.Block;

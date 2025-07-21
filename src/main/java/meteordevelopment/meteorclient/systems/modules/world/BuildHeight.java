@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.world;
 
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.mixin.BlockHitResultAccessor;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;

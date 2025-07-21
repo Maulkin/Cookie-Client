@@ -5,22 +5,22 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement;
 
-import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
-import meteordevelopment.meteorclient.events.meteor.KeyEvent;
-import meteordevelopment.meteorclient.events.meteor.MouseButtonEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.events.entity.player.PlayerMoveEvent;
+import meteordevelopment.cookieclient.events.meteor.KeyEvent;
+import meteordevelopment.cookieclient.events.meteor.MouseButtonEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
 import meteordevelopment.meteorclient.pathing.NopPathManager;
 import meteordevelopment.meteorclient.pathing.PathManagers;
-import meteordevelopment.meteorclient.settings.BoolSetting;
-import meteordevelopment.meteorclient.settings.EnumSetting;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.settings.BoolSetting;
+import meteordevelopment.cookieclient.settings.EnumSetting;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.input.KeyAction;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.input.KeyAction;
 import meteordevelopment.orbit.EventHandler;
 import meteordevelopment.orbit.EventPriority;
 

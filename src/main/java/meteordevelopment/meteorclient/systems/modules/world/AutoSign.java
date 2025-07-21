@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.systems.modules.world;
 
-import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.game.OpenScreenEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.mixin.AbstractSignEditScreenAccessor;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;

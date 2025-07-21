@@ -11,8 +11,8 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
-import meteordevelopment.meteorclient.utils.entity.fakeplayer.FakePlayerEntity;
-import meteordevelopment.meteorclient.utils.entity.fakeplayer.FakePlayerManager;
+import meteordevelopment.cookieclient.utils.entity.fakeplayer.FakePlayerEntity;
+import meteordevelopment.cookieclient.utils.entity.fakeplayer.FakePlayerManager;
 
 import java.util.Collection;
 import java.util.List;

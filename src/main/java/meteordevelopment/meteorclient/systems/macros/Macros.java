@@ -5,13 +5,13 @@
 
 package meteordevelopment.meteorclient.systems.macros;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.meteor.KeyEvent;
-import meteordevelopment.meteorclient.events.meteor.MouseButtonEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.meteor.KeyEvent;
+import meteordevelopment.cookieclient.events.meteor.MouseButtonEvent;
 import meteordevelopment.meteorclient.systems.System;
 import meteordevelopment.meteorclient.systems.Systems;
-import meteordevelopment.meteorclient.utils.misc.NbtUtils;
-import meteordevelopment.meteorclient.utils.misc.input.KeyAction;
+import meteordevelopment.cookieclient.utils.misc.NbtUtils;
+import meteordevelopment.cookieclient.utils.misc.input.KeyAction;
 import meteordevelopment.orbit.EventHandler;
 import meteordevelopment.orbit.EventPriority;
 import net.minecraft.nbt.NbtCompound;

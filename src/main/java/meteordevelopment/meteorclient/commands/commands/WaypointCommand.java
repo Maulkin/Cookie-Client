@@ -12,7 +12,7 @@ import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.commands.arguments.WaypointArgumentType;
 import meteordevelopment.meteorclient.systems.waypoints.Waypoint;
 import meteordevelopment.meteorclient.systems.waypoints.Waypoints;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.argument.PosArgument;
 import net.minecraft.command.argument.Vec3ArgumentType;

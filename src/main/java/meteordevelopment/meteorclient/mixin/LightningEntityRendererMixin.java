@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.mixin;
 
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.world.Ambience;
-import meteordevelopment.meteorclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.utils.render.color.Color;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.LightningEntityRenderer;
 import org.joml.Matrix4f;

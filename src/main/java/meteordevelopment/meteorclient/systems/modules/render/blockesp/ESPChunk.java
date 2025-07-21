@@ -7,18 +7,19 @@ package meteordevelopment.meteorclient.systems.modules.render.blockesp;
 
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
-import meteordevelopment.meteorclient.events.render.Render3DEvent;
+import meteordevelopment.cookieclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkSectionPos;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.chunk.Chunk;
 
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
-import static meteordevelopment.meteorclient.utils.Utils.getRenderDistance;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.utils.Utils.getRenderDistance;
 
 public class ESPChunk {
     private static final BlockESP blockEsp = Modules.get().get(BlockESP.class);
@@ -109,15 +110,11 @@ public class ESPChunk {
 
         for (int x = chunk.getPos().getStartX(); x <= chunk.getPos().getEndX(); x++) {
             for (int z = chunk.getPos().getStartZ(); z <= chunk.getPos().getEndZ(); z++) {
-                int minY = mc.world.getBottomY();
-                int maxY = mc.world.getHeight();
+                int height = chunk.getHeightmap(Heightmap.Type.WORLD_SURFACE).get(x - chunk.getPos().getStartX(), z - chunk.getPos().getStartZ());
 
-d6va1g-codex/add-vertical-check-in-espchunk.shouldbedeleted
                 if (height > maxHeight) maxHeight = height;
 
                 for (int y = mc.world.getBottomY(); y < height; y++) {
-
-master
                     blockPos.set(x, y, z);
                     BlockState bs = chunk.getBlockState(blockPos);
 

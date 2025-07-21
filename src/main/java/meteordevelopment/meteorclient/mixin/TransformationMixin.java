@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.mixin;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.render.ApplyTransformationEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.render.ApplyTransformationEvent;
 import net.minecraft.client.render.model.json.Transformation;
 import net.minecraft.client.util.math.MatrixStack;
 import org.spongepowered.asm.mixin.Mixin;

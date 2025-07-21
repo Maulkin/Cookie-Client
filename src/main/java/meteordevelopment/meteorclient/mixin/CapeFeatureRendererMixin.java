@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import meteordevelopment.meteorclient.mixininterface.IEntityRenderState;
-import meteordevelopment.meteorclient.utils.network.Capes;
+import meteordevelopment.cookieclient.utils.network.Capes;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.feature.CapeFeatureRenderer;
 import net.minecraft.client.render.entity.state.PlayerEntityRenderState;

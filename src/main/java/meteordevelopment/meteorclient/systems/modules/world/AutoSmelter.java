@@ -6,14 +6,14 @@
 package meteordevelopment.meteorclient.systems.modules.world;
 
 import meteordevelopment.meteorclient.mixininterface.IAbstractFurnaceScreenHandler;
-import meteordevelopment.meteorclient.settings.BoolSetting;
-import meteordevelopment.meteorclient.settings.ItemListSetting;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.settings.BoolSetting;
+import meteordevelopment.cookieclient.settings.ItemListSetting;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.player.InvUtils;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.player.InvUtils;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;

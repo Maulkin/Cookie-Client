@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement;
 
-import meteordevelopment.meteorclient.events.entity.player.ClipAtLedgeEvent;
+import meteordevelopment.cookieclient.events.entity.player.ClipAtLedgeEvent;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;

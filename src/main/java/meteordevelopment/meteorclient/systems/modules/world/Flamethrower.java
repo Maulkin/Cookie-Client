@@ -5,15 +5,15 @@
 
 package meteordevelopment.meteorclient.systems.modules.world;
 
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.misc.HorizontalDirection;
-import meteordevelopment.meteorclient.utils.player.FindItemResult;
-import meteordevelopment.meteorclient.utils.player.InvUtils;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
-import meteordevelopment.meteorclient.utils.player.Rotations;
+import meteordevelopment.cookieclient.utils.misc.HorizontalDirection;
+import meteordevelopment.cookieclient.utils.player.FindItemResult;
+import meteordevelopment.cookieclient.utils.player.InvUtils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.player.Rotations;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;

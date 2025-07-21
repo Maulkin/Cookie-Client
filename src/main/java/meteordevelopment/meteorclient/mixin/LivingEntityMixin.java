@@ -7,8 +7,8 @@ package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.entity.player.CanWalkOnFluidEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.entity.player.CanWalkOnFluidEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.movement.Sprint;
 import meteordevelopment.meteorclient.systems.modules.movement.elytrafly.ElytraFlightModes;
@@ -37,7 +37,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {

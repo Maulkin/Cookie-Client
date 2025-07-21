@@ -6,11 +6,11 @@
 package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.entity.player.FinishUsingItemEvent;
-import meteordevelopment.meteorclient.events.entity.player.StoppedUsingItemEvent;
-import meteordevelopment.meteorclient.events.game.ItemStackTooltipEvent;
-import meteordevelopment.meteorclient.utils.Utils;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.entity.player.FinishUsingItemEvent;
+import meteordevelopment.cookieclient.events.entity.player.StoppedUsingItemEvent;
+import meteordevelopment.cookieclient.events.game.ItemStackTooltipEvent;
+import meteordevelopment.cookieclient.utils.Utils;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -23,7 +23,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 @Mixin(ItemStack.class)
 public abstract class ItemStackMixin {

@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.mixin;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.entity.player.PlaceBlockEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.entity.player.PlaceBlockEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.world.NoGhostBlocks;
 import net.minecraft.block.BlockState;

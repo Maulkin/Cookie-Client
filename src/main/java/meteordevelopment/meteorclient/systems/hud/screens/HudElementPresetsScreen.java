@@ -5,14 +5,14 @@
 
 package meteordevelopment.meteorclient.systems.hud.screens;
 
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.WindowScreen;
-import meteordevelopment.meteorclient.gui.widgets.containers.WHorizontalList;
-import meteordevelopment.meteorclient.gui.widgets.input.WTextBox;
-import meteordevelopment.meteorclient.gui.widgets.pressable.WPlus;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.WindowScreen;
+import meteordevelopment.cookieclient.gui.widgets.containers.WHorizontalList;
+import meteordevelopment.cookieclient.gui.widgets.input.WTextBox;
+import meteordevelopment.cookieclient.gui.widgets.pressable.WPlus;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
-import meteordevelopment.meteorclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.Utils;
 import net.minecraft.client.gui.DrawContext;
 import org.jetbrains.annotations.Nullable;
 

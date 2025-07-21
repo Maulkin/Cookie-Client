@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.systems.modules.misc.swarm;
 
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.utils.network.MeteorExecutor;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
 
 import java.io.IOException;
 import java.net.ServerSocket;

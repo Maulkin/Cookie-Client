@@ -5,21 +5,21 @@
 
 package meteordevelopment.meteorclient.systems.modules.combat;
 
-import meteordevelopment.meteorclient.events.render.Render3DEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.renderer.ShapeMode;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.render.Render3DEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.renderer.ShapeMode;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.entity.DamageUtils;
-import meteordevelopment.meteorclient.utils.entity.EntityUtils;
-import meteordevelopment.meteorclient.utils.entity.SortPriority;
-import meteordevelopment.meteorclient.utils.entity.TargetUtils;
-import meteordevelopment.meteorclient.utils.player.*;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
-import meteordevelopment.meteorclient.utils.world.BlockUtils;
-import meteordevelopment.meteorclient.utils.world.CardinalDirection;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.entity.DamageUtils;
+import meteordevelopment.cookieclient.utils.entity.EntityUtils;
+import meteordevelopment.cookieclient.utils.entity.SortPriority;
+import meteordevelopment.cookieclient.utils.entity.TargetUtils;
+import meteordevelopment.cookieclient.utils.player.*;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.utils.world.BlockUtils;
+import meteordevelopment.cookieclient.utils.world.CardinalDirection;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.block.BedBlock;
 import net.minecraft.block.entity.BedBlockEntity;

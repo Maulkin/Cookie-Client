@@ -12,8 +12,8 @@ import com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService;
 import meteordevelopment.meteorclient.mixin.FileCacheAccessor;
 import meteordevelopment.meteorclient.mixin.MinecraftClientAccessor;
 import meteordevelopment.meteorclient.mixin.PlayerSkinProviderAccessor;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
-import meteordevelopment.meteorclient.utils.misc.NbtException;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.utils.misc.NbtException;
 import net.minecraft.client.network.SocialInteractionsManager;
 import net.minecraft.client.session.ProfileKeys;
 import net.minecraft.client.session.Session;
@@ -27,7 +27,7 @@ import net.minecraft.util.Util;
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public abstract class Account<T extends Account<?>> implements ISerializable<T> {
     protected AccountType type;

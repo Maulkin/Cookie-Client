@@ -5,18 +5,18 @@
 
 package meteordevelopment.meteorclient.systems.modules.combat;
 
-import meteordevelopment.meteorclient.events.render.Render3DEvent;
+import meteordevelopment.cookieclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.pathing.PathManagers;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.friends.Friends;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.entity.EntityUtils;
-import meteordevelopment.meteorclient.utils.entity.SortPriority;
-import meteordevelopment.meteorclient.utils.entity.TargetUtils;
-import meteordevelopment.meteorclient.utils.player.InvUtils;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
-import meteordevelopment.meteorclient.utils.player.Rotations;
+import meteordevelopment.cookieclient.utils.entity.EntityUtils;
+import meteordevelopment.cookieclient.utils.entity.SortPriority;
+import meteordevelopment.cookieclient.utils.entity.TargetUtils;
+import meteordevelopment.cookieclient.utils.player.InvUtils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.player.Rotations;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;

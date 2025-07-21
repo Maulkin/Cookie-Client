@@ -7,13 +7,13 @@ package meteordevelopment.meteorclient.commands.commands;
 
 import baritone.api.BaritoneAPI;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.cookieclient.MeteorClient;
 import meteordevelopment.meteorclient.commands.Command;
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.pathing.BaritoneUtils;
 import meteordevelopment.meteorclient.pathing.PathManagers;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
-import meteordevelopment.meteorclient.utils.player.InvUtils;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.utils.player.InvUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;

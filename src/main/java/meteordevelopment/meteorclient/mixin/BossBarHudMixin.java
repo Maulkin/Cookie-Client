@@ -7,8 +7,8 @@ package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.render.RenderBossBarEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.render.RenderBossBarEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.render.NoRender;
 import net.minecraft.client.gui.hud.BossBarHud;

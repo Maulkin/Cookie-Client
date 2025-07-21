@@ -5,13 +5,13 @@
 
 package meteordevelopment.meteorclient.systems.modules.render;
 
-import meteordevelopment.meteorclient.settings.ColorSetting;
-import meteordevelopment.meteorclient.settings.ItemListSetting;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.settings.ColorSetting;
+import meteordevelopment.cookieclient.settings.ItemListSetting;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 

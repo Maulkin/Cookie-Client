@@ -9,7 +9,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement.elytrafly.modes;
 
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.systems.modules.movement.elytrafly.ElytraFlightMode;
 import meteordevelopment.meteorclient.systems.modules.movement.elytrafly.ElytraFlightModes;
 import net.minecraft.client.network.ClientPlayerEntity;

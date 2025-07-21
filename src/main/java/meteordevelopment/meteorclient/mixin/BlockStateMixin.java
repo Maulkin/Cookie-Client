@@ -7,8 +7,8 @@ package meteordevelopment.meteorclient.mixin;
 
 import com.mojang.serialization.MapCodec;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectArrayMap;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.world.BlockActivateEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.world.BlockActivateEvent;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

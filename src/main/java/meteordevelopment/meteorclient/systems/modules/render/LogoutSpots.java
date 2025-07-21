@@ -5,21 +5,21 @@
 
 package meteordevelopment.meteorclient.systems.modules.render;
 
-import meteordevelopment.meteorclient.events.entity.EntityAddedEvent;
-import meteordevelopment.meteorclient.events.render.Render2DEvent;
-import meteordevelopment.meteorclient.events.render.Render3DEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.renderer.Renderer2D;
-import meteordevelopment.meteorclient.renderer.ShapeMode;
-import meteordevelopment.meteorclient.renderer.text.TextRenderer;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.entity.EntityAddedEvent;
+import meteordevelopment.cookieclient.events.render.Render2DEvent;
+import meteordevelopment.cookieclient.events.render.Render3DEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.renderer.Renderer2D;
+import meteordevelopment.cookieclient.renderer.ShapeMode;
+import meteordevelopment.cookieclient.renderer.text.TextRenderer;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
-import meteordevelopment.meteorclient.utils.render.NametagUtils;
-import meteordevelopment.meteorclient.utils.render.color.Color;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
-import meteordevelopment.meteorclient.utils.world.Dimension;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.render.NametagUtils;
+import meteordevelopment.cookieclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.utils.world.Dimension;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.entity.Entity;

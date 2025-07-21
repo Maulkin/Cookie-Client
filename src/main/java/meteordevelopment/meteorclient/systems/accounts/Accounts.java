@@ -10,9 +10,9 @@ import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.accounts.types.CrackedAccount;
 import meteordevelopment.meteorclient.systems.accounts.types.MicrosoftAccount;
 import meteordevelopment.meteorclient.systems.accounts.types.TheAlteningAccount;
-import meteordevelopment.meteorclient.utils.misc.NbtException;
-import meteordevelopment.meteorclient.utils.misc.NbtUtils;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.cookieclient.utils.misc.NbtException;
+import meteordevelopment.cookieclient.utils.misc.NbtUtils;
+import meteordevelopment.cookieclient.utils.network.MeteorExecutor;
 import net.minecraft.nbt.NbtCompound;
 import org.jetbrains.annotations.NotNull;
 

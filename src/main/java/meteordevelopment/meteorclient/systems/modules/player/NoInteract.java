@@ -5,11 +5,11 @@
 
 package meteordevelopment.meteorclient.systems.modules.player;
 
-import meteordevelopment.meteorclient.events.entity.player.AttackEntityEvent;
-import meteordevelopment.meteorclient.events.entity.player.InteractBlockEvent;
-import meteordevelopment.meteorclient.events.entity.player.InteractEntityEvent;
-import meteordevelopment.meteorclient.events.entity.player.StartBreakingBlockEvent;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.entity.player.AttackEntityEvent;
+import meteordevelopment.cookieclient.events.entity.player.InteractBlockEvent;
+import meteordevelopment.cookieclient.events.entity.player.InteractEntityEvent;
+import meteordevelopment.cookieclient.events.entity.player.StartBreakingBlockEvent;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.friends.Friends;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;

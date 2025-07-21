@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.asm;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.cookieclient.MeteorClient;
 import meteordevelopment.meteorclient.asm.transformers.PacketInflaterTransformer;
 import net.fabricmc.loader.api.FabricLoader;
 import org.objectweb.asm.ClassReader;

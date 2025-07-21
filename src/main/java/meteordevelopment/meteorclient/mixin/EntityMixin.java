@@ -7,10 +7,10 @@ package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.entity.LivingEntityMoveEvent;
-import meteordevelopment.meteorclient.events.entity.player.JumpVelocityMultiplierEvent;
-import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.entity.LivingEntityMoveEvent;
+import meteordevelopment.cookieclient.events.entity.player.JumpVelocityMultiplierEvent;
+import meteordevelopment.cookieclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.mixininterface.ICamera;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.combat.Hitboxes;
@@ -21,10 +21,10 @@ import meteordevelopment.meteorclient.systems.modules.render.FreeLook;
 import meteordevelopment.meteorclient.systems.modules.render.Freecam;
 import meteordevelopment.meteorclient.systems.modules.render.NoRender;
 import meteordevelopment.meteorclient.systems.modules.world.HighwayBuilder;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.entity.fakeplayer.FakePlayerEntity;
-import meteordevelopment.meteorclient.utils.render.color.Color;
-import meteordevelopment.meteorclient.utils.render.postprocess.PostProcessShaders;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.entity.fakeplayer.FakePlayerEntity;
+import meteordevelopment.cookieclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.utils.render.postprocess.PostProcessShaders;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.render.Camera;
@@ -42,7 +42,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 @Mixin(Entity.class)
 public abstract class EntityMixin {

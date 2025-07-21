@@ -5,12 +5,12 @@
 
 package meteordevelopment.meteorclient.systems.hud.elements;
 
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.hud.*;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
-import meteordevelopment.meteorclient.utils.render.color.Color;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
 
 import java.util.ArrayList;
 import java.util.List;

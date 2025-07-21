@@ -11,7 +11,7 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
-import meteordevelopment.meteorclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.Setting;
 import net.minecraft.command.CommandSource;
 import net.minecraft.util.Identifier;
 

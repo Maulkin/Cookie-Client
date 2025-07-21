@@ -5,19 +5,19 @@
 
 package meteordevelopment.meteorclient.systems.hud;
 
-import meteordevelopment.meteorclient.events.meteor.CustomFontChangedEvent;
-import meteordevelopment.meteorclient.events.render.Render2DEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.gui.WidgetScreen;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.meteor.CustomFontChangedEvent;
+import meteordevelopment.cookieclient.events.render.Render2DEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.gui.WidgetScreen;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.System;
 import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.hud.elements.*;
 import meteordevelopment.meteorclient.systems.hud.screens.HudEditorScreen;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.Keybind;
-import meteordevelopment.meteorclient.utils.misc.NbtUtils;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.Keybind;
+import meteordevelopment.cookieclient.utils.misc.NbtUtils;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
@@ -25,7 +25,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class Hud extends System<Hud> implements Iterable<HudElement> {
     public static final HudGroup GROUP = new HudGroup("Cookie");

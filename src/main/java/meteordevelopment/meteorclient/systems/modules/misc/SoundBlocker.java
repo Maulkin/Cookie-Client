@@ -5,10 +5,10 @@
 
 package meteordevelopment.meteorclient.systems.modules.misc;
 
-import meteordevelopment.meteorclient.events.world.PlaySoundEvent;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
-import meteordevelopment.meteorclient.settings.SoundEventListSetting;
+import meteordevelopment.cookieclient.events.world.PlaySoundEvent;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.settings.SoundEventListSetting;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;

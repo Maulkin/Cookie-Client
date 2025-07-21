@@ -5,14 +5,14 @@
 
 package meteordevelopment.meteorclient.systems.config;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.renderer.Fonts;
-import meteordevelopment.meteorclient.renderer.text.FontFace;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.renderer.Fonts;
+import meteordevelopment.cookieclient.renderer.text.FontFace;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.System;
 import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtList;
@@ -21,7 +21,7 @@ import net.minecraft.nbt.NbtString;
 import java.util.ArrayList;
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class Config extends System<Config> {
     public final Settings settings = new Settings();

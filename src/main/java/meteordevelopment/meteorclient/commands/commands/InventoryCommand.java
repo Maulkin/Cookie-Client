@@ -8,7 +8,7 @@ package meteordevelopment.meteorclient.commands.commands;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.commands.arguments.PlayerArgumentType;
-import meteordevelopment.meteorclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.Utils;
 import net.minecraft.client.gui.screen.ingame.InventoryScreen;
 import net.minecraft.command.CommandSource;
 

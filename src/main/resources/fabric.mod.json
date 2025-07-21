@@ -18,10 +18,10 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "meteordevelopment.meteorclient.MeteorClient"
+      "meteordevelopment.cookieclient.MeteorClient"
     ],
     "modmenu": [
-      "meteordevelopment.meteorclient.ModMenuIntegration"
+      "meteordevelopment.cookieclient.ModMenuIntegration"
     ]
   },
   "mixins": [

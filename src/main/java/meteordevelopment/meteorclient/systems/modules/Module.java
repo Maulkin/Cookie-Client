@@ -5,18 +5,18 @@
 
 package meteordevelopment.meteorclient.systems.modules;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.addons.AddonManager;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.widgets.WWidget;
-import meteordevelopment.meteorclient.settings.Settings;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.addons.AddonManager;
+import meteordevelopment.cookieclient.addons.MeteorAddon;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.widgets.WWidget;
+import meteordevelopment.cookieclient.settings.Settings;
 import meteordevelopment.meteorclient.systems.config.Config;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
-import meteordevelopment.meteorclient.utils.misc.Keybind;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
-import meteordevelopment.meteorclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.utils.misc.Keybind;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.utils.render.color.Color;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;

@@ -5,19 +5,19 @@
 
 package meteordevelopment.meteorclient.systems.modules.misc;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.widgets.WLabel;
-import meteordevelopment.meteorclient.gui.widgets.WWidget;
-import meteordevelopment.meteorclient.gui.widgets.containers.WHorizontalList;
-import meteordevelopment.meteorclient.gui.widgets.pressable.WButton;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.widgets.WLabel;
+import meteordevelopment.cookieclient.gui.widgets.WWidget;
+import meteordevelopment.cookieclient.gui.widgets.containers.WHorizontalList;
+import meteordevelopment.cookieclient.gui.widgets.pressable.WButton;
 import meteordevelopment.meteorclient.mixin.TextHandlerAccessor;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.player.FindItemResult;
-import meteordevelopment.meteorclient.utils.player.InvUtils;
+import meteordevelopment.cookieclient.utils.player.FindItemResult;
+import meteordevelopment.cookieclient.utils.player.InvUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.font.TextHandler;
 import net.minecraft.component.DataComponentTypes;

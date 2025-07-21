@@ -11,9 +11,9 @@ import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.commands.arguments.FakePlayerArgumentType;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.player.FakePlayer;
-import meteordevelopment.meteorclient.utils.entity.fakeplayer.FakePlayerEntity;
-import meteordevelopment.meteorclient.utils.entity.fakeplayer.FakePlayerManager;
-import meteordevelopment.meteorclient.utils.player.ChatUtils;
+import meteordevelopment.cookieclient.utils.entity.fakeplayer.FakePlayerEntity;
+import meteordevelopment.cookieclient.utils.entity.fakeplayer.FakePlayerManager;
+import meteordevelopment.cookieclient.utils.player.ChatUtils;
 import net.minecraft.command.CommandSource;
 
 public class FakePlayerCommand extends Command {

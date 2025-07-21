@@ -5,25 +5,25 @@
 
 package meteordevelopment.meteorclient.systems.hud.screens;
 
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.WindowScreen;
-import meteordevelopment.meteorclient.gui.utils.Cell;
-import meteordevelopment.meteorclient.gui.widgets.WWidget;
-import meteordevelopment.meteorclient.gui.widgets.containers.WContainer;
-import meteordevelopment.meteorclient.gui.widgets.containers.WHorizontalList;
-import meteordevelopment.meteorclient.gui.widgets.pressable.WCheckbox;
-import meteordevelopment.meteorclient.gui.widgets.pressable.WMinus;
-import meteordevelopment.meteorclient.settings.BoolSetting;
-import meteordevelopment.meteorclient.settings.EnumSetting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
-import meteordevelopment.meteorclient.settings.Settings;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.WindowScreen;
+import meteordevelopment.cookieclient.gui.utils.Cell;
+import meteordevelopment.cookieclient.gui.widgets.WWidget;
+import meteordevelopment.cookieclient.gui.widgets.containers.WContainer;
+import meteordevelopment.cookieclient.gui.widgets.containers.WHorizontalList;
+import meteordevelopment.cookieclient.gui.widgets.pressable.WCheckbox;
+import meteordevelopment.cookieclient.gui.widgets.pressable.WMinus;
+import meteordevelopment.cookieclient.settings.BoolSetting;
+import meteordevelopment.cookieclient.settings.EnumSetting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.settings.Settings;
 import meteordevelopment.meteorclient.systems.hud.HudElement;
 import meteordevelopment.meteorclient.systems.hud.XAnchor;
 import meteordevelopment.meteorclient.systems.hud.YAnchor;
-import meteordevelopment.meteorclient.utils.misc.NbtUtils;
+import meteordevelopment.cookieclient.utils.misc.NbtUtils;
 import net.minecraft.client.gui.DrawContext;
 
-import static meteordevelopment.meteorclient.utils.Utils.getWindowWidth;
+import static meteordevelopment.cookieclient.utils.Utils.getWindowWidth;
 
 public class HudElementScreen extends WindowScreen {
     private final HudElement element;

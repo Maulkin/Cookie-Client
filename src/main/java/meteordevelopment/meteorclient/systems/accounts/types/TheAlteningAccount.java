@@ -9,20 +9,20 @@ import com.mojang.authlib.Environment;
 import com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService;
 import de.florianmichael.waybackauthlib.InvalidCredentialsException;
 import de.florianmichael.waybackauthlib.WaybackAuthLib;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.cookieclient.MeteorClient;
 import meteordevelopment.meteorclient.mixin.MinecraftClientAccessor;
 import meteordevelopment.meteorclient.mixin.YggdrasilMinecraftSessionServiceAccessor;
 import meteordevelopment.meteorclient.systems.accounts.Account;
 import meteordevelopment.meteorclient.systems.accounts.AccountType;
 import meteordevelopment.meteorclient.systems.accounts.TokenAccount;
-import meteordevelopment.meteorclient.utils.misc.NbtException;
+import meteordevelopment.cookieclient.utils.misc.NbtException;
 import net.minecraft.client.session.Session;
 import net.minecraft.nbt.NbtCompound;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class TheAlteningAccount extends Account<TheAlteningAccount> implements TokenAccount {
     private static final Environment ENVIRONMENT = new Environment("http://sessionserver.thealtening.com", "http://authserver.thealtening.com", "The Altening");

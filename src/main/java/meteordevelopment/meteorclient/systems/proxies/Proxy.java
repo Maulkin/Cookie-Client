@@ -5,9 +5,9 @@
 
 package meteordevelopment.meteorclient.systems.proxies;
 
-import meteordevelopment.meteorclient.settings.*;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.settings.*;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 

@@ -6,10 +6,10 @@
 package meteordevelopment.meteorclient.commands.commands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.cookieclient.MeteorClient;
 import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.commands.arguments.PlayerArgumentType;
-import meteordevelopment.meteorclient.events.meteor.KeyEvent;
+import meteordevelopment.cookieclient.events.meteor.KeyEvent;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.command.CommandSource;
 import net.minecraft.text.Text;

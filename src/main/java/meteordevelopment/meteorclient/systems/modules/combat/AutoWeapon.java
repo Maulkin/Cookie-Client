@@ -5,12 +5,12 @@
 
 package meteordevelopment.meteorclient.systems.modules.combat;
 
-import meteordevelopment.meteorclient.events.entity.player.AttackEntityEvent;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.entity.player.AttackEntityEvent;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.entity.DamageUtils;
-import meteordevelopment.meteorclient.utils.player.InvUtils;
+import meteordevelopment.cookieclient.utils.entity.DamageUtils;
+import meteordevelopment.cookieclient.utils.player.InvUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.AxeItem;

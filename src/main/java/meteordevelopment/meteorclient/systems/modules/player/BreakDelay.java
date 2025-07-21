@@ -5,15 +5,15 @@
 
 package meteordevelopment.meteorclient.systems.modules.player;
 
-import meteordevelopment.meteorclient.events.entity.player.BlockBreakingCooldownEvent;
-import meteordevelopment.meteorclient.events.meteor.MouseButtonEvent;
-import meteordevelopment.meteorclient.settings.BoolSetting;
-import meteordevelopment.meteorclient.settings.IntSetting;
-import meteordevelopment.meteorclient.settings.Setting;
-import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.cookieclient.events.entity.player.BlockBreakingCooldownEvent;
+import meteordevelopment.cookieclient.events.meteor.MouseButtonEvent;
+import meteordevelopment.cookieclient.settings.BoolSetting;
+import meteordevelopment.cookieclient.settings.IntSetting;
+import meteordevelopment.cookieclient.settings.Setting;
+import meteordevelopment.cookieclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.misc.input.KeyAction;
+import meteordevelopment.cookieclient.utils.misc.input.KeyAction;
 import meteordevelopment.orbit.EventHandler;
 
 public class BreakDelay extends Module {

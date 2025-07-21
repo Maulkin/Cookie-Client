@@ -5,13 +5,13 @@
 
 package meteordevelopment.meteorclient.systems.modules.misc;
 
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.text.RunnableClickEvent;
+import meteordevelopment.cookieclient.utils.Utils;
+import meteordevelopment.cookieclient.utils.misc.text.RunnableClickEvent;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.network.packet.BrandCustomPayload;
 import net.minecraft.network.packet.c2s.common.CustomPayloadC2SPacket;

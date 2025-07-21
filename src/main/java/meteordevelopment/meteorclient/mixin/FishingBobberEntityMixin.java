@@ -14,7 +14,7 @@ import net.minecraft.entity.projectile.FishingBobberEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 @Mixin(FishingBobberEntity.class)
 public abstract class FishingBobberEntityMixin {

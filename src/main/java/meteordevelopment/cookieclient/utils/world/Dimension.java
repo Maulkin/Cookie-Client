@@ -1,0 +1,20 @@
+/*
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
+ */
+
+package meteordevelopment.cookieclient.utils.world;
+
+public enum Dimension {
+    Overworld,
+    Nether,
+    End;
+
+    public Dimension opposite() {
+        return switch (this) {
+            case Overworld -> Nether;
+            case Nether -> Overworld;
+            default -> this;
+        };
+    }
+}

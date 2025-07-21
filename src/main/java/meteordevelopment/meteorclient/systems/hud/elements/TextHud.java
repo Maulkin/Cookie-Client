@@ -5,16 +5,16 @@
 
 package meteordevelopment.meteorclient.systems.hud.elements;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.gui.utils.StarscriptTextBoxRenderer;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.MeteorClient;
+import meteordevelopment.cookieclient.gui.utils.StarscriptTextBoxRenderer;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudElement;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
 import meteordevelopment.meteorclient.systems.hud.HudRenderer;
-import meteordevelopment.meteorclient.utils.misc.MeteorStarscript;
-import meteordevelopment.meteorclient.utils.render.color.Color;
-import meteordevelopment.meteorclient.utils.render.color.SettingColor;
+import meteordevelopment.cookieclient.utils.misc.MeteorStarscript;
+import meteordevelopment.cookieclient.utils.render.color.Color;
+import meteordevelopment.cookieclient.utils.render.color.SettingColor;
 import org.meteordev.starscript.Script;
 import org.meteordev.starscript.Section;
 import org.meteordev.starscript.compiler.Compiler;

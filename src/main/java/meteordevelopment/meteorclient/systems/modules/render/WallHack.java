@@ -5,11 +5,11 @@
 
 package meteordevelopment.meteorclient.systems.modules.render;
 
-import meteordevelopment.meteorclient.MixinPlugin;
-import meteordevelopment.meteorclient.events.world.ChunkOcclusionEvent;
-import meteordevelopment.meteorclient.gui.GuiTheme;
-import meteordevelopment.meteorclient.gui.widgets.WWidget;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.MixinPlugin;
+import meteordevelopment.cookieclient.events.world.ChunkOcclusionEvent;
+import meteordevelopment.cookieclient.gui.GuiTheme;
+import meteordevelopment.cookieclient.gui.widgets.WWidget;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;

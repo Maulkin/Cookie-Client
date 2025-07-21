@@ -6,13 +6,13 @@
 package meteordevelopment.meteorclient.systems.accounts;
 
 import com.mojang.util.UndashedUuid;
-import meteordevelopment.meteorclient.utils.misc.ISerializable;
-import meteordevelopment.meteorclient.utils.misc.NbtException;
-import meteordevelopment.meteorclient.utils.render.PlayerHeadTexture;
-import meteordevelopment.meteorclient.utils.render.PlayerHeadUtils;
+import meteordevelopment.cookieclient.utils.misc.ISerializable;
+import meteordevelopment.cookieclient.utils.misc.NbtException;
+import meteordevelopment.cookieclient.utils.render.PlayerHeadTexture;
+import meteordevelopment.cookieclient.utils.render.PlayerHeadUtils;
 import net.minecraft.nbt.NbtCompound;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.cookieclient.MeteorClient.mc;
 
 public class AccountCache implements ISerializable<AccountCache> {
     public String username = "";

@@ -5,12 +5,12 @@
 
 package meteordevelopment.meteorclient.systems.modules.render;
 
-import meteordevelopment.meteorclient.events.render.ArmRenderEvent;
-import meteordevelopment.meteorclient.events.render.HeldItemRendererEvent;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.render.ArmRenderEvent;
+import meteordevelopment.cookieclient.events.render.HeldItemRendererEvent;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.player.Rotations;
+import meteordevelopment.cookieclient.utils.player.Rotations;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Hand;

@@ -5,17 +5,17 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement.speed;
 
-import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
-import meteordevelopment.meteorclient.events.packets.PacketEvent;
-import meteordevelopment.meteorclient.events.world.TickEvent;
-import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.cookieclient.events.entity.player.PlayerMoveEvent;
+import meteordevelopment.cookieclient.events.packets.PacketEvent;
+import meteordevelopment.cookieclient.events.world.TickEvent;
+import meteordevelopment.cookieclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.movement.speed.modes.Strafe;
 import meteordevelopment.meteorclient.systems.modules.movement.speed.modes.Vanilla;
 import meteordevelopment.meteorclient.systems.modules.world.Timer;
-import meteordevelopment.meteorclient.utils.player.PlayerUtils;
+import meteordevelopment.cookieclient.utils.player.PlayerUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.entity.MovementType;
 import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
