@@ -6,7 +6,7 @@
 package meteordevelopment.meteorclient.utils;
 
 import meteordevelopment.meteorclient.addons.AddonManager;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
+import meteordevelopment.meteorclient.addons.CookieAddon;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
 
@@ -23,7 +23,7 @@ public class ReflectInit {
     }
 
     public static void registerPackages() {
-        for (MeteorAddon addon : AddonManager.ADDONS) {
+        for (CookieAddon addon : AddonManager.ADDONS) {
             try {
                 add(addon);
             } catch (AbstractMethodError e) {
@@ -32,7 +32,7 @@ public class ReflectInit {
         }
     }
 
-    private static void add(MeteorAddon addon) {
+    private static void add(CookieAddon addon) {
         String pkg = addon.getPackage();
         if (pkg == null || pkg.isBlank()) return;
         reflections.add(new Reflections(pkg, Scanners.MethodsAnnotated));

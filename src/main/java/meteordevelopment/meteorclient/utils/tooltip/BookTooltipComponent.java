@@ -14,7 +14,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.joml.Matrix3x2fStack;
 
-public class BookTooltipComponent implements TooltipComponent, MeteorTooltipData {
+public class BookTooltipComponent implements TooltipComponent, CookieTooltipData {
     private static final Identifier TEXTURE_BOOK_BACKGROUND = Identifier.of("textures/gui/book.png");
 
     private final Text page;

@@ -5,11 +5,11 @@
 
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets;
 
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.WTopBar;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 
-public class WMeteorTopBar extends WTopBar implements MeteorWidget {
+public class WMeteorTopBar extends WTopBar implements CookieWidget {
     @Override
     protected Color getButtonColor(boolean pressed, boolean hovered) {
         return theme().backgroundColor.get(pressed, hovered);

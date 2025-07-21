@@ -6,11 +6,11 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets.input;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorGuiTheme;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieGuiTheme;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.input.WSlider;
 
-public class WMeteorSlider extends WSlider implements MeteorWidget {
+public class WMeteorSlider extends WSlider implements CookieWidget {
     public WMeteorSlider(double value, double min, double max) {
         super(value, min, max);
     }
@@ -24,7 +24,7 @@ public class WMeteorSlider extends WSlider implements MeteorWidget {
     }
 
     private void renderBar(GuiRenderer renderer, double valueWidth) {
-        MeteorGuiTheme theme = theme();
+        CookieGuiTheme theme = theme();
 
         double s = theme.scale(3);
         double handleSize = handleSize();
@@ -37,7 +37,7 @@ public class WMeteorSlider extends WSlider implements MeteorWidget {
     }
 
     private void renderHandle(GuiRenderer renderer, double valueWidth) {
-        MeteorGuiTheme theme = theme();
+        CookieGuiTheme theme = theme();
         double s = handleSize();
 
         renderer.quad(x + valueWidth, y, s, s, GuiRenderer.CIRCLE, theme.sliderHandle.get(dragging, handleMouseOver));

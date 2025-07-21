@@ -15,7 +15,7 @@ public class FullScreenRenderer {
 
     @PreInit
     public static void init() {
-        mesh = new MeshBuilder(MeteorVertexFormats.POS2, VertexFormat.DrawMode.TRIANGLES, 4, 6);
+        mesh = new MeshBuilder(CookieVertexFormats.POS2, VertexFormat.DrawMode.TRIANGLES, 4, 6);
 
         mesh.begin();
         mesh.ensureQuadCapacity();

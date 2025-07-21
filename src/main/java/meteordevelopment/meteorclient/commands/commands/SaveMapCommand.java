@@ -9,7 +9,7 @@ import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.mixin.MapTextureManagerAccessor;
 import net.minecraft.client.texture.MapTextureManager;
@@ -89,7 +89,7 @@ public class SaveMapCommand extends Command {
             }
         } catch (IOException e) {
             error("Error writing map texture");
-            MeteorClient.LOG.error(e.toString());
+            CookieClient.LOG.error(e.toString());
         }
     }
 

@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.mixin;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.render.ApplyTransformationEvent;
 import net.minecraft.client.render.model.json.Transformation;
 import net.minecraft.client.util.math.MatrixStack;
@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class TransformationMixin {
     @Inject(method = "apply", at = @At("HEAD"), cancellable = true)
     private void onApply(boolean leftHanded, MatrixStack.Entry entry, CallbackInfo info) {
-        ApplyTransformationEvent event = MeteorClient.EVENT_BUS.post(ApplyTransformationEvent.get((Transformation) (Object) this, leftHanded));
+        ApplyTransformationEvent event = CookieClient.EVENT_BUS.post(ApplyTransformationEvent.get((Transformation) (Object) this, leftHanded));
         if (event.isCancelled()) info.cancel();
     }
 }

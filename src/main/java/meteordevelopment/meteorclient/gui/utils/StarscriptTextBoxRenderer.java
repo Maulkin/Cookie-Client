@@ -9,7 +9,7 @@ import meteordevelopment.meteorclient.gui.GuiTheme;
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
 import meteordevelopment.meteorclient.gui.widgets.input.WTextBox;
 import meteordevelopment.meteorclient.systems.hud.elements.TextHud;
-import meteordevelopment.meteorclient.utils.misc.MeteorStarscript;
+import meteordevelopment.meteorclient.utils.misc.CookieStarscript;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import org.meteordev.starscript.utils.SemanticToken;
 import org.meteordev.starscript.utils.SemanticTokenProvider;
@@ -47,7 +47,7 @@ public class StarscriptTextBoxRenderer implements WTextBox.Renderer {
     public List<String> getCompletions(String text, int position) {
         List<String> completions = new ArrayList<>();
 
-        MeteorStarscript.ss.getCompletions(text, position, (completion, function) -> {
+        CookieStarscript.ss.getCompletions(text, position, (completion, function) -> {
             completions.add(function ? completion + "(" : completion);
         });
 

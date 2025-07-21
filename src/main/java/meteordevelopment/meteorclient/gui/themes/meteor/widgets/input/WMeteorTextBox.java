@@ -6,8 +6,8 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets.input;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorGuiTheme;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieGuiTheme;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.themes.meteor.widgets.WMeteorLabel;
 import meteordevelopment.meteorclient.gui.utils.CharFilter;
 import meteordevelopment.meteorclient.gui.widgets.WWidget;
@@ -17,7 +17,7 @@ import meteordevelopment.meteorclient.gui.widgets.input.WTextBox;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import net.minecraft.util.math.MathHelper;
 
-public class WMeteorTextBox extends WTextBox implements MeteorWidget {
+public class WMeteorTextBox extends WTextBox implements CookieWidget {
     private boolean cursorVisible;
     private double cursorTimer;
 
@@ -32,7 +32,7 @@ public class WMeteorTextBox extends WTextBox implements MeteorWidget {
         return new WVerticalList() {
             @Override
             protected void onRender(GuiRenderer renderer1, double mouseX, double mouseY, double delta) {
-                MeteorGuiTheme theme1 = theme();
+                CookieGuiTheme theme1 = theme();
                 double s = theme1.scale(2);
                 Color c = theme1.outlineColor.get();
 
@@ -107,7 +107,7 @@ public class WMeteorTextBox extends WTextBox implements MeteorWidget {
 
         renderBackground(renderer, this, false, false);
 
-        MeteorGuiTheme theme = theme();
+        CookieGuiTheme theme = theme();
         double pad = pad();
         double overflowWidth = getOverflowWidthForRender();
 

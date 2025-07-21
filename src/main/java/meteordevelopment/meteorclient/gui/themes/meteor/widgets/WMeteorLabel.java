@@ -6,10 +6,10 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.WLabel;
 
-public class WMeteorLabel extends WLabel implements MeteorWidget {
+public class WMeteorLabel extends WLabel implements CookieWidget {
     public WMeteorLabel(String text, boolean title) {
         super(text, title);
     }

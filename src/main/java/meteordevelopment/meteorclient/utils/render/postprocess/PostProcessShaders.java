@@ -3,7 +3,7 @@ package meteordevelopment.meteorclient.utils.render.postprocess;
 import meteordevelopment.meteorclient.utils.PreInit;
 import net.minecraft.client.render.VertexConsumerProvider;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class PostProcessShaders {
     public static EntityShader CHAMS;

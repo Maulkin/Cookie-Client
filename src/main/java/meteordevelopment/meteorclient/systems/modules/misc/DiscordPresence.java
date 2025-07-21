@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.systems.modules.misc;
 
 import meteordevelopment.discordipc.DiscordIPC;
 import meteordevelopment.discordipc.RichPresence;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.gui.GuiTheme;
@@ -19,7 +19,7 @@ import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.MeteorStarscript;
+import meteordevelopment.meteorclient.utils.misc.CookieStarscript;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.gui.screen.CreditsScreen;
 import net.minecraft.client.gui.screen.TitleScreen;
@@ -148,8 +148,8 @@ public class DiscordPresence extends Module {
 
         rpc.setStart(System.currentTimeMillis() / 1000L);
 
-        String largeText = "%s %s".formatted(MeteorClient.NAME, MeteorClient.VERSION);
-        if (!MeteorClient.BUILD_NUMBER.isEmpty()) largeText += " Build: " + MeteorClient.BUILD_NUMBER;
+        String largeText = "%s %s".formatted(CookieClient.NAME, CookieClient.VERSION);
+        if (!CookieClient.BUILD_NUMBER.isEmpty()) largeText += " Build: " + CookieClient.BUILD_NUMBER;
         rpc.setLargeImage("meteor_client", largeText);
 
         currentSmallImage = SmallImage.MineGame;
@@ -175,7 +175,7 @@ public class DiscordPresence extends Module {
         scripts.clear();
 
         for (String message : messages) {
-            Script script = MeteorStarscript.compile(message);
+            Script script = CookieStarscript.compile(message);
             if (script != null) scripts.add(script);
         }
 
@@ -214,7 +214,7 @@ public class DiscordPresence extends Module {
                         i = line1I++;
                     }
 
-                    String message = MeteorStarscript.run(line1Scripts.get(i));
+                    String message = CookieStarscript.run(line1Scripts.get(i));
                     if (message != null) rpc.setDetails(message);
                 }
                 update = true;
@@ -231,7 +231,7 @@ public class DiscordPresence extends Module {
                         i = line2I++;
                     }
 
-                    String message = MeteorStarscript.run(line2Scripts.get(i));
+                    String message = CookieStarscript.run(line2Scripts.get(i));
                     if (message != null) rpc.setState(message);
                 }
                 update = true;
@@ -241,7 +241,7 @@ public class DiscordPresence extends Module {
         }
         else {
             if (!lastWasInMainMenu) {
-                rpc.setDetails(MeteorClient.NAME + " " + (MeteorClient.BUILD_NUMBER.isEmpty() ? MeteorClient.VERSION : MeteorClient.VERSION + " " + MeteorClient.BUILD_NUMBER));
+                rpc.setDetails(CookieClient.NAME + " " + (CookieClient.BUILD_NUMBER.isEmpty() ? CookieClient.VERSION : CookieClient.VERSION + " " + CookieClient.BUILD_NUMBER));
 
                 if (mc.currentScreen instanceof TitleScreen) rpc.setState("Looking at title screen");
                 else if (mc.currentScreen instanceof SelectWorldScreen) rpc.setState("Selecting world");

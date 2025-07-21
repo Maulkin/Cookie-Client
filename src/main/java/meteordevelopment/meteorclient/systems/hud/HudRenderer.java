@@ -10,7 +10,7 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.meteor.CustomFontChangedEvent;
 import meteordevelopment.meteorclient.renderer.*;
 import meteordevelopment.meteorclient.renderer.text.CustomTextRenderer;
@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class HudRenderer {
     public static final HudRenderer INSTANCE = new HudRenderer();
@@ -59,7 +59,7 @@ public class HudRenderer {
     public double delta;
 
     private HudRenderer() {
-        MeteorClient.EVENT_BUS.subscribe(this);
+        CookieClient.EVENT_BUS.subscribe(this);
     }
 
     public void begin(DrawContext drawContext) {
@@ -87,7 +87,7 @@ public class HudRenderer {
                 if (fontHolder.visited) {
                     MeshRenderer.begin()
                         .attachments(mc.getFramebuffer())
-                        .pipeline(MeteorRenderPipelines.UI_TEXT)
+                        .pipeline(CookieRenderPipelines.UI_TEXT)
                         .mesh(fontHolder.getMesh())
                         .sampler("u_Texture", fontHolder.font.texture.getGlTextureView())
                         .end();
@@ -316,7 +316,7 @@ public class HudRenderer {
         }
 
         public MeshBuilder getMesh() {
-            if (mesh == null) mesh = new MeshBuilder(MeteorRenderPipelines.UI_TEXT);
+            if (mesh == null) mesh = new MeshBuilder(CookieRenderPipelines.UI_TEXT);
             if (!mesh.isBuilding()) mesh.begin();
             return mesh;
         }

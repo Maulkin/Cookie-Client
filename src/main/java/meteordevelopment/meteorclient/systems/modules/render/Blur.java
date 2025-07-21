@@ -13,14 +13,14 @@ import com.mojang.blaze3d.textures.AddressMode;
 import com.mojang.blaze3d.textures.GpuTextureView;
 import com.mojang.blaze3d.textures.TextureFormat;
 import it.unimi.dsi.fastutil.ints.IntDoubleImmutablePair;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.game.ResolutionChangedEvent;
 import meteordevelopment.meteorclient.events.render.RenderAfterWorldEvent;
 import meteordevelopment.meteorclient.gui.WidgetScreen;
 import meteordevelopment.meteorclient.mixininterface.IGpuTexture;
 import meteordevelopment.meteorclient.renderer.FullScreenRenderer;
 import meteordevelopment.meteorclient.renderer.MeshRenderer;
-import meteordevelopment.meteorclient.renderer.MeteorRenderPipelines;
+import meteordevelopment.meteorclient.renderer.CookieRenderPipelines;
 import meteordevelopment.meteorclient.settings.BoolSetting;
 import meteordevelopment.meteorclient.settings.IntSetting;
 import meteordevelopment.meteorclient.settings.Setting;
@@ -122,7 +122,7 @@ public class Blur extends Module {
         super(Categories.Render, "blur", "Blurs background when in GUI screens.");
 
         // The listeners need to run even when the module is not enabled
-        MeteorClient.EVENT_BUS.subscribe(new ConsumerListener<>(ResolutionChangedEvent.class, event -> {
+        CookieClient.EVENT_BUS.subscribe(new ConsumerListener<>(ResolutionChangedEvent.class, event -> {
             // Resize all fbos
             for (int i = 0; i < fbos.length; i++) {
                 if (fbos[i] != null) {
@@ -133,7 +133,7 @@ public class Blur extends Module {
             }
         }));
 
-        MeteorClient.EVENT_BUS.subscribe(new ConsumerListener<>(RenderAfterWorldEvent.class, event -> onRenderAfterWorld()));
+        CookieClient.EVENT_BUS.subscribe(new ConsumerListener<>(RenderAfterWorldEvent.class, event -> onRenderAfterWorld()));
     }
 
     private GpuTextureView createFbo(int i) {
@@ -195,22 +195,22 @@ public class Blur extends Module {
         double offset = strength.rightDouble();
 
         // Initial downsample
-        renderToFbo(fbos[0], mc.getFramebuffer().getColorAttachmentView(), MeteorRenderPipelines.BLUR_DOWN, offset);
+        renderToFbo(fbos[0], mc.getFramebuffer().getColorAttachmentView(), CookieRenderPipelines.BLUR_DOWN, offset);
 
         // Downsample
         for (int i = 0; i < iterations; i++) {
-            renderToFbo(fbos[i + 1], fbos[i], MeteorRenderPipelines.BLUR_DOWN, offset);
+            renderToFbo(fbos[i + 1], fbos[i], CookieRenderPipelines.BLUR_DOWN, offset);
         }
 
         // Upsample
         for (int i = iterations; i >= 1; i--) {
-            renderToFbo(fbos[i - 1], fbos[i], MeteorRenderPipelines.BLUR_UP, offset);
+            renderToFbo(fbos[i - 1], fbos[i], CookieRenderPipelines.BLUR_UP, offset);
         }
 
         // Render output
         MeshRenderer.begin()
             .attachments(mc.getFramebuffer())
-            .pipeline(MeteorRenderPipelines.BLUR_PASSTHROUGH)
+            .pipeline(CookieRenderPipelines.BLUR_PASSTHROUGH)
             .mesh(FullScreenRenderer.mesh)
             .sampler("u_Texture", fbos[0])
             .end();

@@ -5,7 +5,7 @@ import meteordevelopment.meteorclient.mixininterface.IWorldRenderer;
 
 import java.util.OptionalInt;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public abstract class EntityShader extends PostProcessShader {
     @Override

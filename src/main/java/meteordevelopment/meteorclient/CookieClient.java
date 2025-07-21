@@ -6,7 +6,7 @@
 package meteordevelopment.meteorclient;
 
 import meteordevelopment.meteorclient.addons.AddonManager;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
+import meteordevelopment.meteorclient.addons.CookieAddon;
 import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
 import meteordevelopment.meteorclient.events.meteor.KeyEvent;
 import meteordevelopment.meteorclient.events.meteor.MouseButtonEvent;
@@ -45,15 +45,15 @@ import org.spongepowered.asm.mixin.MixinEnvironment;
 import java.io.File;
 import java.lang.invoke.MethodHandles;
 
-public class MeteorClient implements ClientModInitializer {
+public class CookieClient implements ClientModInitializer {
     public static final String MOD_ID = "cookie-client";
     public static final ModMetadata MOD_META;
     public static final String NAME;
     public static final Version VERSION;
     public static final String BUILD_NUMBER;
 
-    public static MeteorClient INSTANCE;
-    public static MeteorAddon ADDON;
+    public static CookieClient INSTANCE;
+    public static CookieAddon ADDON;
 
     public static MinecraftClient mc;
     public static final IEventBus EVENT_BUS = new EventBus();
@@ -73,7 +73,7 @@ public class MeteorClient implements ClientModInitializer {
         if (versionString.equals("${version}")) versionString = "0.0.0";
 
         VERSION = new Version(versionString);
-        BUILD_NUMBER = MOD_META.getCustomValue(MeteorClient.MOD_ID + ":build_number").getAsString();
+        BUILD_NUMBER = MOD_META.getCustomValue(CookieClient.MOD_ID + ":build_number").getAsString();
     }
 
     @Override
@@ -128,7 +128,7 @@ public class MeteorClient implements ClientModInitializer {
         EVENT_BUS.subscribe(this);
 
         // Initialise addons
-        AddonManager.ADDONS.forEach(MeteorAddon::onInitialize);
+        AddonManager.ADDONS.forEach(CookieAddon::onInitialize);
 
         // Sort modules after addons have added their own
         Modules.get().sortModules();
@@ -195,6 +195,6 @@ public class MeteorClient implements ClientModInitializer {
     }
 
     public static Identifier identifier(String path) {
-        return Identifier.of(MeteorClient.MOD_ID, path);
+        return Identifier.of(CookieClient.MOD_ID, path);
     }
 }

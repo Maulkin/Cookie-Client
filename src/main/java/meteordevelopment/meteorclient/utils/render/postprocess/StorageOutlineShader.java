@@ -2,7 +2,7 @@ package meteordevelopment.meteorclient.utils.render.postprocess;
 
 import meteordevelopment.meteorclient.mixininterface.IMinecraftClient;
 import meteordevelopment.meteorclient.renderer.MeshRenderer;
-import meteordevelopment.meteorclient.renderer.MeteorRenderPipelines;
+import meteordevelopment.meteorclient.renderer.CookieRenderPipelines;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.render.StorageESP;
 import net.minecraft.client.MinecraftClient;
@@ -14,7 +14,7 @@ public class StorageOutlineShader extends PostProcessShader {
     private Framebuffer mcFramebuffer;
 
     public StorageOutlineShader() {
-        init(MeteorRenderPipelines.POST_OUTLINE);
+        init(CookieRenderPipelines.POST_OUTLINE);
     }
 
     @Override

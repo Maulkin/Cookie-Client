@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.utils.misc;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import net.minecraft.nbt.*;
 
 import java.io.ByteArrayInputStream;
@@ -13,7 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.util.*;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class NbtUtils {
     public static <T extends ISerializable<?>> NbtList listToTag(Iterable<T> list) {
@@ -55,7 +55,7 @@ public class NbtUtils {
             mc.keyboard.setClipboard(Base64.getEncoder().encodeToString(byteArrayOutputStream.toByteArray()));
             return true;
         } catch (Exception e) {
-            MeteorClient.LOG.error("Error copying NBT to clipboard!", e);
+            CookieClient.LOG.error("Error copying NBT to clipboard!", e);
             mc.keyboard.setClipboard(preClipboard);
             return false;
         }
@@ -80,7 +80,7 @@ public class NbtUtils {
             ByteArrayInputStream bis = new ByteArrayInputStream(data);
             return NbtIo.readCompressed(new DataInputStream(bis), NbtSizeTracker.ofUnlimitedBytes());
         } catch (Exception e) {
-            MeteorClient.LOG.error("Invalid NBT data pasted!", e);
+            CookieClient.LOG.error("Invalid NBT data pasted!", e);
             return null;
         }
     }

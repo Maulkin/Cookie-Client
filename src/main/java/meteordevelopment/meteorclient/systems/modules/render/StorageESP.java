@@ -13,7 +13,7 @@ import meteordevelopment.meteorclient.gui.widgets.containers.WVerticalList;
 import meteordevelopment.meteorclient.gui.widgets.pressable.WButton;
 import meteordevelopment.meteorclient.renderer.MeshBuilder;
 import meteordevelopment.meteorclient.renderer.MeshRenderer;
-import meteordevelopment.meteorclient.renderer.MeteorRenderPipelines;
+import meteordevelopment.meteorclient.renderer.CookieRenderPipelines;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
@@ -184,7 +184,7 @@ public class StorageESP extends Module {
     public StorageESP() {
         super(Categories.Render, "storage-esp", "Renders all specified storage blocks.");
 
-        mesh = new MeshBuilder(MeteorRenderPipelines.WORLD_COLORED);
+        mesh = new MeshBuilder(CookieRenderPipelines.WORLD_COLORED);
         vertexConsumerProvider = new MeshBuilderVertexConsumerProvider(mesh);
     }
 
@@ -300,7 +300,7 @@ public class StorageESP extends Module {
             PostProcessShaders.STORAGE_OUTLINE.endRender(() -> MeshRenderer.begin()
                 .attachments(mc.getFramebuffer())
                 .clearColor(Color.CLEAR)
-                .pipeline(MeteorRenderPipelines.WORLD_COLORED)
+                .pipeline(CookieRenderPipelines.WORLD_COLORED)
                 .mesh(mesh, event.matrices)
                 .end()
             );

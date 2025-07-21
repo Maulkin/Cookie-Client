@@ -6,10 +6,10 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets.pressable;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.pressable.WMinus;
 
-public class WMeteorMinus extends WMinus implements MeteorWidget {
+public class WMeteorMinus extends WMinus implements CookieWidget {
     @Override
     protected void onRender(GuiRenderer renderer, double mouseX, double mouseY, double delta) {
         double pad = pad();

@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.gui.screens;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.gui.GuiTheme;
 import meteordevelopment.meteorclient.gui.WindowScreen;
 import meteordevelopment.meteorclient.gui.widgets.containers.WVerticalList;
@@ -116,7 +116,7 @@ public class ProxiesImportScreen extends WindowScreen {
                     .color(Utils.lerp(Color.RED, Color.GREEN, (float) success / (success + fail)))
                 );
             } catch (IOException e) {
-                MeteorClient.LOG.error("An error occurred while importing the proxy file", e);
+                CookieClient.LOG.error("An error occurred while importing the proxy file", e);
             }
         } else {
             add(theme.label("Invalid File!"));

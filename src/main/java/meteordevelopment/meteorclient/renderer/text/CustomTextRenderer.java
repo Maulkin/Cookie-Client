@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.renderer.text;
 
 import meteordevelopment.meteorclient.renderer.MeshBuilder;
 import meteordevelopment.meteorclient.renderer.MeshRenderer;
-import meteordevelopment.meteorclient.renderer.MeteorRenderPipelines;
+import meteordevelopment.meteorclient.renderer.CookieRenderPipelines;
 import meteordevelopment.meteorclient.utils.Utils;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import net.minecraft.client.MinecraftClient;
@@ -18,7 +18,7 @@ import java.nio.ByteBuffer;
 public class CustomTextRenderer implements TextRenderer {
     public static final Color SHADOW_COLOR = new Color(60, 60, 60, 180);
 
-    private final MeshBuilder mesh = new MeshBuilder(MeteorRenderPipelines.UI_TEXT);
+    private final MeshBuilder mesh = new MeshBuilder(CookieRenderPipelines.UI_TEXT);
 
     public final FontFace fontFace;
 
@@ -127,7 +127,7 @@ public class CustomTextRenderer implements TextRenderer {
 
             MeshRenderer.begin()
                 .attachments(MinecraftClient.getInstance().getFramebuffer())
-                .pipeline(MeteorRenderPipelines.UI_TEXT)
+                .pipeline(CookieRenderPipelines.UI_TEXT)
                 .mesh(mesh)
                 .sampler("u_Texture", font.texture.getGlTextureView())
                 .end();

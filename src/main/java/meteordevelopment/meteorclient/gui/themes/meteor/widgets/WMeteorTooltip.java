@@ -6,10 +6,10 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.WTooltip;
 
-public class WMeteorTooltip extends WTooltip implements MeteorWidget {
+public class WMeteorTooltip extends WTooltip implements CookieWidget {
     public WMeteorTooltip(String text) {
         super(text);
     }

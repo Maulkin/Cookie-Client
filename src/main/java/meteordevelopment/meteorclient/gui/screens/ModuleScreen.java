@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.gui.screens;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.meteor.ActiveModulesChangedEvent;
 import meteordevelopment.meteorclient.events.meteor.ModuleBindChangedEvent;
 import meteordevelopment.meteorclient.gui.GuiTheme;
@@ -51,7 +51,7 @@ public class ModuleScreen extends WindowScreen {
         // Description
         add(theme.label(module.description, getWindowWidth() / 2.0));
 
-        if (module.addon != null && module.addon != MeteorClient.ADDON) {
+        if (module.addon != null && module.addon != CookieClient.ADDON) {
             WHorizontalList addon = add(theme.horizontalList()).expandX().widget();
             addon.add(theme.label("From: ").color(theme.textSecondaryColor())).widget();
             addon.add(theme.label(module.addon.name).color(module.addon.color)).widget();

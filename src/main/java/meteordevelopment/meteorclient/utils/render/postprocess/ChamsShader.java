@@ -10,7 +10,7 @@ import com.mojang.blaze3d.buffers.Std140SizeCalculator;
 import com.mojang.blaze3d.platform.TextureUtil;
 import com.mojang.blaze3d.textures.FilterMode;
 import com.mojang.blaze3d.textures.TextureFormat;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.game.ResourcePacksReloadedEvent;
 import meteordevelopment.meteorclient.renderer.MeshRenderer;
 import meteordevelopment.meteorclient.renderer.Texture;
@@ -30,7 +30,7 @@ import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 import java.util.Optional;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class ChamsShader extends EntityShader {
     private static final String[] FILE_FORMATS = { "png", "jpg" };
@@ -39,7 +39,7 @@ public class ChamsShader extends EntityShader {
     private static Chams chams;
 
     public ChamsShader() {
-        MeteorClient.EVENT_BUS.subscribe(ChamsShader.class);
+        CookieClient.EVENT_BUS.subscribe(ChamsShader.class);
     }
 
     @PostInit
@@ -47,7 +47,7 @@ public class ChamsShader extends EntityShader {
         try {
             ByteBuffer data = null;
             for (String fileFormat : FILE_FORMATS) {
-                Optional<Resource> optional = mc.getResourceManager().getResource(MeteorClient.identifier("textures/chams." + fileFormat));
+                Optional<Resource> optional = mc.getResourceManager().getResource(CookieClient.identifier("textures/chams." + fileFormat));
                 if (optional.isEmpty() || optional.get().getInputStream() == null) {
                     continue;
                 }

@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.movement.elytrafly;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -520,11 +520,11 @@ public class ElytraFly extends Module {
     private final StaticGroundListener staticGroundListener = new StaticGroundListener();
 
     protected void enableGroundListener() {
-        MeteorClient.EVENT_BUS.subscribe(staticGroundListener);
+        CookieClient.EVENT_BUS.subscribe(staticGroundListener);
     }
 
     protected void disableGroundListener() {
-        MeteorClient.EVENT_BUS.unsubscribe(staticGroundListener);
+        CookieClient.EVENT_BUS.unsubscribe(staticGroundListener);
     }
 
     //Drop
@@ -543,11 +543,11 @@ public class ElytraFly extends Module {
     private final StaticInstaDropListener staticInstadropListener = new StaticInstaDropListener();
 
     protected void enableInstaDropListener() {
-        MeteorClient.EVENT_BUS.subscribe(staticInstadropListener);
+        CookieClient.EVENT_BUS.subscribe(staticInstadropListener);
     }
 
     protected void disableInstaDropListener() {
-        MeteorClient.EVENT_BUS.unsubscribe(staticInstadropListener);
+        CookieClient.EVENT_BUS.unsubscribe(staticInstadropListener);
     }
 
     @Override
