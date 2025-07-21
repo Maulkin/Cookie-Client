@@ -72,8 +72,8 @@ public class BlockESP extends Module {
 
     public final Setting<Integer> distance = sgGeneral.add(new IntSetting.Builder()
         .name("distance")
-        .description("Chunk distance used to search for blocks. Adds on top of render distance.")
-        .defaultValue(Utils.getRenderDistance() + 1)
+        .description("Additional chunk distance used to search for blocks.")
+        .defaultValue(1)
         .min(1)
         .sliderMax(32)
         .build()
