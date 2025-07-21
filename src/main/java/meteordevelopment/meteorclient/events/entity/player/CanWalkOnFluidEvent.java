@@ -1,5 +1,5 @@
 /*
- * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * This file is part of the Cookie Client distribution (https://github.com/cookie-client/cookie-client).
  * Copyright (c) Cookie Development.
  */
 
@@ -17,7 +17,7 @@ import net.minecraft.fluid.FluidState;
  * calculates whether there is enough space to fit your bounding box if you change into that pose. This method ends up
  * calling {@link LivingEntity#canWalkOnFluid(net.minecraft.fluid.FluidState)}, causing this event to fire
  * again and leading to a stack overflow crash. Introduced in
- * <a href="https://github.com/MeteorDevelopment/meteor-client/pull/5449">this pull request</a>
+ * <a href="https://github.com/cookie-client/cookie-client/pull/5449">this pull request</a>
  */
 public class CanWalkOnFluidEvent {
     private static final CanWalkOnFluidEvent INSTANCE = new CanWalkOnFluidEvent();

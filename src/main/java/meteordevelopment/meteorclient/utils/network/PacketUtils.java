@@ -1,5 +1,5 @@
 /*
- * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client/).
+ * This file is part of the Cookie Client distribution (https://github.com/cookie-client/cookie-client/).
  * Copyright (c) Cookie Development.
  */
 

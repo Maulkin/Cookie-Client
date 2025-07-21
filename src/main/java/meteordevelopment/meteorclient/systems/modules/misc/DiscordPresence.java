@@ -1,5 +1,5 @@
 /*
- * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * This file is part of the Cookie Client distribution (https://github.com/cookie-client/cookie-client).
  * Copyright (c) Cookie Development.
  */
 
@@ -288,7 +288,7 @@ public class DiscordPresence extends Module {
     @Override
     public WWidget getWidget(GuiTheme theme) {
         WButton help = theme.button("Open documentation.");
-        help.action = () -> Util.getOperatingSystem().open("https://github.com/MeteorDevelopment/meteor-client/wiki/Starscript");
+        help.action = () -> Util.getOperatingSystem().open("https://github.com/cookie-client/cookie-client/wiki/Starscript");
 
         return help;
     }

@@ -1,5 +1,5 @@
 /*
- * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * This file is part of the Cookie Client distribution (https://github.com/cookie-client/cookie-client).
  * Copyright (c) Cookie Development.
  */
 
@@ -47,7 +47,7 @@ public class NotebotCommand extends Command {
     @Override
     public void build(LiteralArgumentBuilder<CommandSource> builder) {
         builder.then(literal("help").executes(ctx -> {
-            Util.getOperatingSystem().open("https://github.com/MeteorDevelopment/meteor-client/wiki/Notebot-Guide");
+            Util.getOperatingSystem().open("https://github.com/cookie-client/cookie-client/wiki/Notebot-Guide");
             return SINGLE_SUCCESS;
         }));
 

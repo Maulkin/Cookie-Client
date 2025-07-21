@@ -1,7 +1,7 @@
 <component name="CopyrightManager">
   <copyright>
     <option name="keyword" value="This file is part of the Cookie Client distribution" />
-    <option name="notice" value="This file is part of the Cookie Client distribution (https://github.com/CookieDevelopment/meteor-client).&#10;Copyright (c) Cookie Development." />
+    <option name="notice" value="This file is part of the Cookie Client distribution (https://github.com/cookie-client/cookie-client).&#10;Copyright (c) Cookie Development." />
     <option name="myName" value="Cookie" />
   </copyright>
 </component>
