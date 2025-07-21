@@ -36,7 +36,7 @@ public class AddonManager {
 
                 @Override
                 public GithubRepo getRepo() {
-                    return new GithubRepo("MeteorDevelopment", "cookie-client");
+                    return new GithubRepo("cookie-client", "cookie-client");
                 }
 
                 @Override
