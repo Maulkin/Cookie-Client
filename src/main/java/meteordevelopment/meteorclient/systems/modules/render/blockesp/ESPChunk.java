@@ -13,7 +13,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkSectionPos;
-import net.minecraft.world.Heightmap;
 import net.minecraft.world.chunk.Chunk;
 
 import java.util.List;
@@ -96,9 +95,10 @@ public class ESPChunk {
 
         for (int x = chunk.getPos().getStartX(); x <= chunk.getPos().getEndX(); x++) {
             for (int z = chunk.getPos().getStartZ(); z <= chunk.getPos().getEndZ(); z++) {
-                int height = chunk.getHeightmap(Heightmap.Type.WORLD_SURFACE).get(x - chunk.getPos().getStartX(), z - chunk.getPos().getStartZ());
+                int minY = mc.world.getBottomY();
+                int maxY = mc.world.getHeight();
 
-                for (int y = mc.world.getBottomY(); y < height; y++) {
+                for (int y = minY; y < maxY; y++) {
                     blockPos.set(x, y, z);
                     BlockState bs = chunk.getBlockState(blockPos);
 
