@@ -13,10 +13,10 @@ import meteordevelopment.meteorclient.gui.widgets.pressable.WMinus;
 import meteordevelopment.meteorclient.systems.accounts.Account;
 import meteordevelopment.meteorclient.systems.accounts.Accounts;
 import meteordevelopment.meteorclient.systems.accounts.TokenAccount;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.meteorclient.utils.network.CookieExecutor;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public abstract class WAccount extends WHorizontalList {
     public Runnable refreshScreenAction;
@@ -57,7 +57,7 @@ public abstract class WAccount extends WHorizontalList {
             login.set("...");
             screen.locked = true;
 
-            MeteorExecutor.execute(() -> {
+            CookieExecutor.execute(() -> {
                 if (account.fetchInfo() && account.login()) {
                     name.set(account.getUsername());
 

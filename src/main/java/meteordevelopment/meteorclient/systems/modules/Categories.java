@@ -6,7 +6,7 @@
 package meteordevelopment.meteorclient.systems.modules;
 
 import meteordevelopment.meteorclient.addons.AddonManager;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
+import meteordevelopment.meteorclient.addons.CookieAddon;
 import net.minecraft.item.Items;
 
 public class Categories {
@@ -31,7 +31,7 @@ public class Categories {
         Modules.registerCategory(Misc);
 
         // Addons
-        AddonManager.ADDONS.forEach(MeteorAddon::onRegisterCategories);
+        AddonManager.ADDONS.forEach(CookieAddon::onRegisterCategories);
 
         REGISTERING = false;
     }

@@ -22,7 +22,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
 import org.lwjgl.glfw.GLFW;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class PeekScreen extends ShulkerBoxScreen {
     private final Identifier TEXTURE = Identifier.of("textures/gui/container/shulker_box.png");

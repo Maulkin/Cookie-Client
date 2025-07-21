@@ -14,10 +14,10 @@ import meteordevelopment.meteorclient.gui.widgets.pressable.WButton;
 import meteordevelopment.meteorclient.systems.accounts.Account;
 import meteordevelopment.meteorclient.systems.accounts.Accounts;
 import meteordevelopment.meteorclient.utils.misc.NbtUtils;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.meteorclient.utils.network.CookieExecutor;
 import org.jetbrains.annotations.Nullable;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class AccountsScreen extends WindowScreen {
     public AccountsScreen(GuiTheme theme) {
@@ -48,7 +48,7 @@ public class AccountsScreen extends WindowScreen {
     public static void addAccount(@Nullable AddAccountScreen screen, AccountsScreen parent, Account<?> account) {
         if (screen != null) screen.locked = true;
 
-        MeteorExecutor.execute(() -> {
+        CookieExecutor.execute(() -> {
             if (account.fetchInfo()) {
                 account.getCache().loadHead();
 

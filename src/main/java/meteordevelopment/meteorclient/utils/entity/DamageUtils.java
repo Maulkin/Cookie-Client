@@ -49,7 +49,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.BiFunction;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class DamageUtils {
     private DamageUtils() {

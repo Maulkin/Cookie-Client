@@ -25,7 +25,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class Hud extends System<Hud> implements Iterable<HudElement> {
     public static final HudGroup GROUP = new HudGroup("Cookie");
@@ -116,7 +116,7 @@ public class Hud extends System<Hud> implements Iterable<HudElement> {
     public void init() {
         settings.registerColorSettings(null);
 
-        register(MeteorTextHud.INFO);
+        register(CookieTextHud.INFO);
         register(ItemHud.INFO);
         register(InventoryHud.INFO);
         register(CompassHud.INFO);
@@ -190,19 +190,19 @@ public class Hud extends System<Hud> implements Iterable<HudElement> {
         int h = (int) Math.ceil(HudRenderer.INSTANCE.textHeight(true));
 
         // Top Left
-        add(MeteorTextHud.WATERMARK, 4, 4, XAnchor.Left, YAnchor.Top);
-        add(MeteorTextHud.FPS, 4, 4 + h, XAnchor.Left, YAnchor.Top);
-        add(MeteorTextHud.TPS, 4, 4 + h * 2, XAnchor.Left, YAnchor.Top);
-        add(MeteorTextHud.PING, 4, 4 + h * 3, XAnchor.Left, YAnchor.Top);
-        add(MeteorTextHud.SPEED, 4, 4 + h * 4, XAnchor.Left, YAnchor.Top);
+        add(CookieTextHud.WATERMARK, 4, 4, XAnchor.Left, YAnchor.Top);
+        add(CookieTextHud.FPS, 4, 4 + h, XAnchor.Left, YAnchor.Top);
+        add(CookieTextHud.TPS, 4, 4 + h * 2, XAnchor.Left, YAnchor.Top);
+        add(CookieTextHud.PING, 4, 4 + h * 3, XAnchor.Left, YAnchor.Top);
+        add(CookieTextHud.SPEED, 4, 4 + h * 4, XAnchor.Left, YAnchor.Top);
 
         // Top Right
         add(ActiveModulesHud.INFO, -4, 4, XAnchor.Right, YAnchor.Top);
 
         // Bottom Right
-        add(MeteorTextHud.POSITION, -4, -4, XAnchor.Right, YAnchor.Bottom);
-        add(MeteorTextHud.OPPOSITE_POSITION, -4, -4 - h, XAnchor.Right, YAnchor.Bottom);
-        add(MeteorTextHud.ROTATION, -4, -4 - h * 2, XAnchor.Right, YAnchor.Bottom);
+        add(CookieTextHud.POSITION, -4, -4, XAnchor.Right, YAnchor.Bottom);
+        add(CookieTextHud.OPPOSITE_POSITION, -4, -4 - h, XAnchor.Right, YAnchor.Bottom);
+        add(CookieTextHud.ROTATION, -4, -4 - h * 2, XAnchor.Right, YAnchor.Bottom);
     }
 
     @EventHandler

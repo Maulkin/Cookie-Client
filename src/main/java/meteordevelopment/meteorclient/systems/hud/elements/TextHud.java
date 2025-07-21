@@ -5,14 +5,14 @@
 
 package meteordevelopment.meteorclient.systems.hud.elements;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.gui.utils.StarscriptTextBoxRenderer;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudElement;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
 import meteordevelopment.meteorclient.systems.hud.HudRenderer;
-import meteordevelopment.meteorclient.utils.misc.MeteorStarscript;
+import meteordevelopment.meteorclient.utils.misc.CookieStarscript;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import meteordevelopment.meteorclient.utils.render.color.SettingColor;
 import org.meteordev.starscript.Script;
@@ -41,7 +41,7 @@ public class TextHud extends HudElement {
     public final Setting<String> text = sgGeneral.add(new StringSetting.Builder()
         .name("text")
         .description("Text to display with Starscript.")
-        .defaultValue(MeteorClient.NAME)
+        .defaultValue(CookieClient.NAME)
         .onChanged(s -> recompile())
         .wide()
         .renderer(StarscriptTextBoxRenderer.class)
@@ -209,7 +209,7 @@ public class TextHud extends HudElement {
 
         try {
             if (script != null) {
-                section = MeteorStarscript.ss.run(script);
+                section = CookieStarscript.ss.run(script);
                 calculateSize(renderer);
             }
         }
@@ -219,7 +219,7 @@ public class TextHud extends HudElement {
         }
 
         if (shown.get() != Shown.Always && conditionScript != null) {
-            String text = MeteorStarscript.run(conditionScript);
+            String text = CookieStarscript.run(conditionScript);
             if (text == null) visible = false;
             else visible = shown.get() == Shown.WhenTrue ? text.equalsIgnoreCase("true") : text.equalsIgnoreCase("false");
         }

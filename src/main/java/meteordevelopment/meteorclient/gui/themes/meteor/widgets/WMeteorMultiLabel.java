@@ -6,11 +6,11 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.WMultiLabel;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 
-public class WMeteorMultiLabel extends WMultiLabel implements MeteorWidget {
+public class WMeteorMultiLabel extends WMultiLabel implements CookieWidget {
     public WMeteorMultiLabel(String text, boolean title, double maxWidth) {
         super(text, title, maxWidth);
     }

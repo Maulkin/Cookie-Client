@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.misc;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.gui.GuiTheme;
 import meteordevelopment.meteorclient.gui.widgets.WLabel;
@@ -105,7 +105,7 @@ public class BookBot extends Module {
         .build()
     );
 
-    private File file = new File(MeteorClient.FOLDER, "bookbot.txt");
+    private File file = new File(CookieClient.FOLDER, "bookbot.txt");
     private final PointerBuffer filters;
 
     private int delayTimer, bookCount;
@@ -137,7 +137,7 @@ public class BookBot extends Module {
         selectFile.action = () -> {
             String path = TinyFileDialogs.tinyfd_openFileDialog(
                 "Select File",
-                new File(MeteorClient.FOLDER, "bookbot.txt").getAbsolutePath(),
+                new File(CookieClient.FOLDER, "bookbot.txt").getAbsolutePath(),
                 filters,
                 null,
                 false

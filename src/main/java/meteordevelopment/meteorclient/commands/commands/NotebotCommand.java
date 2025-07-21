@@ -9,7 +9,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.commands.arguments.NotebotSongArgumentType;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
@@ -110,13 +110,13 @@ public class NotebotCommand extends Command {
         builder.then(literal("record").then(literal("start").executes(ctx -> {
             ticks = -1;
             song.clear();
-            MeteorClient.EVENT_BUS.subscribe(this);
+            CookieClient.EVENT_BUS.subscribe(this);
             info("Recording started");
             return SINGLE_SUCCESS;
         })));
 
         builder.then(literal("record").then(literal("cancel").executes(ctx -> {
-            MeteorClient.EVENT_BUS.unsubscribe(this);
+            CookieClient.EVENT_BUS.unsubscribe(this);
             info("Recording cancelled");
             return SINGLE_SUCCESS;
         })));
@@ -126,7 +126,7 @@ public class NotebotCommand extends Command {
             if (name == null || name.isEmpty()) {
                 throw INVALID_PATH.create(name);
             }
-            Path notebotFolder = MeteorClient.FOLDER.toPath().resolve("notebot");
+            Path notebotFolder = CookieClient.FOLDER.toPath().resolve("notebot");
             Path path = notebotFolder.resolve(String.format("%s.txt", name)).normalize();
             if (!path.startsWith(notebotFolder)) {
                 throw INVALID_PATH.create(path);
@@ -156,11 +156,11 @@ public class NotebotCommand extends Command {
 
     private void saveRecording(Path path) {
         if (song.isEmpty()) {
-            MeteorClient.EVENT_BUS.unsubscribe(this);
+            CookieClient.EVENT_BUS.unsubscribe(this);
             return;
         }
         try {
-            MeteorClient.EVENT_BUS.unsubscribe(this);
+            CookieClient.EVENT_BUS.unsubscribe(this);
 
             FileWriter file = new FileWriter(path.toFile());
             for (var entry : song.entrySet()) {
@@ -179,7 +179,7 @@ public class NotebotCommand extends Command {
             info("Song saved.");
         } catch (IOException e) {
             info("Couldn't create the file.");
-            MeteorClient.EVENT_BUS.unsubscribe(this);
+            CookieClient.EVENT_BUS.unsubscribe(this);
         }
 
     }

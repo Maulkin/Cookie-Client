@@ -11,10 +11,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class MeteorExecutor {
+public class CookieExecutor {
     public static ExecutorService executor;
 
-    private MeteorExecutor() {
+    private CookieExecutor() {
     }
 
     @PreInit

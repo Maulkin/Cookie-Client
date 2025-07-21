@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.systems.modules.render;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.renderer.MeteorRenderPipelines;
+import meteordevelopment.meteorclient.CookieClient;
+import meteordevelopment.meteorclient.renderer.CookieRenderPipelines;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
@@ -176,7 +176,7 @@ public class Chams extends Module {
         .build()
     );
 
-    public static final Identifier BLANK = MeteorClient.identifier("textures/blank.png");
+    public static final Identifier BLANK = CookieClient.identifier("textures/blank.png");
 
     public Chams() {
         super(Categories.Render, "chams", "Tweaks rendering of entities.");
@@ -192,7 +192,7 @@ public class Chams extends Module {
 
     public void updateShader(Shader value) {
         if (value == Shader.None) return;
-        PostProcessShaders.CHAMS.init(MeteorRenderPipelines.POST_IMAGE);
+        PostProcessShaders.CHAMS.init(CookieRenderPipelines.POST_IMAGE);
     }
 
     public enum Shader {

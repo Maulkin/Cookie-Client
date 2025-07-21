@@ -18,7 +18,7 @@ import net.minecraft.world.chunk.Chunk;
 
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 import static meteordevelopment.meteorclient.utils.Utils.getRenderDistance;
 
 public class ESPChunk {
@@ -110,7 +110,12 @@ public class ESPChunk {
 
         for (int x = chunk.getPos().getStartX(); x <= chunk.getPos().getEndX(); x++) {
             for (int z = chunk.getPos().getStartZ(); z <= chunk.getPos().getEndZ(); z++) {
-                int height = chunk.getHeightmap(Heightmap.Type.WORLD_SURFACE).get(x - chunk.getPos().getStartX(), z - chunk.getPos().getStartZ());
+ k2ci8d-codex/review-build.gradle.kts-dependencies
+                
+
+                int height = chunk.getHeightmap(Heightmap.Type.WORLD_SURFACE)
+                    .get(x - chunk.getPos().getStartX(), z - chunk.getPos().getStartZ());
+ master
 
                 if (height > maxHeight) maxHeight = height;
 

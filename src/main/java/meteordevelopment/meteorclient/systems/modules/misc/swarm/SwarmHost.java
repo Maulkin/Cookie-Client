@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.modules.misc.swarm;
 
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.meteorclient.utils.network.CookieExecutor;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 
 import java.io.IOException;
@@ -69,7 +69,7 @@ public class SwarmHost extends Thread {
     }
 
     public void sendMessage(String s) {
-        MeteorExecutor.execute(() -> {
+        CookieExecutor.execute(() -> {
             for (SwarmConnection connection : clientConnections) {
                 if (connection != null) {
                     connection.messageToSend = s;

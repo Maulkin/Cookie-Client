@@ -23,7 +23,7 @@ import net.minecraft.util.math.random.Random;
 import java.util.ArrayList;
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public abstract class SimpleBlockRenderer {
     private static final MatrixStack MATRICES = new MatrixStack();

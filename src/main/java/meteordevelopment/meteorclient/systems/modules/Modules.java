@@ -6,7 +6,7 @@
 package meteordevelopment.meteorclient.systems.modules;
 
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceOpenHashMap;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.game.GameJoinedEvent;
 import meteordevelopment.meteorclient.events.game.GameLeftEvent;
 import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
@@ -48,7 +48,7 @@ import java.io.File;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class Modules extends System<Modules> {
     private static final List<Category> CATEGORIES = new ArrayList<>();
@@ -189,7 +189,7 @@ public class Modules extends System<Modules> {
         synchronized (active) {
             if (!active.contains(module)) {
                 active.add(module);
-                MeteorClient.EVENT_BUS.post(ActiveModulesChangedEvent.get());
+                CookieClient.EVENT_BUS.post(ActiveModulesChangedEvent.get());
             }
         }
     }
@@ -197,7 +197,7 @@ public class Modules extends System<Modules> {
     void removeActive(Module module) {
         synchronized (active) {
             if (active.remove(module)) {
-                MeteorClient.EVENT_BUS.post(ActiveModulesChangedEvent.get());
+                CookieClient.EVENT_BUS.post(ActiveModulesChangedEvent.get());
             }
         }
     }
@@ -250,7 +250,7 @@ public class Modules extends System<Modules> {
         }
         else return false;
 
-        MeteorClient.EVENT_BUS.post(ModuleBindChangedEvent.get(moduleToBind));
+        CookieClient.EVENT_BUS.post(ModuleBindChangedEvent.get(moduleToBind));
         moduleToBind = null;
 
         return true;
@@ -298,7 +298,7 @@ public class Modules extends System<Modules> {
         synchronized (active) {
             for (Module module : getAll()) {
                 if (module.isActive() && !module.runInMainMenu) {
-                    MeteorClient.EVENT_BUS.subscribe(module);
+                    CookieClient.EVENT_BUS.subscribe(module);
                     module.onActivate();
                 }
             }
@@ -310,7 +310,7 @@ public class Modules extends System<Modules> {
         synchronized (active) {
             for (Module module : getAll()) {
                 if (module.isActive() && !module.runInMainMenu) {
-                    MeteorClient.EVENT_BUS.unsubscribe(module);
+                    CookieClient.EVENT_BUS.unsubscribe(module);
                     module.onDeactivate();
                 }
             }

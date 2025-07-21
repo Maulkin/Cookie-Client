@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.systems.modules.combat;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.*;
@@ -281,10 +281,10 @@ public class AutoLog extends Module {
     private final StaticListener staticListener = new StaticListener();
 
     private void enableHealthListener() {
-        MeteorClient.EVENT_BUS.subscribe(staticListener);
+        CookieClient.EVENT_BUS.subscribe(staticListener);
     }
 
     private void disableHealthListener() {
-        MeteorClient.EVENT_BUS.unsubscribe(staticListener);
+        CookieClient.EVENT_BUS.unsubscribe(staticListener);
     }
 }

@@ -8,7 +8,7 @@ package meteordevelopment.meteorclient.utils.misc.text;
 /**
  * Allows arbitrary code execution in a click event
  */
-public class RunnableClickEvent extends MeteorClickEvent {
+public class RunnableClickEvent extends CookieClickEvent {
     public final Runnable runnable;
 
     public RunnableClickEvent(Runnable runnable) {

@@ -23,8 +23,8 @@ public class Renderer2D {
     public Renderer2D(boolean textured) {
         this.textured = textured;
 
-        triangles = new MeshBuilder(textured ? MeteorRenderPipelines.UI_TEXTURED : MeteorRenderPipelines.UI_COLORED);
-        lines = new MeshBuilder(MeteorRenderPipelines.UI_COLORED_LINES);
+        triangles = new MeshBuilder(textured ? CookieRenderPipelines.UI_TEXTURED : CookieRenderPipelines.UI_COLORED);
+        lines = new MeshBuilder(CookieRenderPipelines.UI_COLORED_LINES);
     }
 
     @PreInit
@@ -64,13 +64,13 @@ public class Renderer2D {
 
         MeshRenderer.begin()
             .attachments(MinecraftClient.getInstance().getFramebuffer())
-            .pipeline(MeteorRenderPipelines.UI_COLORED_LINES)
+            .pipeline(CookieRenderPipelines.UI_COLORED_LINES)
             .mesh(lines)
             .end();
 
         MeshRenderer.begin()
             .attachments(MinecraftClient.getInstance().getFramebuffer())
-            .pipeline(textured ? MeteorRenderPipelines.UI_TEXTURED : MeteorRenderPipelines.UI_COLORED)
+            .pipeline(textured ? CookieRenderPipelines.UI_TEXTURED : CookieRenderPipelines.UI_COLORED)
             .mesh(triangles)
             .sampler(samplerName, samplerView)
             .end();

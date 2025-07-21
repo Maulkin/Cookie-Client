@@ -8,7 +8,7 @@ package meteordevelopment.meteorclient.systems.modules.world;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.world.ChunkDataEvent;
 import meteordevelopment.meteorclient.gui.GuiTheme;
 import meteordevelopment.meteorclient.gui.WindowScreen;
@@ -22,7 +22,7 @@ import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.render.MeteorToast;
+import meteordevelopment.meteorclient.utils.render.CookieToast;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.block.entity.*;
 import net.minecraft.item.Items;
@@ -126,12 +126,12 @@ public class StashFinder extends Module {
                 switch (notificationMode.get()) {
                     case Chat -> info("Found stash at (highlight)%s(default), (highlight)%s(default).", chunk.x, chunk.z);
                     case Toast -> {
-                        MeteorToast toast = new MeteorToast.Builder(title).icon(Items.CHEST).text("Found Stash!").build();
+                        CookieToast toast = new CookieToast.Builder(title).icon(Items.CHEST).text("Found Stash!").build();
                         mc.getToastManager().add(toast);
                     }
                     case Both -> {
                         info("Found stash at (highlight)%s(default), (highlight)%s(default).", chunk.x, chunk.z);
-                        MeteorToast toast = new MeteorToast.Builder(title).icon(Items.CHEST).text("Found Stash!").build();
+                        CookieToast toast = new CookieToast.Builder(title).icon(Items.CHEST).text("Found Stash!").build();
                         mc.getToastManager().add(toast);
                     }
                 }
@@ -265,11 +265,11 @@ public class StashFinder extends Module {
     }
 
     private File getJsonFile() {
-        return new File(new File(new File(MeteorClient.FOLDER, "stashes"), Utils.getFileWorldName()), "stashes.json");
+        return new File(new File(new File(CookieClient.FOLDER, "stashes"), Utils.getFileWorldName()), "stashes.json");
     }
 
     private File getCsvFile() {
-        return new File(new File(new File(MeteorClient.FOLDER, "stashes"), Utils.getFileWorldName()), "stashes.csv");
+        return new File(new File(new File(CookieClient.FOLDER, "stashes"), Utils.getFileWorldName()), "stashes.csv");
     }
 
     @Override

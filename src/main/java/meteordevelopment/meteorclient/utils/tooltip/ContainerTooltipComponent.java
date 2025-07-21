@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.utils.tooltip;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.utils.render.RenderUtils;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import net.minecraft.client.font.TextRenderer;
@@ -15,8 +15,8 @@ import net.minecraft.client.gui.tooltip.TooltipComponent;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
-public class ContainerTooltipComponent implements TooltipComponent, MeteorTooltipData {
-    private static final Identifier TEXTURE_CONTAINER_BACKGROUND = MeteorClient.identifier("textures/container.png");
+public class ContainerTooltipComponent implements TooltipComponent, CookieTooltipData {
+    private static final Identifier TEXTURE_CONTAINER_BACKGROUND = CookieClient.identifier("textures/container.png");
 
     private final ItemStack[] items;
     private final Color color;

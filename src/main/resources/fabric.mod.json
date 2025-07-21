@@ -18,7 +18,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "meteordevelopment.meteorclient.MeteorClient"
+      "meteordevelopment.meteorclient.CookieClient"
     ],
     "modmenu": [
       "meteordevelopment.meteorclient.ModMenuIntegration"

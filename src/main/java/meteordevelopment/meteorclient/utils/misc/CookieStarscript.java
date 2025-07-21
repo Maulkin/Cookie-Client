@@ -8,7 +8,7 @@ package meteordevelopment.meteorclient.utils.misc;
 import baritone.api.BaritoneAPI;
 import baritone.api.pathing.goals.Goal;
 import baritone.api.process.IBaritoneProcess;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.mixin.ClientPlayerInteractionManagerAccessor;
 import meteordevelopment.meteorclient.mixin.MinecraftClientAccessor;
 import meteordevelopment.meteorclient.pathing.BaritoneUtils;
@@ -65,9 +65,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
-public class MeteorStarscript {
+public class CookieStarscript {
     public static Starscript ss = new Starscript();
 
     private static final BlockPos.Mutable BP = new BlockPos.Mutable();
@@ -80,30 +80,30 @@ public class MeteorStarscript {
         // General
         ss.set("mc_version", SharedConstants.getGameVersion().name());
         ss.set("fps", () -> Value.number(MinecraftClientAccessor.getFps()));
-        ss.set("ping", MeteorStarscript::ping);
+        ss.set("ping", CookieStarscript::ping);
         ss.set("time", () -> Value.string(LocalTime.now().format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT))));
         ss.set("cps", () -> Value.number(CPSUtils.getCpsAverage()));
 
         // Meteor
         ss.set("meteor", new ValueMap()
-            .set("name", MeteorClient.NAME)
-            .set("version", MeteorClient.VERSION != null ? (MeteorClient.BUILD_NUMBER.isEmpty() ? MeteorClient.VERSION.toString() : MeteorClient.VERSION + " " + MeteorClient.BUILD_NUMBER) : "")
+            .set("name", CookieClient.NAME)
+            .set("version", CookieClient.VERSION != null ? (CookieClient.BUILD_NUMBER.isEmpty() ? CookieClient.VERSION.toString() : CookieClient.VERSION + " " + CookieClient.BUILD_NUMBER) : "")
             .set("modules", () -> Value.number(Modules.get().getAll().size()))
             .set("active_modules", () -> Value.number(Modules.get().getActive().size()))
-            .set("is_module_active", MeteorStarscript::isModuleActive)
-            .set("get_module_info", MeteorStarscript::getModuleInfo)
-            .set("get_module_setting", MeteorStarscript::getModuleSetting)
-            .set("prefix", MeteorStarscript::getMeteorPrefix)
+            .set("is_module_active", CookieStarscript::isModuleActive)
+            .set("get_module_info", CookieStarscript::getModuleInfo)
+            .set("get_module_setting", CookieStarscript::getModuleSetting)
+            .set("prefix", CookieStarscript::getMeteorPrefix)
         );
 
         // Baritone
         if (BaritoneUtils.IS_AVAILABLE) {
             ss.set("baritone", new ValueMap()
                 .set("is_pathing", () -> Value.bool(BaritoneAPI.getProvider().getPrimaryBaritone().getPathingBehavior().isPathing()))
-                .set("distance_to_goal", MeteorStarscript::baritoneDistanceToGoal)
-                .set("process", MeteorStarscript::baritoneProcess)
-                .set("process_name", MeteorStarscript::baritoneProcessName)
-                .set("eta", MeteorStarscript::baritoneETA)
+                .set("distance_to_goal", CookieStarscript::baritoneDistanceToGoal)
+                .set("process", CookieStarscript::baritoneProcess)
+                .set("process_name", CookieStarscript::baritoneProcessName)
+                .set("eta", CookieStarscript::baritoneETA)
             );
         }
 
@@ -144,7 +144,7 @@ public class MeteorStarscript {
             )
 
             .set("breaking_progress", () -> Value.number(mc.interactionManager != null ? ((ClientPlayerInteractionManagerAccessor) mc.interactionManager).getBreakingProgress() : 0))
-            .set("biome", MeteorStarscript::biome)
+            .set("biome", CookieStarscript::biome)
 
             .set("dimension", () -> Value.string(PlayerUtils.getDimension().name()))
             .set("opposite_dimension", () -> Value.string(PlayerUtils.getDimension().opposite().name()))
@@ -170,9 +170,9 @@ public class MeteorStarscript {
 
             .set("hand", () -> mc.player != null ? wrap(mc.player.getMainHandStack()) : Value.null_())
             .set("offhand", () -> mc.player != null ? wrap(mc.player.getOffHandStack()) : Value.null_())
-            .set("hand_or_offhand", MeteorStarscript::handOrOffhand)
-            .set("get_item", MeteorStarscript::getItem)
-            .set("count_items", MeteorStarscript::countItems)
+            .set("hand_or_offhand", CookieStarscript::handOrOffhand)
+            .set("get_item", CookieStarscript::getItem)
+            .set("count_items", CookieStarscript::countItems)
 
             .set("xp", new ValueMap()
                 .set("level", () -> Value.number(mc.player != null ? mc.player.experienceLevel : 0))
@@ -180,16 +180,16 @@ public class MeteorStarscript {
                 .set("total", () -> Value.number(mc.player != null ? mc.player.totalExperience : 0))
             )
 
-            .set("has_potion_effect", MeteorStarscript::hasPotionEffect)
-            .set("get_potion_effect", MeteorStarscript::getPotionEffect)
+            .set("has_potion_effect", CookieStarscript::hasPotionEffect)
+            .set("get_potion_effect", CookieStarscript::getPotionEffect)
 
-            .set("get_stat", MeteorStarscript::getStat)
+            .set("get_stat", CookieStarscript::getStat)
         );
 
         // Crosshair target
         ss.set("crosshair_target", new ValueMap()
-            .set("type", MeteorStarscript::crosshairType)
-            .set("value", MeteorStarscript::crosshairValue)
+            .set("type", CookieStarscript::crosshairType)
+            .set("value", CookieStarscript::crosshairValue)
         );
 
         // Server
@@ -271,7 +271,7 @@ public class MeteorStarscript {
             String name = elements[i].getClassName();
 
             if (name.startsWith(Starscript.class.getPackageName())) continue;
-            if (name.equals(MeteorStarscript.class.getName())) continue;
+            if (name.equals(CookieStarscript.class.getName())) continue;
 
             return name.substring(name.lastIndexOf('.') + 1);
         }

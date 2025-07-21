@@ -16,7 +16,7 @@ import org.lwjgl.BufferUtils;
 
 import java.nio.ByteBuffer;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 import static org.lwjgl.system.MemoryUtil.*;
 
 public class MeshBuilder {

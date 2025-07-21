@@ -10,7 +10,7 @@ import it.unimi.dsi.fastutil.chars.Char2CharMap;
 import it.unimi.dsi.fastutil.chars.Char2CharOpenHashMap;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.commands.Commands;
 import meteordevelopment.meteorclient.events.game.ReceiveMessageEvent;
 import meteordevelopment.meteorclient.events.game.SendMessageEvent;
@@ -21,7 +21,7 @@ import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.misc.text.MeteorClickEvent;
+import meteordevelopment.meteorclient.utils.misc.text.CookieClickEvent;
 import meteordevelopment.meteorclient.utils.misc.text.TextVisitor;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import meteordevelopment.orbit.EventHandler;
@@ -405,8 +405,8 @@ public class BetterChat extends Module {
     }
 
     static {
-        registerCustomHead("[Meteor]", MeteorClient.identifier("textures/icons/chat/meteor.png"));
-        registerCustomHead("[Baritone]", MeteorClient.identifier("textures/icons/chat/baritone.png"));
+        registerCustomHead("[Meteor]", CookieClient.identifier("textures/icons/chat/meteor.png"));
+        registerCustomHead("[Baritone]", CookieClient.identifier("textures/icons/chat/baritone.png"));
     }
 
     public int modifyChatWidth(int width) {
@@ -560,7 +560,7 @@ public class BetterChat extends Module {
 
         sendButton.setStyle(sendButton.getStyle()
             .withFormatting(Formatting.DARK_RED)
-            .withClickEvent(new MeteorClickEvent(Commands.get("say").toString(message)))
+            .withClickEvent(new CookieClickEvent(Commands.get("say").toString(message)))
             .withHoverEvent(new HoverEvent.ShowText(
                 hintBaseText
             )));

@@ -13,9 +13,9 @@ import net.minecraft.entity.LivingEntity;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
-public class EntityTooltipComponent implements MeteorTooltipData, TooltipComponent {
+public class EntityTooltipComponent implements CookieTooltipData, TooltipComponent {
     protected final LivingEntity entity;
     private static double spin;
 

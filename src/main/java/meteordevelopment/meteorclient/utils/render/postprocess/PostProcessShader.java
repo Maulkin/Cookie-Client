@@ -3,7 +3,7 @@ package meteordevelopment.meteorclient.utils.render.postprocess;
 import com.mojang.blaze3d.buffers.Std140Builder;
 import com.mojang.blaze3d.buffers.Std140SizeCalculator;
 import com.mojang.blaze3d.pipeline.RenderPipeline;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.renderer.FullScreenRenderer;
 import meteordevelopment.meteorclient.renderer.MeshRenderer;
 import net.minecraft.client.gl.DynamicUniformStorage;
@@ -14,7 +14,7 @@ import net.minecraft.entity.Entity;
 
 import java.nio.ByteBuffer;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 import static org.lwjgl.glfw.GLFW.glfwGetTime;
 
 public abstract class PostProcessShader {
@@ -24,7 +24,7 @@ public abstract class PostProcessShader {
 
     public void init(RenderPipeline pipeline) {
         vertexConsumerProvider = new OutlineVertexConsumerProvider(mc.getBufferBuilders().getEntityVertexConsumers());
-        framebuffer = new SimpleFramebuffer(MeteorClient.NAME + " PostProcessShader", mc.getWindow().getFramebufferWidth(), mc.getWindow().getFramebufferHeight(), true);
+        framebuffer = new SimpleFramebuffer(CookieClient.NAME + " PostProcessShader", mc.getWindow().getFramebufferWidth(), mc.getWindow().getFramebufferHeight(), true);
         this.pipeline = pipeline;
     }
 

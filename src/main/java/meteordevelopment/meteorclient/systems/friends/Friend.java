@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.UUID;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class Friend implements ISerializable<Friend>, Comparable<Friend> {
     public volatile String name;

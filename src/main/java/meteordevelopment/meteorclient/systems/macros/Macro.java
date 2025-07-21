@@ -9,7 +9,7 @@ import meteordevelopment.meteorclient.gui.utils.StarscriptTextBoxRenderer;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.utils.misc.ISerializable;
 import meteordevelopment.meteorclient.utils.misc.Keybind;
-import meteordevelopment.meteorclient.utils.misc.MeteorStarscript;
+import meteordevelopment.meteorclient.utils.misc.CookieStarscript;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class Macro implements ISerializable<Macro> {
     public final Settings settings = new Settings();
@@ -64,7 +64,7 @@ public class Macro implements ISerializable<Macro> {
                 scripts.clear();
 
                 for (String message : messages.get()) {
-                    Script script = MeteorStarscript.compile(message);
+                    Script script = CookieStarscript.compile(message);
                     if (script != null) scripts.add(script);
                 }
 
@@ -72,7 +72,7 @@ public class Macro implements ISerializable<Macro> {
             }
 
             for (Script script : scripts) {
-                String message = MeteorStarscript.run(script);
+                String message = CookieStarscript.run(script);
 
                 if (message != null) {
                     ChatUtils.sendPlayerMsg(message);

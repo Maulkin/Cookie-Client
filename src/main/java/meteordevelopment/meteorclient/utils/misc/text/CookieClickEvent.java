@@ -15,10 +15,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * This class does nothing except ensure that {@link ClickEvent}'s containing Cookie Client commands can only be executed if they come from the client.
  * @see ScreenMixin#onHandleBasicClickEvent(ClickEvent, MinecraftClient, Screen, CallbackInfo)
  */
-public class MeteorClickEvent implements ClickEvent {
+public class CookieClickEvent implements ClickEvent {
     public final String value;
 
-    public MeteorClickEvent(String value) {
+    public CookieClickEvent(String value) {
         this.value = value;
     }
 

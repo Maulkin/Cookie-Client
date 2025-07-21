@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.entity.LivingEntityMoveEvent;
 import meteordevelopment.meteorclient.events.entity.player.JumpVelocityMultiplierEvent;
 import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
@@ -42,7 +42,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 @Mixin(Entity.class)
 public abstract class EntityMixin {
@@ -124,7 +124,7 @@ public abstract class EntityMixin {
     @ModifyReturnValue(method = "getJumpVelocityMultiplier", at = @At("RETURN"))
     private float onGetJumpVelocityMultiplier(float original) {
         if ((Object) this == mc.player) {
-            JumpVelocityMultiplierEvent event = MeteorClient.EVENT_BUS.post(JumpVelocityMultiplierEvent.get());
+            JumpVelocityMultiplierEvent event = CookieClient.EVENT_BUS.post(JumpVelocityMultiplierEvent.get());
             return (original * event.multiplier);
         }
 
@@ -134,10 +134,10 @@ public abstract class EntityMixin {
     @Inject(method = "move", at = @At("HEAD"))
     private void onMove(MovementType type, Vec3d movement, CallbackInfo info) {
         if ((Object) this == mc.player) {
-            MeteorClient.EVENT_BUS.post(PlayerMoveEvent.get(type, movement));
+            CookieClient.EVENT_BUS.post(PlayerMoveEvent.get(type, movement));
         }
         else if ((Object) this instanceof LivingEntity) {
-            MeteorClient.EVENT_BUS.post(LivingEntityMoveEvent.get((LivingEntity) (Object) this, movement));
+            CookieClient.EVENT_BUS.post(LivingEntityMoveEvent.get((LivingEntity) (Object) this, movement));
         }
     }
 

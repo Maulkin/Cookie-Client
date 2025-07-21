@@ -17,7 +17,7 @@ import meteordevelopment.meteorclient.gui.widgets.pressable.WPlus;
 import meteordevelopment.meteorclient.systems.friends.Friend;
 import meteordevelopment.meteorclient.systems.friends.Friends;
 import meteordevelopment.meteorclient.utils.misc.NbtUtils;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.meteorclient.utils.network.CookieExecutor;
 import net.minecraft.client.gui.screen.Screen;
 
 public class FriendsTab extends Tab {
@@ -62,7 +62,7 @@ public class FriendsTab extends Tab {
                     nameW.set("");
                     reload();
 
-                    MeteorExecutor.execute(() -> {
+                    CookieExecutor.execute(() -> {
                         friend.updateInfo();
                         reload();
                     });
@@ -77,7 +77,7 @@ public class FriendsTab extends Tab {
             if (Friends.get().isEmpty()) return;
 
             Friends.get().forEach(friend ->
-                MeteorExecutor.execute(() -> {
+                CookieExecutor.execute(() -> {
                     if (friend.headTextureNeedsUpdate()) {
                         friend.updateInfo();
                         reload();

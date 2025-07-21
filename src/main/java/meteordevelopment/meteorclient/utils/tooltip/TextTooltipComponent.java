@@ -10,7 +10,7 @@ import net.minecraft.client.gui.tooltip.TooltipComponent;
 import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
 
-public class TextTooltipComponent extends OrderedTextTooltipComponent implements MeteorTooltipData {
+public class TextTooltipComponent extends OrderedTextTooltipComponent implements CookieTooltipData {
     public TextTooltipComponent(OrderedText text) {
         super(text);
     }

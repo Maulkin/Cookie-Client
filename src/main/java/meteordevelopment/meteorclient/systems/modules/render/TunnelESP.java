@@ -10,7 +10,7 @@ import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
 import it.unimi.dsi.fastutil.ints.IntSet;
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.renderer.Renderer3D;
@@ -19,7 +19,7 @@ import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.Utils;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.meteorclient.utils.network.CookieExecutor;
 import meteordevelopment.meteorclient.utils.render.color.SettingColor;
 import meteordevelopment.meteorclient.utils.world.Dir;
 import meteordevelopment.orbit.EventHandler;
@@ -216,7 +216,7 @@ public class TunnelESP extends Module {
                     TChunk tChunk = new TChunk(chunk.getPos().x, chunk.getPos().z);
                     chunks.put(tChunk.getKey(), tChunk);
 
-                    MeteorExecutor.execute(() -> searchChunk(chunk, tChunk));
+                    CookieExecutor.execute(() -> searchChunk(chunk, tChunk));
                     added++;
                 }
             }
@@ -305,7 +305,7 @@ public class TunnelESP extends Module {
         private Chunk lastChunk;
 
         public Context() {
-            this.world = MeteorClient.mc.world;
+            this.world = CookieClient.mc.world;
         }
 
         public BlockState get(int x, int y, int z) {

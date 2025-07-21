@@ -9,12 +9,12 @@ import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.systems.RenderSystem;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.render.GetFovEvent;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.render.RenderAfterWorldEvent;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
-import meteordevelopment.meteorclient.renderer.MeteorRenderPipelines;
+import meteordevelopment.meteorclient.renderer.CookieRenderPipelines;
 import meteordevelopment.meteorclient.renderer.Renderer3D;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.player.LiquidInteract;
@@ -82,12 +82,12 @@ public abstract class GameRendererMixin {
     private void onRenderWorld(RenderTickCounter tickCounter, CallbackInfo ci, @Local(ordinal = 0) Matrix4f projection, @Local(ordinal = 2) Matrix4f view, @Local(ordinal = 1) float tickDelta, @Local MatrixStack matrixStack) {
         if (!Utils.canUpdate()) return;
 
-        Profilers.get().push(MeteorClient.MOD_ID + "_render");
+        Profilers.get().push(CookieClient.MOD_ID + "_render");
 
         // Create renderer and event
 
-        if (renderer == null) renderer = new Renderer3D(MeteorRenderPipelines.WORLD_COLORED_LINES, MeteorRenderPipelines.WORLD_COLORED);
-        if (depthRenderer == null) depthRenderer = new Renderer3D(MeteorRenderPipelines.WORLD_COLORED_LINES_DEPTH, MeteorRenderPipelines.WORLD_COLORED_DEPTH);
+        if (renderer == null) renderer = new Renderer3D(CookieRenderPipelines.WORLD_COLORED_LINES, CookieRenderPipelines.WORLD_COLORED);
+        if (depthRenderer == null) depthRenderer = new Renderer3D(CookieRenderPipelines.WORLD_COLORED_LINES_DEPTH, CookieRenderPipelines.WORLD_COLORED_DEPTH);
         Render3DEvent event = Render3DEvent.get(matrixStack, renderer, depthRenderer, tickDelta, camera.getPos().x, camera.getPos().y, camera.getPos().z);
 
         // Call utility classes
@@ -109,7 +109,7 @@ public abstract class GameRendererMixin {
 
         renderer.begin();
         depthRenderer.begin();
-        MeteorClient.EVENT_BUS.post(event);
+        CookieClient.EVENT_BUS.post(event);
         renderer.render(matrixStack);
         depthRenderer.render(matrixStack);
 
@@ -122,7 +122,7 @@ public abstract class GameRendererMixin {
 
     @Inject(method = "renderWorld", at = @At("TAIL"))
     private void onRenderWorldTail(CallbackInfo info) {
-        MeteorClient.EVENT_BUS.post(RenderAfterWorldEvent.get());
+        CookieClient.EVENT_BUS.post(RenderAfterWorldEvent.get());
     }
 
     @ModifyReturnValue(method = "findCrosshairTarget", at = @At("RETURN"))
@@ -159,7 +159,7 @@ public abstract class GameRendererMixin {
 
     @ModifyReturnValue(method = "getFov", at = @At("RETURN"))
     private float modifyFov(float original) {
-        return MeteorClient.EVENT_BUS.post(GetFovEvent.get(original)).fov;
+        return CookieClient.EVENT_BUS.post(GetFovEvent.get(original)).fov;
     }
 
     // Freecam

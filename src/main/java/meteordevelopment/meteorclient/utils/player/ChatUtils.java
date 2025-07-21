@@ -6,12 +6,12 @@
 package meteordevelopment.meteorclient.utils.player;
 
 import com.mojang.brigadier.StringReader;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.mixininterface.IChatHud;
 import meteordevelopment.meteorclient.pathing.BaritoneUtils;
 import meteordevelopment.meteorclient.systems.config.Config;
 import meteordevelopment.meteorclient.utils.PostInit;
-import meteordevelopment.meteorclient.utils.misc.text.MeteorClickEvent;
+import meteordevelopment.meteorclient.utils.misc.text.CookieClickEvent;
 import net.minecraft.text.*;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Pair;
@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class ChatUtils {
     private static final List<Pair<String, Supplier<Text>>> customPrefixes = new ArrayList<>();
@@ -38,7 +38,7 @@ public class ChatUtils {
         PREFIX = Text.empty()
             .setStyle(Style.EMPTY.withFormatting(Formatting.GRAY))
             .append("[")
-            .append(Text.literal("Cookie").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(MeteorClient.ADDON.color.getPacked()))))
+            .append(Text.literal("Cookie").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(CookieClient.ADDON.color.getPacked()))))
             .append("] ");
     }
 
@@ -260,7 +260,7 @@ public class ChatUtils {
                 .withHoverEvent(new HoverEvent.ShowText(
                     Text.literal("Set as Baritone goal")
                 ))
-                .withClickEvent(new MeteorClickEvent(
+                .withClickEvent(new CookieClickEvent(
                     String.format("%sgoto %d %d %d", BaritoneUtils.getPrefix(), (int) pos.x, (int) pos.y, (int) pos.z)
                 ));
 

@@ -6,14 +6,14 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets.pressable;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorGuiTheme;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieGuiTheme;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.pressable.WPlus;
 
-public class WMeteorPlus extends WPlus implements MeteorWidget {
+public class WMeteorPlus extends WPlus implements CookieWidget {
     @Override
     protected void onRender(GuiRenderer renderer, double mouseX, double mouseY, double delta) {
-        MeteorGuiTheme theme = theme();
+        CookieGuiTheme theme = theme();
         double pad = pad();
         double s = theme.scale(3);
 

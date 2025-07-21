@@ -6,13 +6,13 @@
 package meteordevelopment.meteorclient.gui.screens;
 
 import meteordevelopment.meteorclient.addons.GithubRepo;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
+import meteordevelopment.meteorclient.addons.CookieAddon;
 import meteordevelopment.meteorclient.gui.GuiTheme;
 import meteordevelopment.meteorclient.gui.WindowScreen;
 import meteordevelopment.meteorclient.gui.widgets.containers.WHorizontalList;
 import meteordevelopment.meteorclient.gui.widgets.containers.WTable;
 import meteordevelopment.meteorclient.utils.network.Http;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.meteorclient.utils.network.CookieExecutor;
 import net.minecraft.util.Util;
 
 import java.net.http.HttpResponse;
@@ -20,11 +20,11 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
 public class CommitsScreen extends WindowScreen {
-    private final MeteorAddon addon;
+    private final CookieAddon addon;
     private Commit[] commits;
     private int statusCode;
 
-    public CommitsScreen(GuiTheme theme, MeteorAddon addon) {
+    public CommitsScreen(GuiTheme theme, CookieAddon addon) {
         super(theme, "Commits for " + addon.name);
 
         this.addon = addon;
@@ -32,7 +32,7 @@ public class CommitsScreen extends WindowScreen {
         locked = true;
         lockedAllowClose = true;
 
-        MeteorExecutor.execute(() -> {
+        CookieExecutor.execute(() -> {
             GithubRepo repo = addon.getRepo();
 
             if (addon.getCommit() == null || addon.getCommit().equals("${commit}")) {

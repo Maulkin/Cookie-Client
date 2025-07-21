@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class MeshRenderer {
     private static final MeshRenderer INSTANCE = new MeshRenderer();

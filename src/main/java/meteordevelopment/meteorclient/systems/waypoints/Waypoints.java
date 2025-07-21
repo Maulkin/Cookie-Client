@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.systems.waypoints;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.game.GameJoinedEvent;
 import meteordevelopment.meteorclient.events.game.GameLeftEvent;
 import meteordevelopment.meteorclient.systems.System;
@@ -50,7 +50,7 @@ public class Waypoints extends System<Waypoints> implements Iterable<Waypoint> {
 
     @Override
     public void init() {
-        File iconsFolder = new File(new File(MeteorClient.FOLDER, "waypoints"), "icons");
+        File iconsFolder = new File(new File(CookieClient.FOLDER, "waypoints"), "icons");
         iconsFolder.mkdirs();
 
         for (String builtinIcon : BUILTIN_ICONS) {
@@ -69,7 +69,7 @@ public class Waypoints extends System<Waypoints> implements Iterable<Waypoint> {
                     icons.put(name, texture);
                 }
                 catch (IOException e) {
-                    MeteorClient.LOG.error("Failed to read a waypoint icon", e);
+                    CookieClient.LOG.error("Failed to read a waypoint icon", e);
                 }
             }
         }
@@ -88,7 +88,7 @@ public class Waypoints extends System<Waypoints> implements Iterable<Waypoint> {
         waypoints.add(waypoint);
         save();
 
-        MeteorClient.EVENT_BUS.post(new WaypointAddedEvent(waypoint));
+        CookieClient.EVENT_BUS.post(new WaypointAddedEvent(waypoint));
 
         return false;
     }
@@ -97,7 +97,7 @@ public class Waypoints extends System<Waypoints> implements Iterable<Waypoint> {
         boolean removed = waypoints.remove(waypoint);
         if (removed) {
             save();
-            MeteorClient.EVENT_BUS.post(new WaypointRemovedEvent(waypoint));
+            CookieClient.EVENT_BUS.post(new WaypointRemovedEvent(waypoint));
         }
 
         return removed;
@@ -137,7 +137,7 @@ public class Waypoints extends System<Waypoints> implements Iterable<Waypoint> {
     @Override
     public File getFile() {
         if (!Utils.canUpdate()) return null;
-        return new File(new File(MeteorClient.FOLDER, "waypoints"), Utils.getFileWorldName() + ".nbt");
+        return new File(new File(CookieClient.FOLDER, "waypoints"), Utils.getFileWorldName() + ".nbt");
     }
 
     public boolean isEmpty() {
@@ -150,11 +150,11 @@ public class Waypoints extends System<Waypoints> implements Iterable<Waypoint> {
     }
 
     private void copyIcon(File file) {
-        String path = "/assets/" + MeteorClient.MOD_ID + "/textures/icons/waypoints/" + file.getName();
+        String path = "/assets/" + CookieClient.MOD_ID + "/textures/icons/waypoints/" + file.getName();
         InputStream in = Waypoints.class.getResourceAsStream(path);
 
         if (in == null) {
-            MeteorClient.LOG.error("Failed to read a resource: {}", path);
+            CookieClient.LOG.error("Failed to read a resource: {}", path);
             return;
         }
 

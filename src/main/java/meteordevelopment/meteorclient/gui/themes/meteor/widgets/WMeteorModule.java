@@ -6,18 +6,18 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorGuiTheme;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieGuiTheme;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.utils.AlignmentX;
 import meteordevelopment.meteorclient.gui.widgets.pressable.WPressable;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import net.minecraft.util.math.MathHelper;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT;
 import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_RIGHT;
 
-public class WMeteorModule extends WPressable implements MeteorWidget {
+public class WMeteorModule extends WPressable implements CookieWidget {
     private final Module module;
 
     private double titleWidth;
@@ -62,7 +62,7 @@ public class WMeteorModule extends WPressable implements MeteorWidget {
 
     @Override
     protected void onRender(GuiRenderer renderer, double mouseX, double mouseY, double delta) {
-        MeteorGuiTheme theme = theme();
+        CookieGuiTheme theme = theme();
         double pad = pad();
 
         animationProgress1 += delta * 4 * ((module.isActive() || mouseOver) ? 1 : -1);

@@ -3,7 +3,7 @@ package meteordevelopment.meteorclient.utils.render;
 import com.mojang.blaze3d.platform.TextureUtil;
 import com.mojang.blaze3d.textures.FilterMode;
 import com.mojang.blaze3d.textures.TextureFormat;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.renderer.Texture;
 import meteordevelopment.meteorclient.utils.network.Http;
 import org.lwjgl.BufferUtils;
@@ -18,7 +18,7 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class PlayerHeadTexture extends Texture {
     private boolean needsRotate;
@@ -72,7 +72,7 @@ public class PlayerHeadTexture extends Texture {
     public PlayerHeadTexture() {
         super(8, 8, TextureFormat.RGBA8, FilterMode.NEAREST, FilterMode.NEAREST);
 
-        try (InputStream inputStream = mc.getResourceManager().getResource(MeteorClient.identifier("textures/steve.png")).get().getInputStream()) {
+        try (InputStream inputStream = mc.getResourceManager().getResource(CookieClient.identifier("textures/steve.png")).get().getInputStream()) {
             ByteBuffer data = TextureUtil.readResource(inputStream);
             data.rewind();
 

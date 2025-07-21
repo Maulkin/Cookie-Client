@@ -10,7 +10,7 @@ import meteordevelopment.meteorclient.gui.widgets.WWidget;
 import meteordevelopment.meteorclient.gui.widgets.containers.WContainer;
 import meteordevelopment.meteorclient.renderer.MeshBuilder;
 import meteordevelopment.meteorclient.renderer.MeshRenderer;
-import meteordevelopment.meteorclient.renderer.MeteorRenderPipelines;
+import meteordevelopment.meteorclient.renderer.CookieRenderPipelines;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import net.minecraft.client.MinecraftClient;
 
@@ -18,7 +18,7 @@ public class GuiDebugRenderer {
     private static final Color CELL_COLOR = new Color(25, 225, 25);
     private static final Color WIDGET_COLOR = new Color(25, 25, 225);
 
-    private final MeshBuilder mesh = new MeshBuilder(MeteorRenderPipelines.WORLD_COLORED_LINES);
+    private final MeshBuilder mesh = new MeshBuilder(CookieRenderPipelines.WORLD_COLORED_LINES);
 
     public void render(WWidget widget) {
         if (widget == null) return;
@@ -29,7 +29,7 @@ public class GuiDebugRenderer {
 
         MeshRenderer.begin()
             .attachments(MinecraftClient.getInstance().getFramebuffer())
-            .pipeline(MeteorRenderPipelines.WORLD_COLORED_LINES)
+            .pipeline(CookieRenderPipelines.WORLD_COLORED_LINES)
             .mesh(mesh)
             .end();
     }
