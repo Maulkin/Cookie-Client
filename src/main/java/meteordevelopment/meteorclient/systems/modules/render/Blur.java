@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.systems.modules.render;
@@ -255,7 +255,7 @@ public class Blur extends Module {
         .putFloat()
         .get();
 
-    private static final DynamicUniformStorage<UniformData> UNIFORM_STORAGE = new DynamicUniformStorage<>("Meteor - Blur UBO", UNIFORM_SIZE, 16);
+    private static final DynamicUniformStorage<UniformData> UNIFORM_STORAGE = new DynamicUniformStorage<>("Cookie - Blur UBO", UNIFORM_SIZE, 16);
 
     public static void flipFrame() {
         UNIFORM_STORAGE.clear();

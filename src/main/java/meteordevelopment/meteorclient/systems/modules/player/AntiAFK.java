@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.systems.modules.player;
@@ -135,8 +135,8 @@ public class AntiAFK extends Module {
         .name("messages")
         .description("The messages to choose from.")
         .defaultValue(
-            "Meteor on top!",
-            "Meteor on crack!"
+            "Cookie on top!",
+            "Cookie on crack!"
         )
         .visible(sendMessages::get)
         .build()

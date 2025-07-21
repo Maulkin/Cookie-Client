@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.utils.entity;
@@ -97,7 +97,7 @@ public class DamageUtils {
         return calculateReductions(damage, target, mc.world.getDamageSources().explosion(null));
     }
 
-    /** Meteor Client implementations */
+    /** Cookie Client implementations */
 
     public static float crystalDamage(LivingEntity target, Vec3d crystal, boolean predictMovement, BlockPos obsidianPos) {
         return overridingExplosionDamage(target, crystal, 12f, predictMovement, obsidianPos, Blocks.OBSIDIAN.getDefaultState());

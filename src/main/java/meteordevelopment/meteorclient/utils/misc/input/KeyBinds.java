@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.utils.misc.input;
@@ -13,10 +13,10 @@ import org.lwjgl.glfw.GLFW;
 import java.util.Map;
 
 public class KeyBinds {
-    private static final String CATEGORY = "Meteor Client";
+    private static final String CATEGORY = "Cookie Client";
 
-    public static KeyBinding OPEN_GUI = new KeyBinding("key.meteor-client.open-gui", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT_SHIFT, CATEGORY);
-    public static KeyBinding OPEN_COMMANDS = new KeyBinding("key.meteor-client.open-commands", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_PERIOD, CATEGORY);
+    public static KeyBinding OPEN_GUI = new KeyBinding("key.cookie-client.open-gui", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT_SHIFT, CATEGORY);
+    public static KeyBinding OPEN_COMMANDS = new KeyBinding("key.cookie-client.open-commands", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_PERIOD, CATEGORY);
 
     private KeyBinds() {
     }

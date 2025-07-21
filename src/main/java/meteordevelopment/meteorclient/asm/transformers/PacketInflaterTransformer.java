@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.asm.transformers;
@@ -29,7 +29,7 @@ public class PacketInflaterTransformer extends AsmTransformer {
     @Override
     public void transform(ClassNode klass) {
         MethodNode method = getMethod(klass, decodeMethod);
-        if (method == null) error("[Meteor Client] Could not find method PacketInflater.decode()");
+        if (method == null) error("[Cookie Client] Could not find method PacketInflater.decode()");
 
         int newCount = 0;
         LabelNode label = new LabelNode(new Label());
@@ -57,6 +57,6 @@ public class PacketInflaterTransformer extends AsmTransformer {
             }
         }
 
-        error("[Meteor Client] Failed to modify PacketInflater.decode()");
+        error("[Cookie Client] Failed to modify PacketInflater.decode()");
     }
 }

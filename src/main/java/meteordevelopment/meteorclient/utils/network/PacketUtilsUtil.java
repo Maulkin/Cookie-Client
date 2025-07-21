@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.utils.network;
@@ -43,8 +43,8 @@ public class PacketUtilsUtil {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             writer.write("/*\n");
-            writer.write(" * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client/).\n");
-            writer.write(" * Copyright (c) Meteor Development.\n");
+            writer.write(" * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client/).\n");
+            writer.write(" * Copyright (c) Cookie Development.\n");
             writer.write(" */\n\n");
 
             writer.write("package meteordevelopment.meteorclient.utils.network;\n\n");

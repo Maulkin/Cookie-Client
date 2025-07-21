@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.utils.render.postprocess;
@@ -115,7 +115,7 @@ public class ChamsShader extends EntityShader {
         .putVec4()
         .get();
 
-    private static final DynamicUniformStorage<UniformData> UNIFORM_STORAGE = new DynamicUniformStorage<>("Meteor - Image UBO", UNIFORM_SIZE, 16);
+    private static final DynamicUniformStorage<UniformData> UNIFORM_STORAGE = new DynamicUniformStorage<>("Cookie - Image UBO", UNIFORM_SIZE, 16);
 
     public static void flipFrame() {
         UNIFORM_STORAGE.clear();

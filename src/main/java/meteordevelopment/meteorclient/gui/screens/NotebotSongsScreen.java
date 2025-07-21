@@ -1,6 +1,6 @@
 /*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
+ * This file is part of the Cookie Client distribution (https://github.com/MeteorDevelopment/meteor-client).
+ * Copyright (c) Cookie Development.
  */
 
 package meteordevelopment.meteorclient.gui.screens;
@@ -69,7 +69,7 @@ public class NotebotSongsScreen extends WindowScreen {
                 }
             });
         } catch (IOException e) {
-            table.add(theme.label("Missing meteor-client/notebot folder.")).expandCellX();
+            table.add(theme.label("Missing cookie-client/notebot folder.")).expandCellX();
             table.row();
         }
 
