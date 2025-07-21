@@ -9,8 +9,8 @@
   ],
   "contact": {
     "homepage": "https://cookieclient.com",
-    "issues": "https://github.com/MeteorDevelopment/meteor-client/issues",
-    "sources": "https://github.com/MeteorDevelopment/meteor-client",
+    "issues": "https://github.com/cookie-client/cookie-client/issues",
+    "sources": "https://github.com/cookie-client/cookie-client",
     "discord": "https://cookieclient.com/discord"
   },
   "license": "GPL-3.0",
