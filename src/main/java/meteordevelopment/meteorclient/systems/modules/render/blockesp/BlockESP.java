@@ -72,7 +72,7 @@ public class BlockESP extends Module {
 
     public final Setting<Integer> distance = sgGeneral.add(new IntSetting.Builder()
         .name("distance")
-        .description("Additional chunk distance used to search for blocks.")
+        .description("Additional chunk distance used to search for blocks. Also limits vertical culling range in blocks using this value * 16.")
         .defaultValue(1)
         .min(1)
         .sliderMax(32)
