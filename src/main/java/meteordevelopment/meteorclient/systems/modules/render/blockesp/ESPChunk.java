@@ -8,6 +8,7 @@ package meteordevelopment.meteorclient.systems.modules.render.blockesp;
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
+import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
@@ -21,6 +22,7 @@ import static meteordevelopment.meteorclient.MeteorClient.mc;
 import static meteordevelopment.meteorclient.utils.Utils.getRenderDistance;
 
 public class ESPChunk {
+    private static final BlockESP blockEsp = Modules.get().get(BlockESP.class);
 
     private final int x, z;
     public Long2ObjectMap<ESPBlock> blocks;
@@ -72,7 +74,7 @@ public class ESPChunk {
     }
 
     public boolean shouldBeDeleted() {
-        int viewDist = getRenderDistance() + 1;
+        int viewDist = getRenderDistance() + 1 + blockEsp.distance.get();
         int chunkX = ChunkSectionPos.getSectionCoord(mc.player.getBlockPos().getX());
         int chunkZ = ChunkSectionPos.getSectionCoord(mc.player.getBlockPos().getZ());
 

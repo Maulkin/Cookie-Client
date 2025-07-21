@@ -70,6 +70,15 @@ public class BlockESP extends Module {
         .build()
     );
 
+    public final Setting<Integer> distance = sgGeneral.add(new IntSetting.Builder()
+        .name("distance")
+        .description("Chunk distance used to search for blocks. Adds on top of render distance.")
+        .defaultValue(Utils.getRenderDistance() + 1)
+        .min(1)
+        .sliderMax(32)
+        .build()
+    );
+
     private final Setting<Boolean> tracers = sgGeneral.add(new BoolSetting.Builder()
         .name("tracers")
         .description("Render tracer lines.")
