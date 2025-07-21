@@ -32,17 +32,17 @@ function sendDiscordWebhook() {
             if (hasChanges) description += changes;
 
             if (success) {
-                description += "\n\nVisit our [website](https://meteorclient.com) for download";
+                description += "\n\nVisit our [website](https://cookieclient.com) for download";
             }
 
             const webhook = {
                 username: "Builds",
-                avatar_url: "https://meteorclient.com/icon.png",
+                avatar_url: "https://cookieclient.com/icon.png",
                 embeds: [
                     {
                         title: "Cookie Client " + mcVersion + " build #" + buildNumber,
                         description: description,
-                        url: "https://meteorclient.com",
+                        url: "https://cookieclient.com",
                             color: success ? 2672680 : 13117480
                     }
                 ]
@@ -59,7 +59,7 @@ function sendDiscordWebhook() {
 }
 
 if (success) {
-    fetch("https://meteorclient.com/api/recheckMaven", {
+    fetch("https://cookieclient.com/api/recheckMaven", {
         method: "POST",
         headers: {
             "Authorization": process.env.SERVER_TOKEN

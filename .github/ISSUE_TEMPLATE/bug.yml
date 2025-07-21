@@ -27,7 +27,7 @@ body:
   - type: input
     id: meteor-version
     attributes:
-      label: Meteor Version
+      label: Cookie Version
       placeholder: Meteor X.Y.Z (or X.Y.Z-build_number)
     validations:
       required: true

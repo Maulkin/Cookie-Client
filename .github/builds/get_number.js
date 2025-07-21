@@ -7,7 +7,7 @@ import { getMcVersion } from "./mc_version.js"
 
 const mcVersion = await getMcVersion();
 
-fetch("https://meteorclient.com/api/stats")
+fetch("https://cookieclient.com/api/stats")
     .then(async res => {
         let stats = await res.json()
         let build = 0

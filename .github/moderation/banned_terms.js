@@ -88,7 +88,7 @@ async function run() {
 
     if (checkTerm(issueText, "old version")) {
         const oldVersionMessage =
-            'Our [archive page](https://www.meteorclient.com/archive) stores major Meteor versions for Minecraft ' +
+            'Our [archive page](https://www.cookieclient.com/archive) stores major Meteor versions for Minecraft ' +
             'versions starting at 1.21.4. If you wish to use older builds on older versions of Minecraft, you will ' +
             'need to build them yourself. **You will not receive support for issues with old versions of Meteor!**'
 
