@@ -124,7 +124,6 @@ public class ESPChunk {
             }
         }
 
-        schunk.top = maxHeight;
 
         return schunk;
     }
