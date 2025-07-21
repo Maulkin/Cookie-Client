@@ -75,7 +75,7 @@ public class BlockESP extends Module {
         .description("Additional chunk distance used to search for blocks. Also limits vertical culling range in blocks using this value * 16.")
         .defaultValue(1)
         .min(1)
-        .sliderMax(32)
+        .sliderMax(64)
         .build()
     );
 
