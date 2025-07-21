@@ -5,11 +5,11 @@
 
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets.pressable;
 
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.pressable.WFavorite;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 
-public class WMeteorFavorite extends WFavorite implements MeteorWidget {
+public class WMeteorFavorite extends WFavorite implements CookieWidget {
     public WMeteorFavorite(boolean checked) {
         super(checked);
     }

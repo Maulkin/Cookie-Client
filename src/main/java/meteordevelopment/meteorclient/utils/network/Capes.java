@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.utils.network;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.utils.PreInit;
 import meteordevelopment.orbit.EventHandler;
@@ -19,7 +19,7 @@ import java.io.InputStream;
 import java.util.*;
 import java.util.stream.Stream;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class Capes {
     private static final String CAPE_OWNERS_URL = "https://meteorclient.com/api/capeowners";
@@ -36,7 +36,7 @@ public class Capes {
     private Capes() {
     }
 
-    @PreInit(dependencies = MeteorExecutor.class)
+    @PreInit(dependencies = CookieExecutor.class)
     public static void init() {
         OWNERS.clear();
         URLS.clear();
@@ -45,10 +45,10 @@ public class Capes {
         TO_RETRY.clear();
         TO_REMOVE.clear();
 
-        MeteorExecutor.execute(() -> {
+        CookieExecutor.execute(() -> {
             // Cape owners
             Stream<String> lines = Http.get(CAPE_OWNERS_URL)
-                .exceptionHandler(e -> MeteorClient.LOG.error("Could not load capes: {}",  e.getMessage()))
+                .exceptionHandler(e -> CookieClient.LOG.error("Could not load capes: {}",  e.getMessage()))
                 .sendLines();
             if (lines != null) {
                 lines.forEach(s -> {
@@ -72,7 +72,7 @@ public class Capes {
             });
         });
 
-        MeteorClient.EVENT_BUS.subscribe(Capes.class);
+        CookieClient.EVENT_BUS.subscribe(Capes.class);
     }
 
     @EventHandler
@@ -127,7 +127,7 @@ public class Capes {
         private int retryTimer;
 
         public Cape(String name) {
-            this.identifier = MeteorClient.identifier("capes/" + COUNT++);
+            this.identifier = CookieClient.identifier("capes/" + COUNT++);
             this.name = name;
         }
 
@@ -139,7 +139,7 @@ public class Capes {
             if (downloaded || downloading || retryTimer > 0) return;
             downloading = true;
 
-            MeteorExecutor.execute(() -> {
+            CookieExecutor.execute(() -> {
                 try {
                     String url = URLS.get(name);
                     if (url == null) {

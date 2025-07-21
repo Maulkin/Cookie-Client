@@ -12,7 +12,7 @@ import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.friends.Friend;
 import meteordevelopment.meteorclient.systems.friends.Friends;
 import meteordevelopment.meteorclient.utils.network.Capes;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.meteorclient.utils.network.CookieExecutor;
 import net.minecraft.command.CommandSource;
 
 public class ReloadCommand extends Command {
@@ -28,7 +28,7 @@ public class ReloadCommand extends Command {
             Systems.load();
             Capes.init();
             Fonts.refresh();
-            MeteorExecutor.execute(() -> Friends.get().forEach(Friend::updateInfo));
+            CookieExecutor.execute(() -> Friends.get().forEach(Friend::updateInfo));
 
             return SINGLE_SUCCESS;
         });

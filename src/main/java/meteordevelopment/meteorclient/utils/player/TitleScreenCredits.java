@@ -5,16 +5,16 @@
 
 package meteordevelopment.meteorclient.utils.player;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.addons.AddonManager;
 import meteordevelopment.meteorclient.addons.GithubRepo;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
+import meteordevelopment.meteorclient.addons.CookieAddon;
 import meteordevelopment.meteorclient.gui.GuiThemes;
 import meteordevelopment.meteorclient.gui.screens.CommitsScreen;
 import meteordevelopment.meteorclient.mixininterface.IText;
 import meteordevelopment.meteorclient.utils.network.Http;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
-import meteordevelopment.meteorclient.utils.render.MeteorToast;
+import meteordevelopment.meteorclient.utils.network.CookieExecutor;
+import meteordevelopment.meteorclient.utils.render.CookieToast;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.item.Items;
 import net.minecraft.text.MutableText;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class TitleScreenCredits {
     private static final List<Credit> credits = new ArrayList<>();
@@ -36,36 +36,36 @@ public class TitleScreenCredits {
 
     private static void init() {
         // Add addons
-        for (MeteorAddon addon : AddonManager.ADDONS) add(addon);
+        for (CookieAddon addon : AddonManager.ADDONS) add(addon);
 
         // Sort by width (Meteor always first)
-        credits.sort(Comparator.comparingInt(value -> value.addon == MeteorClient.ADDON ? Integer.MIN_VALUE : -mc.textRenderer.getWidth(value.text)));
+        credits.sort(Comparator.comparingInt(value -> value.addon == CookieClient.ADDON ? Integer.MIN_VALUE : -mc.textRenderer.getWidth(value.text)));
 
         // Check for latest commits
-        MeteorExecutor.execute(() -> {
+        CookieExecutor.execute(() -> {
             for (Credit credit : credits) {
                 if (credit.addon.getRepo() == null || credit.addon.getCommit() == null) continue;
 
                 GithubRepo repo = credit.addon.getRepo();
                 Http.Request request = Http.get("https://api.github.com/repos/%s/branches/%s".formatted(repo.getOwnerName(), repo.branch()));
-                request.exceptionHandler(e -> MeteorClient.LOG.error("Could not fetch repository information for addon '{}'.", credit.addon.name, e));
+                request.exceptionHandler(e -> CookieClient.LOG.error("Could not fetch repository information for addon '{}'.", credit.addon.name, e));
                 repo.authenticate(request);
                 HttpResponse<Response> res = request.sendJsonResponse(Response.class);
 
                 switch (res.statusCode()) {
                     case Http.UNAUTHORIZED -> {
                         String message = "Invalid authentication token for repository '%s'".formatted(repo.getOwnerName());
-                        MeteorToast toast = new MeteorToast.Builder("GitHub: Unauthorized").icon(Items.BARRIER).text(message).build();
+                        CookieToast toast = new CookieToast.Builder("GitHub: Unauthorized").icon(Items.BARRIER).text(message).build();
                         mc.getToastManager().add(toast);
-                        MeteorClient.LOG.warn(message);
+                        CookieClient.LOG.warn(message);
                         if (System.getenv("meteor.github.authorization") == null) {
-                            MeteorClient.LOG.info("Consider setting an authorization " +
+                            CookieClient.LOG.info("Consider setting an authorization " +
                                 "token with the 'meteor.github.authorization' environment variable.");
-                            MeteorClient.LOG.info("See: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens");
+                            CookieClient.LOG.info("See: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens");
                         }
                     }
-                    case Http.FORBIDDEN -> MeteorClient.LOG.warn("Could not fetch updates for addon '{}': Rate-limited by GitHub.", credit.addon.name);
-                    case Http.NOT_FOUND -> MeteorClient.LOG.warn("Could not fetch updates for addon '{}': GitHub repository '{}' not found.", credit.addon.name, repo.getOwnerName());
+                    case Http.FORBIDDEN -> CookieClient.LOG.warn("Could not fetch updates for addon '{}': Rate-limited by GitHub.", credit.addon.name);
+                    case Http.NOT_FOUND -> CookieClient.LOG.warn("Could not fetch updates for addon '{}': GitHub repository '{}' not found.", credit.addon.name, repo.getOwnerName());
                     case Http.SUCCESS -> {
                         if (!credit.addon.getCommit().equals(res.body().commit.sha)) {
                             synchronized (credit.text) {
@@ -79,7 +79,7 @@ public class TitleScreenCredits {
         });
     }
 
-    private static void add(MeteorAddon addon) {
+    private static void add(CookieAddon addon) {
         Credit credit = new Credit(addon);
 
         credit.text.append(Text.literal(addon.name).styled(style -> style.withColor(addon.color.getPacked())));
@@ -135,10 +135,10 @@ public class TitleScreenCredits {
     }
 
     private static class Credit {
-        public final MeteorAddon addon;
+        public final CookieAddon addon;
         public final MutableText text = Text.empty();
 
-        public Credit(MeteorAddon addon) {
+        public Credit(CookieAddon addon) {
             this.addon = addon;
         }
     }

@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.pathing;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.utils.PreInit;
 
 import java.lang.reflect.InvocationTargetException;
@@ -35,7 +35,7 @@ public class PathManagers {
                 INSTANCE = new BaritonePathManager();
         }
 
-        MeteorClient.LOG.info("Path Manager: {}", INSTANCE.getName());
+        CookieClient.LOG.info("Path Manager: {}", INSTANCE.getName());
     }
 
     private static boolean exists(String name) {

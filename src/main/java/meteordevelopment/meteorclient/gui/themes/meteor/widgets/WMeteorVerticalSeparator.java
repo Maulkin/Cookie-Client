@@ -6,15 +6,15 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorGuiTheme;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieGuiTheme;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.WVerticalSeparator;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 
-public class WMeteorVerticalSeparator extends WVerticalSeparator implements MeteorWidget {
+public class WMeteorVerticalSeparator extends WVerticalSeparator implements CookieWidget {
     @Override
     protected void onRender(GuiRenderer renderer, double mouseX, double mouseY, double delta) {
-        MeteorGuiTheme theme = theme();
+        CookieGuiTheme theme = theme();
         Color colorEdges = theme.separatorEdges.get();
         Color colorCenter = theme.separatorCenter.get();
 

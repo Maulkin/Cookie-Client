@@ -11,7 +11,7 @@ import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.entity.player.ItemUseCrosshairTargetEvent;
 import meteordevelopment.meteorclient.events.game.GameLeftEvent;
 import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
@@ -29,7 +29,7 @@ import meteordevelopment.meteorclient.systems.modules.render.ESP;
 import meteordevelopment.meteorclient.systems.modules.world.HighwayBuilder;
 import meteordevelopment.meteorclient.utils.Utils;
 import meteordevelopment.meteorclient.utils.misc.CPSUtils;
-import meteordevelopment.meteorclient.utils.misc.MeteorStarscript;
+import meteordevelopment.meteorclient.utils.misc.CookieStarscript;
 import meteordevelopment.meteorclient.utils.network.OnlinePlayers;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.Mouse;
@@ -95,7 +95,7 @@ public abstract class MinecraftClientMixin implements IMinecraftClient {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void onInit(CallbackInfo info) {
-        MeteorClient.INSTANCE.onInitializeClient();
+        CookieClient.INSTANCE.onInitializeClient();
         firstFrame = true;
     }
 
@@ -105,8 +105,8 @@ public abstract class MinecraftClientMixin implements IMinecraftClient {
 
         doItemUseCalled = false;
 
-        Profilers.get().push(MeteorClient.MOD_ID + "_pre_update");
-        MeteorClient.EVENT_BUS.post(TickEvent.Pre.get());
+        Profilers.get().push(CookieClient.MOD_ID + "_pre_update");
+        CookieClient.EVENT_BUS.post(TickEvent.Pre.get());
         Profilers.get().pop();
 
         if (rightClick && !doItemUseCalled && interactionManager != null) doItemUse();
@@ -115,8 +115,8 @@ public abstract class MinecraftClientMixin implements IMinecraftClient {
 
     @Inject(at = @At("TAIL"), method = "tick")
     private void onTick(CallbackInfo info) {
-        Profilers.get().push(MeteorClient.MOD_ID + "_post_update");
-        MeteorClient.EVENT_BUS.post(TickEvent.Post.get());
+        Profilers.get().push(CookieClient.MOD_ID + "_post_update");
+        CookieClient.EVENT_BUS.post(TickEvent.Post.get());
         Profilers.get().pop();
     }
 
@@ -133,7 +133,7 @@ public abstract class MinecraftClientMixin implements IMinecraftClient {
     @Inject(method = "disconnect(Lnet/minecraft/client/gui/screen/Screen;Z)V", at = @At("HEAD"))
     private void onDisconnect(Screen screen, boolean transferring, CallbackInfo info) {
         if (world != null) {
-            MeteorClient.EVENT_BUS.post(GameLeftEvent.get());
+            CookieClient.EVENT_BUS.post(GameLeftEvent.get());
         }
     }
 
@@ -142,7 +142,7 @@ public abstract class MinecraftClientMixin implements IMinecraftClient {
         if (screen instanceof WidgetScreen) screen.mouseMoved(mouse.getX() * window.getScaleFactor(), mouse.getY() * window.getScaleFactor());
 
         OpenScreenEvent event = OpenScreenEvent.get(screen);
-        MeteorClient.EVENT_BUS.post(event);
+        CookieClient.EVENT_BUS.post(event);
 
         if (event.isCancelled()) info.cancel();
     }
@@ -161,7 +161,7 @@ public abstract class MinecraftClientMixin implements IMinecraftClient {
             return;
         }
 
-        GameOptions options = MeteorClient.mc.options;
+        GameOptions options = CookieClient.mc.options;
         for (KeyBinding kb : KeyBindingAccessor.getKeysById().values()) {
             if (kb == options.forwardKey) continue;
             if (kb == options.leftKey) continue;
@@ -184,12 +184,12 @@ public abstract class MinecraftClientMixin implements IMinecraftClient {
 
     @ModifyExpressionValue(method = "doItemUse", at = @At(value = "FIELD", target = "Lnet/minecraft/client/MinecraftClient;crosshairTarget:Lnet/minecraft/util/hit/HitResult;", ordinal = 1))
     private HitResult doItemUseMinecraftClientCrosshairTargetProxy(HitResult original) {
-        return MeteorClient.EVENT_BUS.post(ItemUseCrosshairTargetEvent.get(original)).target;
+        return CookieClient.EVENT_BUS.post(ItemUseCrosshairTargetEvent.get(original)).target;
     }
 
     @ModifyReturnValue(method = "reloadResources(ZLnet/minecraft/client/MinecraftClient$LoadingContext;)Ljava/util/concurrent/CompletableFuture;", at = @At("RETURN"))
     private CompletableFuture<Void> onReloadResourcesNewCompletableFuture(CompletableFuture<Void> original) {
-        return original.thenRun(() -> MeteorClient.EVENT_BUS.post(ResourcePacksReloadedEvent.get()));
+        return original.thenRun(() -> CookieClient.EVENT_BUS.post(ResourcePacksReloadedEvent.get()));
     }
 
     @ModifyArg(method = "updateWindowTitle", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/util/Window;setTitle(Ljava/lang/String;)V"))
@@ -197,10 +197,10 @@ public abstract class MinecraftClientMixin implements IMinecraftClient {
         if (Config.get() == null || !Config.get().customWindowTitle.get()) return original;
 
         String customTitle = Config.get().customWindowTitleText.get();
-        Script script = MeteorStarscript.compile(customTitle);
+        Script script = CookieStarscript.compile(customTitle);
 
         if (script != null) {
-            String title = MeteorStarscript.run(script);
+            String title = CookieStarscript.run(script);
             if (title != null) customTitle = title;
         }
 
@@ -221,7 +221,7 @@ public abstract class MinecraftClientMixin implements IMinecraftClient {
 
     @Inject(method = "onResolutionChanged", at = @At("TAIL"))
     private void onResolutionChanged(CallbackInfo info) {
-        MeteorClient.EVENT_BUS.post(ResolutionChangedEvent.get());
+        CookieClient.EVENT_BUS.post(ResolutionChangedEvent.get());
     }
 
     // Time delta

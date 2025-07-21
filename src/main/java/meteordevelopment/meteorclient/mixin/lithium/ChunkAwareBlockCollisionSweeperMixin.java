@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.mixin.lithium;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.world.CollisionShapeEvent;
 import net.caffeinemc.mods.lithium.common.entity.movement.ChunkAwareBlockCollisionSweeper;
 import net.minecraft.block.BlockState;
@@ -35,7 +35,7 @@ public abstract class ChunkAwareBlockCollisionSweeperMixin {
     private VoxelShape modifyCollisionShape(VoxelShape original, @Local BlockState state) {
         if (world != MinecraftClient.getInstance().world) return original;
 
-        CollisionShapeEvent event = MeteorClient.EVENT_BUS.post(CollisionShapeEvent.get(state, pos, original));
+        CollisionShapeEvent event = CookieClient.EVENT_BUS.post(CollisionShapeEvent.get(state, pos, original));
         return event.isCancelled() ? VoxelShapes.empty() : event.shape;
     }
 }

@@ -8,8 +8,8 @@ package meteordevelopment.meteorclient.systems.hud.elements;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
 
-public class MeteorTextHud {
-    public static final HudElementInfo<TextHud> INFO = new HudElementInfo<>(Hud.GROUP, "text", "Displays arbitrary text with Starscript.", MeteorTextHud::create);
+public class CookieTextHud {
+    public static final HudElementInfo<TextHud> INFO = new HudElementInfo<>(Hud.GROUP, "text", "Displays arbitrary text with Starscript.", CookieTextHud::create);
 
     public static final HudElementInfo<TextHud>.Preset FPS;
     public static final HudElementInfo<TextHud>.Preset TPS;

@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.gui;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.gui.renderer.GuiDebugRenderer;
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
 import meteordevelopment.meteorclient.gui.tabs.TabScreen;
@@ -29,7 +29,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Consumer;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 import static meteordevelopment.meteorclient.utils.Utils.getWindowHeight;
 import static meteordevelopment.meteorclient.utils.Utils.getWindowWidth;
 import static org.lwjgl.glfw.GLFW.*;
@@ -91,7 +91,7 @@ public abstract class WidgetScreen extends Screen {
 
     @Override
     protected void init() {
-        MeteorClient.EVENT_BUS.subscribe(this);
+        CookieClient.EVENT_BUS.subscribe(this);
 
         closed = false;
 
@@ -316,7 +316,7 @@ public abstract class WidgetScreen extends Screen {
                 if (widget instanceof WTextBox textBox && textBox.isFocused()) textBox.setFocused(false);
             });
 
-            MeteorClient.EVENT_BUS.unsubscribe(this);
+            CookieClient.EVENT_BUS.unsubscribe(this);
             GuiKeyEvents.canUseKeys = true;
 
             if (onClosed != null) {

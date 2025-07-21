@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.utils.world;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.player.InstantRebreak;
@@ -38,7 +38,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.LightType;
 import net.minecraft.world.World;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 @SuppressWarnings("ConstantConditions")
 public class BlockUtils {
@@ -50,7 +50,7 @@ public class BlockUtils {
 
     @PreInit
     public static void init() {
-        MeteorClient.EVENT_BUS.subscribe(BlockUtils.class);
+        CookieClient.EVENT_BUS.subscribe(BlockUtils.class);
     }
 
     // Placing

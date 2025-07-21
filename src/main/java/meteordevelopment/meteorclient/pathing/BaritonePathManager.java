@@ -14,7 +14,7 @@ import baritone.api.process.PathingCommand;
 import baritone.api.process.PathingCommandType;
 import baritone.api.utils.Rotation;
 import baritone.api.utils.SettingsUtil;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.orbit.EventHandler;
 import meteordevelopment.orbit.EventPriority;
@@ -26,7 +26,7 @@ import net.minecraft.util.math.Vec3d;
 
 import java.util.function.Predicate;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class BaritonePathManager implements IPathManager {
     private final BaritoneSettings settings;
@@ -36,7 +36,7 @@ public class BaritonePathManager implements IPathManager {
 
     public BaritonePathManager() {
         // Subscribe to event bus
-        MeteorClient.EVENT_BUS.subscribe(this);
+        CookieClient.EVENT_BUS.subscribe(this);
 
         // Create settings
         settings = new BaritoneSettings();

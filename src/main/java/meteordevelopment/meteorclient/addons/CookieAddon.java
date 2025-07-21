@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.addons;
 
 import meteordevelopment.meteorclient.utils.render.color.Color;
 
-public abstract class MeteorAddon {
+public abstract class CookieAddon {
     /** This field is automatically assigned from fabric.mod.json file. */
     public String name;
 

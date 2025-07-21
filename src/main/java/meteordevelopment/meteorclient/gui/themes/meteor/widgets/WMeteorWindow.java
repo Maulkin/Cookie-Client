@@ -6,11 +6,11 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.WWidget;
 import meteordevelopment.meteorclient.gui.widgets.containers.WWindow;
 
-public class WMeteorWindow extends WWindow implements MeteorWidget {
+public class WMeteorWindow extends WWindow implements CookieWidget {
     public WMeteorWindow(WWidget icon, String title) {
         super(icon, title);
     }

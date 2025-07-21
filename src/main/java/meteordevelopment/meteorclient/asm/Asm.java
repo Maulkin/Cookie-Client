@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.asm;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.asm.transformers.PacketInflaterTransformer;
 import net.fabricmc.loader.api.FabricLoader;
 import org.objectweb.asm.ClassReader;
@@ -75,7 +75,7 @@ public class Asm {
                 new File(path.toUri()).getParentFile().mkdirs();
                 Files.write(path, bytes);
             } catch (IOException e) {
-                MeteorClient.LOG.error("Failed to export transformer '{}': ", name, e);
+                CookieClient.LOG.error("Failed to export transformer '{}': ", name, e);
             }
         }
     }

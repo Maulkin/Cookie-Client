@@ -12,7 +12,7 @@ import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
 import com.mojang.serialization.DataResult;
 import meteordevelopment.meteorclient.commands.Command;
 import meteordevelopment.meteorclient.commands.arguments.ComponentMapArgumentType;
-import meteordevelopment.meteorclient.utils.misc.text.MeteorClickEvent;
+import meteordevelopment.meteorclient.utils.misc.text.CookieClickEvent;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.DataCommandObject;
 import net.minecraft.command.EntityDataObject;
@@ -43,7 +43,7 @@ public class NbtCommand extends Command {
     );
     private final Text copyButton = Text.literal("NBT").setStyle(Style.EMPTY
         .withFormatting(Formatting.UNDERLINE)
-        .withClickEvent(new MeteorClickEvent(
+        .withClickEvent(new CookieClickEvent(
             this.toString("copy")
         ))
         .withHoverEvent(new HoverEvent.ShowText(

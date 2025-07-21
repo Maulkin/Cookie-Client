@@ -9,7 +9,7 @@ import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.utils.misc.Keybind;
-import meteordevelopment.meteorclient.utils.network.MeteorExecutor;
+import meteordevelopment.meteorclient.utils.network.CookieExecutor;
 import meteordevelopment.meteorclient.utils.player.PlayerUtils;
 import meteordevelopment.meteorclient.utils.render.color.SettingColor;
 import meteordevelopment.meteorclient.utils.world.Dir;
@@ -210,7 +210,7 @@ public class Sphere2dMarker extends BaseMarker {
         };
 
         if (radius.get() <= 50) action.run();
-        else MeteorExecutor.execute(action);
+        else CookieExecutor.execute(action);
     }
 
     private void add(int x, int y, int z) {

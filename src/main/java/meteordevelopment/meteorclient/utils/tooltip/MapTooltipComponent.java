@@ -19,9 +19,9 @@ import net.minecraft.item.FilledMapItem;
 import net.minecraft.item.map.MapState;
 import net.minecraft.util.Identifier;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
-public class MapTooltipComponent implements TooltipComponent, MeteorTooltipData {
+public class MapTooltipComponent implements TooltipComponent, CookieTooltipData {
     private static final Identifier TEXTURE_MAP_BACKGROUND = Identifier.of("textures/map/map_background.png");
     private final int mapId;
     private final MapRenderState mapRenderState = new MapRenderState();

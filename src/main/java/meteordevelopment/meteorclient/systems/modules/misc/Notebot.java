@@ -7,7 +7,7 @@ package meteordevelopment.meteorclient.systems.modules.misc;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.MultimapBuilder;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.render.Render2DEvent;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -651,7 +651,7 @@ public class Notebot extends Module {
     }
 
     public void playRandomSong() {
-        File[] files = MeteorClient.FOLDER.toPath().resolve("notebot").toFile().listFiles();
+        File[] files = CookieClient.FOLDER.toPath().resolve("notebot").toFile().listFiles();
         if (files == null) return;
 
         File randomSong = files[ThreadLocalRandom.current().nextInt(files.length)];
@@ -753,7 +753,7 @@ public class Notebot extends Module {
                     error("Loading song '" + FilenameUtils.getBaseName(file.getName()) + "' was cancelled.");
                 } else {
                     error("An error occurred while loading song '" + FilenameUtils.getBaseName(file.getName()) + "'. See the logs for more details");
-                    MeteorClient.LOG.error("An error occurred while loading song '{}'", FilenameUtils.getBaseName(file.getName()), ex);
+                    CookieClient.LOG.error("An error occurred while loading song '{}'", FilenameUtils.getBaseName(file.getName()), ex);
                     onSongEnd();
                 }
             }

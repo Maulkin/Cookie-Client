@@ -23,9 +23,9 @@ import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
-public class MeteorToast implements Toast {
+public class CookieToast implements Toast {
     private static final int TITLE_COLOR = Color.fromRGBA(145, 61, 226, 255);
     private static final int TEXT_COLOR = Color.fromRGBA(220, 220, 220, 255);
     private static final Identifier TEXTURE = Identifier.of("toast/advancement");
@@ -44,7 +44,7 @@ public class MeteorToast implements Toast {
     private long start = -1;
     private Visibility visibility = Visibility.HIDE;
 
-    private MeteorToast(Builder builder) {
+    private CookieToast(Builder builder) {
         this.title = builder.title;
         this.text = builder.text;
         this.icon = builder.icon;
@@ -85,8 +85,8 @@ public class MeteorToast implements Toast {
             return this;
         }
 
-        public MeteorToast build() {
-            return new MeteorToast(this);
+        public CookieToast build() {
+            return new CookieToast(this);
         }
     }
 

@@ -5,8 +5,8 @@
 
 package meteordevelopment.meteorclient.gui;
 
-import meteordevelopment.meteorclient.MeteorClient;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorGuiTheme;
+import meteordevelopment.meteorclient.CookieClient;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieGuiTheme;
 import meteordevelopment.meteorclient.utils.PostInit;
 import meteordevelopment.meteorclient.utils.PreInit;
 import net.minecraft.nbt.NbtCompound;
@@ -19,7 +19,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class GuiThemes {
-    private static final File FOLDER = new File(MeteorClient.FOLDER, "gui");
+    private static final File FOLDER = new File(CookieClient.FOLDER, "gui");
     private static final File THEMES_FOLDER = new File(FOLDER, "themes");
     private static final File FILE = new File(FOLDER, "gui.nbt");
 
@@ -31,7 +31,7 @@ public class GuiThemes {
 
     @PreInit
     public static void init() {
-        add(new MeteorGuiTheme());
+        add(new CookieGuiTheme());
     }
 
     @PostInit
@@ -54,7 +54,7 @@ public class GuiThemes {
             if (it.next().name.equals(theme.name)) {
                 it.remove();
 
-                MeteorClient.LOG.error("Theme with the name '{}' has already been added.", theme.name);
+                CookieClient.LOG.error("Theme with the name '{}' has already been added.", theme.name);
                 break;
             }
         }

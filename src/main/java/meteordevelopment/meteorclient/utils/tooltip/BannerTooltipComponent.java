@@ -22,9 +22,9 @@ import net.minecraft.item.BannerItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DyeColor;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
-public class BannerTooltipComponent implements MeteorTooltipData, TooltipComponent {
+public class BannerTooltipComponent implements CookieTooltipData, TooltipComponent {
     private final DyeColor color;
     private final BannerPatternsComponent patterns;
     private final ModelPart bannerField;

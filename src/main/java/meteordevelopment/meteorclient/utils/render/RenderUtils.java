@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.utils.render;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class RenderUtils {
     public static Vec3d center;
@@ -39,7 +39,7 @@ public class RenderUtils {
 
     @PostInit
     public static void init() {
-        MeteorClient.EVENT_BUS.subscribe(RenderUtils.class);
+        CookieClient.EVENT_BUS.subscribe(RenderUtils.class);
     }
 
     // Items

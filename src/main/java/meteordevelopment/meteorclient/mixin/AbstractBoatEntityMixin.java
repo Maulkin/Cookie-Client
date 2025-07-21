@@ -6,7 +6,7 @@
 package meteordevelopment.meteorclient.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.entity.BoatMoveEvent;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.movement.BoatFly;
@@ -21,7 +21,7 @@ public abstract class AbstractBoatEntityMixin {
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/vehicle/AbstractBoatEntity;move(Lnet/minecraft/entity/MovementType;Lnet/minecraft/util/math/Vec3d;)V"))
     private void onTickInvokeMove(CallbackInfo info) {
         if ((Object) this instanceof AbstractBoatEntity boatEntity) {
-            MeteorClient.EVENT_BUS.post(BoatMoveEvent.get(boatEntity));
+            CookieClient.EVENT_BUS.post(BoatMoveEvent.get(boatEntity));
         }
     }
 

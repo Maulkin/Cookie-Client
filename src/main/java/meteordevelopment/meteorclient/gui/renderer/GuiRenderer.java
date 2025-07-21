@@ -5,7 +5,7 @@
 
 package meteordevelopment.meteorclient.gui.renderer;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.gui.GuiTheme;
 import meteordevelopment.meteorclient.gui.renderer.operations.TextOperation;
 import meteordevelopment.meteorclient.gui.renderer.packer.GuiTexture;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 import static meteordevelopment.meteorclient.utils.Utils.getWindowHeight;
 import static meteordevelopment.meteorclient.utils.Utils.getWindowWidth;
 
@@ -68,15 +68,15 @@ public class GuiRenderer {
 
     @PostInit
     public static void init() {
-        CIRCLE = addTexture(MeteorClient.identifier("textures/icons/gui/circle.png"));
-        TRIANGLE = addTexture(MeteorClient.identifier("textures/icons/gui/triangle.png"));
-        EDIT = addTexture(MeteorClient.identifier("textures/icons/gui/edit.png"));
-        RESET = addTexture(MeteorClient.identifier("textures/icons/gui/reset.png"));
-        FAVORITE_NO = addTexture(MeteorClient.identifier("textures/icons/gui/favorite_no.png"));
-        FAVORITE_YES = addTexture(MeteorClient.identifier("textures/icons/gui/favorite_yes.png"));
+        CIRCLE = addTexture(CookieClient.identifier("textures/icons/gui/circle.png"));
+        TRIANGLE = addTexture(CookieClient.identifier("textures/icons/gui/triangle.png"));
+        EDIT = addTexture(CookieClient.identifier("textures/icons/gui/edit.png"));
+        RESET = addTexture(CookieClient.identifier("textures/icons/gui/reset.png"));
+        FAVORITE_NO = addTexture(CookieClient.identifier("textures/icons/gui/favorite_no.png"));
+        FAVORITE_YES = addTexture(CookieClient.identifier("textures/icons/gui/favorite_yes.png"));
 
-        COPY = addTexture(MeteorClient.identifier("textures/icons/gui/copy.png"));
-        PASTE = addTexture(MeteorClient.identifier("textures/icons/gui/paste.png"));
+        COPY = addTexture(CookieClient.identifier("textures/icons/gui/copy.png"));
+        PASTE = addTexture(CookieClient.identifier("textures/icons/gui/paste.png"));
 
         TEXTURE = TEXTURE_PACKER.pack();
     }

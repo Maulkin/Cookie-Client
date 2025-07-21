@@ -11,7 +11,7 @@ import meteordevelopment.meteorclient.gui.widgets.pressable.WButton;
 import meteordevelopment.meteorclient.systems.accounts.MicrosoftLogin;
 import meteordevelopment.meteorclient.systems.accounts.types.MicrosoftAccount;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class AddMicrosoftAccountScreen extends AddAccountScreen {
     public AddMicrosoftAccountScreen(GuiTheme theme, AccountsScreen parent) {

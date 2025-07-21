@@ -22,7 +22,7 @@ import meteordevelopment.meteorclient.systems.modules.misc.swarm.Swarm;
 import meteordevelopment.meteorclient.systems.modules.misc.swarm.SwarmConnection;
 import meteordevelopment.meteorclient.systems.modules.misc.swarm.SwarmWorker;
 import meteordevelopment.meteorclient.systems.modules.world.InfinityMiner;
-import meteordevelopment.meteorclient.utils.misc.text.MeteorClickEvent;
+import meteordevelopment.meteorclient.utils.misc.text.CookieClickEvent;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.argument.BlockStateArgument;
@@ -72,7 +72,7 @@ public class SwarmCommand extends Command {
                                     info("Are you sure you want to connect to '%s:%s'?", ip, port);
                                     info(Text.literal("Click here to confirm").setStyle(Style.EMPTY
                                         .withFormatting(Formatting.UNDERLINE, Formatting.GREEN)
-                                        .withClickEvent(new MeteorClickEvent(".swarm join confirm"))
+                                        .withClickEvent(new CookieClickEvent(".swarm join confirm"))
                                     ));
 
                                     return SINGLE_SUCCESS;

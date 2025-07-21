@@ -1,7 +1,7 @@
 package meteordevelopment.meteorclient.utils.render.postprocess;
 
 import meteordevelopment.meteorclient.renderer.MeshRenderer;
-import meteordevelopment.meteorclient.renderer.MeteorRenderPipelines;
+import meteordevelopment.meteorclient.renderer.CookieRenderPipelines;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.render.ESP;
 import net.minecraft.entity.Entity;
@@ -10,7 +10,7 @@ public class EntityOutlineShader extends EntityShader {
     private static ESP esp;
 
     public EntityOutlineShader() {
-        init(MeteorRenderPipelines.POST_OUTLINE);
+        init(CookieRenderPipelines.POST_OUTLINE);
     }
 
     @Override

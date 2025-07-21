@@ -9,7 +9,7 @@ import com.mojang.blaze3d.systems.ProjectionType;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.serialization.DataResult;
 import it.unimi.dsi.fastutil.objects.*;
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.gui.tabs.TabScreen;
 import meteordevelopment.meteorclient.mixin.*;
@@ -70,7 +70,7 @@ import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static meteordevelopment.meteorclient.MeteorClient.mc;
+import static meteordevelopment.meteorclient.CookieClient.mc;
 import static org.lwjgl.glfw.GLFW.*;
 
 public class Utils {
@@ -90,7 +90,7 @@ public class Utils {
 
     @PreInit
     public static void init() {
-        MeteorClient.EVENT_BUS.subscribe(Utils.class);
+        CookieClient.EVENT_BUS.subscribe(Utils.class);
     }
 
     @EventHandler
@@ -512,7 +512,7 @@ public class Utils {
         try {
             return in.readAllBytes();
         } catch (IOException e) {
-            MeteorClient.LOG.error("Error reading from stream.", e);
+            CookieClient.LOG.error("Error reading from stream.", e);
             return new byte[0];
         } finally {
             IOUtils.closeQuietly(in);

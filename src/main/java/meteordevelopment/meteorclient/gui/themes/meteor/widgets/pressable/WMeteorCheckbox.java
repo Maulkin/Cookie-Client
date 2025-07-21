@@ -6,12 +6,12 @@
 package meteordevelopment.meteorclient.gui.themes.meteor.widgets.pressable;
 
 import meteordevelopment.meteorclient.gui.renderer.GuiRenderer;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorGuiTheme;
-import meteordevelopment.meteorclient.gui.themes.meteor.MeteorWidget;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieGuiTheme;
+import meteordevelopment.meteorclient.gui.themes.meteor.CookieWidget;
 import meteordevelopment.meteorclient.gui.widgets.pressable.WCheckbox;
 import net.minecraft.util.math.MathHelper;
 
-public class WMeteorCheckbox extends WCheckbox implements MeteorWidget {
+public class WMeteorCheckbox extends WCheckbox implements CookieWidget {
     private double animProgress;
 
     public WMeteorCheckbox(boolean checked) {
@@ -21,7 +21,7 @@ public class WMeteorCheckbox extends WCheckbox implements MeteorWidget {
 
     @Override
     protected void onRender(GuiRenderer renderer, double mouseX, double mouseY, double delta) {
-        MeteorGuiTheme theme = theme();
+        CookieGuiTheme theme = theme();
 
         animProgress += (checked ? 1 : -1) * delta * 14;
         animProgress = MathHelper.clamp(animProgress, 0, 1);

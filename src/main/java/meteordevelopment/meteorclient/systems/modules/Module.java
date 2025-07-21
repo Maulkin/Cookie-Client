@@ -5,9 +5,9 @@
 
 package meteordevelopment.meteorclient.systems.modules;
 
-import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.CookieClient;
 import meteordevelopment.meteorclient.addons.AddonManager;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
+import meteordevelopment.meteorclient.addons.CookieAddon;
 import meteordevelopment.meteorclient.gui.GuiTheme;
 import meteordevelopment.meteorclient.gui.widgets.WWidget;
 import meteordevelopment.meteorclient.settings.Settings;
@@ -36,7 +36,7 @@ public abstract class Module implements ISerializable<Module>, Comparable<Module
     public final String[] aliases;
     public final Color color;
 
-    public final MeteorAddon addon;
+    public final CookieAddon addon;
     public final Settings settings = new Settings();
 
     private boolean active;
@@ -51,7 +51,7 @@ public abstract class Module implements ISerializable<Module>, Comparable<Module
     public boolean favorite = false;
 
     public Module(Category category, String name, String description, String... aliases) {
-        if (name.contains(" ")) MeteorClient.LOG.warn("Module '{}' contains invalid characters in its name making it incompatible with Cookie Client commands.", name);
+        if (name.contains(" ")) CookieClient.LOG.warn("Module '{}' contains invalid characters in its name making it incompatible with Cookie Client commands.", name);
 
         this.mc = MinecraftClient.getInstance();
         this.category = category;
@@ -62,7 +62,7 @@ public abstract class Module implements ISerializable<Module>, Comparable<Module
         this.color = Color.fromHsv(Utils.random(0.0, 360.0), 0.35, 1);
 
         String classname = this.getClass().getName();
-        for (MeteorAddon addon : AddonManager.ADDONS) {
+        for (CookieAddon addon : AddonManager.ADDONS) {
             if (classname.startsWith(addon.getPackage())) {
                 this.addon = addon;
                 return;
@@ -91,13 +91,13 @@ public abstract class Module implements ISerializable<Module>, Comparable<Module
             settings.onActivated();
 
             if (runInMainMenu || Utils.canUpdate()) {
-                if (autoSubscribe) MeteorClient.EVENT_BUS.subscribe(this);
+                if (autoSubscribe) CookieClient.EVENT_BUS.subscribe(this);
                 onActivate();
             }
         }
         else {
             if (runInMainMenu || Utils.canUpdate()) {
-                if (autoSubscribe) MeteorClient.EVENT_BUS.unsubscribe(this);
+                if (autoSubscribe) CookieClient.EVENT_BUS.unsubscribe(this);
                 onDeactivate();
             }
 
