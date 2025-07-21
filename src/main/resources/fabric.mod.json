@@ -8,10 +8,10 @@
     "ProfCookie"
   ],
   "contact": {
-    "homepage": "https://meteorclient.com",
+    "homepage": "https://cookieclient.com",
     "issues": "https://github.com/MeteorDevelopment/meteor-client/issues",
     "sources": "https://github.com/MeteorDevelopment/meteor-client",
-    "discord": "https://meteorclient.com/discord"
+    "discord": "https://cookieclient.com/discord"
   },
   "license": "GPL-3.0",
   "icon": "assets/cookie-client/icon.png",
@@ -39,7 +39,7 @@
     "cookie-client:commit": "${commit}",
     "modmenu": {
       "links": {
-        "modmenu.discord": "https://meteorclient.com/discord"
+        "modmenu.discord": "https://cookieclient.com/discord"
       }
     }
   },

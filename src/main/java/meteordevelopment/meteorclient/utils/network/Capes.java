@@ -22,8 +22,8 @@ import java.util.stream.Stream;
 import static meteordevelopment.meteorclient.CookieClient.mc;
 
 public class Capes {
-    private static final String CAPE_OWNERS_URL = "https://meteorclient.com/api/capeowners";
-    private static final String CAPES_URL = "https://meteorclient.com/api/capes";
+    private static final String CAPE_OWNERS_URL = "https://cookieclient.com/api/capeowners";
+    private static final String CAPES_URL = "https://cookieclient.com/api/capes";
 
     private static final Map<UUID, String> OWNERS = new HashMap<>();
     private static final Map<String, String> URLS = new HashMap<>();
