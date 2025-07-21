@@ -31,7 +31,7 @@ public class AddonManager {
 
                 @Override
                 public String getWebsite() {
-                    return "https://meteorclient.com";
+                    return "https://cookieclient.com";
                 }
 
                 @Override
